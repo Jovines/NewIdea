@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:paddingEnd="30dp"
+              android:paddingStart="0dp"
+              android:paddingBottom="25dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:background="@drawable/app_shape_recycle_item"
+            android:gravity="center"
+            android:layout_width="130dp"
+            android:layout_height="130dp">
+
+
+        <ImageView
+                android:src="@drawable/ic_main_re_compose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

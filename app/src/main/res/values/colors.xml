@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary" tools:ignore="ResourceName">#008577</color>
+    <color name="colorPrimaryDark" tools:ignore="ResourceName">#00574B</color>
+    <color name="colorAccent" tools:ignore="ResourceName">#383B48</color>
+    <color name="windowBackground" tools:ignore="ResourceName">#FFFF</color>
+    <color name="homeHeadColor" tools:ignore="ResourceName">#FFAE33</color>
+    <color name="sidebarColor" tools:ignore="ResourceName">#FFAE33</color>
+    <color name="mainTextColor" tools:ignore="ResourceName">#383B48</color>
+
 </resources>

@@ -10,17 +10,30 @@ import java.net.URI
  * Created by Tree on 2019/8/15 20:51
  */
 object Music {
-    val mediaPlayer = MediaPlayer()
+    private val mediaPlayer = MediaPlayer()
     var isPlaying = false
 
-    fun paly(songMid: String) {
+    fun paly(songMid: String,function:(Int)->Unit={}) {
+        if (isPlaying) {
+            mediaPlayer.stop()
+            function(R.drawable.ic_play)
+            isPlaying =false
+        } else {
             mediaPlayer.reset()
             mediaPlayer.setDataSource(recommendedSongUri(songMid))
             mediaPlayer.prepareAsync()
-        // 异步准备Prepared完成监听
-        mediaPlayer.setOnPreparedListener { mediaPlayer ->
-            // 开始播放
-            mediaPlayer.start()
+            // 异步准备Prepared完成监听
+            mediaPlayer.setOnPreparedListener { mediaPlayer ->
+                // 开始播放
+                mediaPlayer.start()
+                function(R.drawable.ic_playing)
+                isPlaying = true
+            }
         }
     }
+
+
+
+
+
 }

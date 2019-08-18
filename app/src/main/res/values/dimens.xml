@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--侧边栏宽度-->
+    <dimen name="sidebarWidth" tools:ignore="ResourceName">200.0dp</dimen>
+
+</resources>

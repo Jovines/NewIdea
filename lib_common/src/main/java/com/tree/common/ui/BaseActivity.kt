@@ -2,6 +2,7 @@ package com.tree.common.ui
 
 //import com.jude.swipbackhelper.SwipeBackHelper
 import android.app.Activity
+import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -151,5 +152,4 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onStop()
         EventBus.getDefault().unregister(this)
     }
-
 }

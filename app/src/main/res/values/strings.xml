@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NewIdea</string>
+    <string name="app_top_search_tilte">Your Choice</string>
+    <string name="app_main_edit_hit">What are you looking for？</string>
 </resources>

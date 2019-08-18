@@ -1,40 +1,29 @@
 package com.tree.newidea.bean;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 /**
  * Created by Tree on 2019/8/15 19:59
  */
+
+
+
 public class RecommendedMusicBean {
 
 
     /**
-     * code : 0
-     * color : 0
-     * comment_num : 679
-     * cur_song_num : 50
-     * date : 2019_30
-     * day_of_year :
-     * song_begin : 0
-     * songlist : [{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7347298,"albummid":"001ihXVR21xtpR","albumname":"画","alertid":11,"belongCD":10,"cdIdx":0,"interval":168,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":7,"singer":[{"id":1511644,"mid":"002qrSu92q8XKu","name":"绿巨人先森"}],"size128":2691023,"size320":6726891,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":3397887,"songid":235879319,"songmid":"000fHtpp34UK7N","songname":"画","songorig":"画","songtype":0,"strMediaMid":"000fHtpp34UK7N","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7155800,"albummid":"003LSPma3YRkKb","albumname":"缘分一道桥","alertid":11,"belongCD":1,"cdIdx":0,"interval":245,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2632072,"mid":"002Gt1BI2kl2SP","name":"熙月月"}],"size128":3922773,"size320":9806593,"size5_1":0,"sizeape":0,"sizeflac":48457029,"sizeogg":5297524,"songid":234365404,"songmid":"003Lt2EC3J1UuQ","songname":"缘分一道桥","songorig":"缘分一道桥","songtype":0,"strMediaMid":"003Lt2EC3J1UuQ","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6968692,"albummid":"003hGFFf1FtFrf","albumname":"来自天堂的魔鬼","alertid":18,"belongCD":1,"cdIdx":0,"interval":246,"isonly":0,"label":"0","msgid":6,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":43638,"tryend":74256,"trysize":0},"rate":23,"singer":[{"id":3005777,"mid":"0023Cun84T0wxh","name":"朴爱源"}],"size128":3937393,"size320":9842792,"size5_1":0,"sizeape":0,"sizeflac":25400159,"sizeogg":5259204,"songid":233085835,"songmid":"001jWSgc2KfDvJ","songname":"来自天堂的魔鬼","songorig":"来自天堂的魔鬼","songtype":0,"strMediaMid":"001jWSgc2KfDvJ","stream":1,"switch":79619,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7076019,"albummid":"0040iV4X2muOjS","albumname":"你的酒馆对我打了烊","alertid":11,"belongCD":1,"cdIdx":0,"interval":252,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2116479,"mid":"000021ZO1APZRL","name":"乐静"}],"size128":4035194,"size320":10087254,"size5_1":0,"sizeape":0,"sizeflac":28443129,"sizeogg":5869915,"songid":233780708,"songmid":"001XiBw40u83kh","songname":"你的酒馆对我打了烊","songorig":"你的酒馆对我打了烊","songtype":0,"strMediaMid":"001XiBw40u83kh","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6534816,"albummid":"0019Baet3ooIyV","albumname":"绿色","alertid":11,"belongCD":1,"cdIdx":0,"interval":273,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":56977,"tryend":87727,"trysize":0},"rate":7,"singer":[{"id":1524181,"mid":"002iq6oD0EHnrn","name":"抚刺"}],"size128":4382914,"size320":10956994,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":6409021,"songid":230726032,"songmid":"000Fh6Lp2edv5F","songname":"绿色\u202d \u2062 (Live)","songorig":"绿色\u202d \u2062","songtype":0,"strMediaMid":"000Fh6Lp2edv5F","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":8623,"albummid":"001ZaCQY2OxVMg","albumname":"空","alertid":11,"belongCD":1,"cdIdx":0,"interval":185,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1519712,"mid":"00209Inh178YHr","name":"K.D"}],"size128":2966870,"size320":7416881,"size5_1":0,"sizeape":0,"sizeflac":17360421,"sizeogg":3925600,"songid":231718443,"songmid":"000JnRZJ0oUK9Z","songname":"心如止水 (Demo)","songorig":"心如止水","songtype":0,"strMediaMid":"002KMfu029sEHs","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7269739,"albummid":"0019yxBK1Sx1Ek","albumname":"伤心的酒别喝的太醉","alertid":2,"belongCD":1,"cdIdx":0,"interval":214,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":2892936,"mid":"000Zt0sM0sd0zX","name":"大欢"}],"size128":3440856,"size320":8601816,"size5_1":0,"sizeape":0,"sizeflac":27647799,"sizeogg":5281955,"songid":235177473,"songmid":"001NEc2E25Ao5G","songname":"伤心的酒别喝的太醉","songorig":"伤心的酒别喝的太醉","songtype":0,"strMediaMid":"001NEc2E25Ao5G","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7048541,"albummid":"004NwQmW1jTpeq","albumname":"那时明月","alertid":2,"belongCD":1,"cdIdx":0,"interval":259,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2091885,"mid":"002CNo623C0bEr","name":"丛书"}],"size128":4160979,"size320":10401889,"size5_1":0,"sizeape":0,"sizeflac":30239969,"sizeogg":5931439,"songid":233627047,"songmid":"001h5MzF4B1azv","songname":"那时明月","songorig":"那时明月","songtype":0,"strMediaMid":"001h5MzF4B1azv","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7239422,"albummid":"00170WX92ZEjOb","albumname":"赤伶","alertid":11,"belongCD":1,"cdIdx":0,"interval":268,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":3335017,"mid":"001hPuxj4Ydeap","name":"踢踢"}],"size128":4289291,"size320":10722937,"size5_1":0,"sizeape":0,"sizeflac":29214089,"sizeogg":5861862,"songid":234959050,"songmid":"0043joj80amhto","songname":"赤伶","songorig":"赤伶","songtype":0,"strMediaMid":"0043joj80amhto","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7188018,"albummid":"001ESB3z2yrjmR","albumname":"相思灯","alertid":2,"belongCD":1,"cdIdx":0,"interval":236,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":1513142,"mid":"000pXWEG1Io1it","name":"林维"}],"size128":3780632,"size320":9451294,"size5_1":0,"sizeape":0,"sizeflac":23945025,"sizeogg":4966112,"songid":234635532,"songmid":"0023RQK215WMzh","songname":"相思灯","songorig":"相思灯","songtype":0,"strMediaMid":"0023RQK215WMzh","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7045217,"albummid":"004dXipg4HJXz7","albumname":"阿逗的翻唱合集","alertid":11,"belongCD":1,"cdIdx":0,"interval":285,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":7,"singer":[{"id":1562497,"mid":"001v49if41jSuF","name":"张阿逗"}],"size128":4565986,"size320":11414665,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":6545714,"songid":233611526,"songmid":"0002vlXp4JfmTs","songname":"像鱼","songorig":"像鱼","songtype":0,"strMediaMid":"0002vlXp4JfmTs","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7161298,"albummid":"004eWqrH1UjjNW","albumname":"想和你去冒险","alertid":2,"belongCD":1,"cdIdx":0,"interval":201,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2213625,"mid":"003R5Czw1RjI3l","name":"陈诚"}],"size128":3218489,"size320":8045570,"size5_1":0,"sizeape":0,"sizeflac":45834625,"sizeogg":5020516,"songid":234412382,"songmid":"000lwRFf2AlggK","songname":"想和你去冒险","songorig":"想和你去冒险","songtype":0,"strMediaMid":"000lwRFf2AlggK","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7045095,"albummid":"004WiXhh3ea9w9","albumname":"我的名字","alertid":11,"belongCD":1,"cdIdx":0,"interval":252,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2868522,"mid":"003ViYoy2bJYmk","name":"LBI利比"}],"size128":4033508,"size320":10083467,"size5_1":0,"sizeape":0,"sizeflac":26853860,"sizeogg":5383081,"songid":233611051,"songmid":"002h5Z7D0Y4hqJ","songname":"我的名字","songorig":"我的名字","songtype":0,"strMediaMid":"002h5Z7D0Y4hqJ","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7203573,"albummid":"001GoNGx3E8xHE","albumname":"回合","alertid":2,"belongCD":1,"cdIdx":0,"interval":262,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1518290,"mid":"000C9ZYm4fQCtg","name":"屿汐学长"}],"size128":4201935,"size320":10504551,"size5_1":0,"sizeape":0,"sizeflac":33038846,"sizeogg":6469947,"songid":234727877,"songmid":"000R7tta0ARe26","songname":"回合","songorig":"回合","songtype":0,"strMediaMid":"000R7tta0ARe26","stream":1,"switch":17409795,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7347463,"albummid":"00207VO034eGxA","albumname":"那女孩对我说","alertid":11,"belongCD":3,"cdIdx":0,"interval":280,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1519712,"mid":"00209Inh178YHr","name":"K.D"}],"size128":4490349,"size320":11225552,"size5_1":0,"sizeape":0,"sizeflac":31987763,"sizeogg":6139389,"songid":235879517,"songmid":"002eg5ip3NLnZU","songname":"那女孩对我说","songorig":"那女孩对我说","songtype":0,"strMediaMid":"002eg5ip3NLnZU","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7139921,"albummid":"002qCu4j1lSIBT","albumname":"太晚了","alertid":2,"belongCD":1,"cdIdx":0,"interval":272,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":1309555,"mid":"0026hSlW0iJVB9","name":"老陈酒"}],"size128":4366613,"size320":10915655,"size5_1":0,"sizeape":0,"sizeflac":58034283,"sizeogg":6344133,"songid":234247401,"songmid":"0031ImIc2Auy0h","songname":"太晚了","songorig":"太晚了","songtype":0,"strMediaMid":"0031ImIc2Auy0h","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7138358,"albummid":"004G25rj2dHITf","albumname":"lam翻唱合集","alertid":11,"belongCD":4,"cdIdx":0,"interval":207,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":7,"singer":[{"id":2094259,"mid":"002qsGEU0yTyVJ","name":"林溪LAM"}],"size128":3319631,"size320":8298779,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":4172714,"songid":234237714,"songmid":"0041IKoJ3PK5MH","songname":"遇见","songorig":"遇见","songtype":0,"strMediaMid":"0041IKoJ3PK5MH","stream":1,"switch":77587,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6911676,"albummid":"002hW7FQ0huLX5","albumname":"夏日码头","alertid":2,"belongCD":1,"cdIdx":0,"interval":191,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":43634,"tryend":67124,"trysize":0},"rate":7,"singer":[{"id":1306873,"mid":"0013OHem00vjvG","name":"麓七"}],"size128":3062583,"size320":7656163,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":4283976,"songid":232733126,"songmid":"001vdplq2h2xiZ","songname":"夏日码头","songorig":"夏日码头","songtype":0,"strMediaMid":"002DinQo35EPYa","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6493553,"albummid":"003OvLiI1RK2yA","albumname":"光年之外","alertid":11,"belongCD":1,"cdIdx":0,"interval":157,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":57355,"tryend":85123,"trysize":0},"rate":23,"singer":[{"id":3150147,"mid":"000XGYrQ3Ck5au","name":"超级帅大叔"}],"size128":2518410,"size320":6295716,"size5_1":0,"sizeape":0,"sizeflac":33962607,"sizeogg":3455048,"songid":229279664,"songmid":"001NaL7w1yj0Ej","songname":"光年之外 (Live)","songorig":"光年之外","songtype":0,"strMediaMid":"001NaL7w1yj0Ej","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7146278,"albummid":"003x2hzW1Qqpok","albumname":"打烊的小酒馆","alertid":2,"belongCD":1,"cdIdx":0,"interval":284,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":182662,"mid":"002EFlaZ0bEXdA","name":"于洋"}],"size128":4551779,"size320":11378506,"size5_1":0,"sizeape":0,"sizeflac":29496247,"sizeogg":6578305,"songid":234284760,"songmid":"001Q7Vni4WPg8d","songname":"打烊的小酒馆","songorig":"打烊的小酒馆","songtype":0,"strMediaMid":"001Q7Vni4WPg8d","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7353955,"albummid":"0034FbZi0LKHer","albumname":"爱情错觉","alertid":11,"belongCD":2,"cdIdx":0,"interval":244,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1259689,"mid":"002Sk4r80RBzj6","name":"章伟杰"}],"size128":3914799,"size320":9786708,"size5_1":0,"sizeape":0,"sizeflac":21795679,"sizeogg":4876108,"songid":235887583,"songmid":"003BRQ9R2HO3Nf","songname":"爱情错觉","songorig":"爱情错觉","songtype":0,"strMediaMid":"003BRQ9R2HO3Nf","stream":1,"switch":77587,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7356676,"albummid":"002JMNUB2noTZd","albumname":"不变的情缘","alertid":2,"belongCD":1,"cdIdx":0,"interval":245,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2091885,"mid":"002CNo623C0bEr","name":"丛书"}],"size128":3934449,"size320":9835332,"size5_1":0,"sizeape":0,"sizeflac":52543661,"sizeogg":5740213,"songid":235907212,"songmid":"003AQhlg3mTqLA","songname":"不变的情缘","songorig":"不变的情缘","songtype":0,"strMediaMid":"003AQhlg3mTqLA","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6389684,"albummid":"004YXBve4borr5","albumname":"一修合集","alertid":11,"belongCD":27,"cdIdx":0,"interval":235,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":61112,"tryend":90270,"trysize":0},"rate":7,"singer":[{"id":1508626,"mid":"004BVzep3zNtQE","name":"一修"}],"size128":3766020,"size320":9414738,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":4800025,"songid":229742824,"songmid":"000XE1NK2wKYwO","songname":"追光者 (Live)","songorig":"追光者","songtype":0,"strMediaMid":"000XE1NK2wKYwO","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6886967,"albummid":"003OWvXp3YS5ay","albumname":"雪纺纱","alertid":2,"belongCD":1,"cdIdx":0,"interval":222,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":64277,"tryend":90177,"trysize":0},"rate":23,"singer":[{"id":3239537,"mid":"003503pV2mLp1i","name":"哈尼"}],"size128":3567891,"size320":8919441,"size5_1":0,"sizeape":0,"sizeflac":49743564,"sizeogg":5086408,"songid":232633413,"songmid":"000rAHmO0ahkys","songname":"雪纺纱","songorig":"雪纺纱","songtype":0,"strMediaMid":"000rAHmO0ahkys","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6391389,"albummid":"002enLN339Q9Fr","albumname":"抚刺合集","alertid":11,"belongCD":29,"cdIdx":0,"interval":176,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":33168,"tryend":55665,"trysize":0},"rate":7,"singer":[{"id":1524181,"mid":"002iq6oD0EHnrn","name":"抚刺"}],"size128":2828953,"size320":7072075,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":4068613,"songid":229760095,"songmid":"001ZBTdo1RFyyY","songname":"That Girl (Live)","songorig":"That Girl","songtype":0,"strMediaMid":"001ZBTdo1RFyyY","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":5795427,"albummid":"0041jB8m1honcr","albumname":"雨伶仃","alertid":2,"belongCD":1,"cdIdx":0,"interval":214,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":67243,"tryend":105825,"trysize":0},"rate":23,"singer":[{"id":1513142,"mid":"000pXWEG1Io1it","name":"林维"}],"size128":3428711,"size320":8571490,"size5_1":0,"sizeape":0,"sizeflac":44087759,"sizeogg":4710658,"songid":227065934,"songmid":"001oqKgZ4NBQ2v","songname":"雨伶仃","songorig":"雨伶仃","songtype":0,"strMediaMid":"001oqKgZ4NBQ2v","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6380698,"albummid":"002Oy8lk0BaI28","albumname":"可不可以","alertid":11,"belongCD":27,"cdIdx":0,"interval":239,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":70804,"tryend":101522,"trysize":0},"rate":7,"singer":[{"id":1518290,"mid":"000C9ZYm4fQCtg","name":"屿汐学长"}],"size128":3833723,"size320":9584006,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":5044234,"songid":229668194,"songmid":"001kmHX24GufyA","songname":"可不可以 (Live)","songorig":"可不可以","songtype":0,"strMediaMid":"001kmHX24GufyA","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7237712,"albummid":"002CSAOT3eNNwf","albumname":"好好先生","alertid":2,"belongCD":1,"cdIdx":0,"interval":178,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1289253,"mid":"002ckniF2TNh4f","name":"阿泱"}],"size128":2862380,"size320":7155657,"size5_1":0,"sizeape":0,"sizeflac":40272418,"sizeogg":4091213,"songid":234948786,"songmid":"000cXSxq1QvcF7","songname":"好好先生","songorig":"好好先生","songtype":0,"strMediaMid":"000cXSxq1QvcF7","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7002005,"albummid":"002NU9iC25B1Sz","albumname":"情深深雨蒙蒙","alertid":11,"belongCD":2,"cdIdx":0,"interval":155,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1306873,"mid":"0013OHem00vjvG","name":"麓七"}],"size128":2496680,"size320":6241385,"size5_1":0,"sizeape":0,"sizeflac":30199033,"sizeogg":3325904,"songid":233311298,"songmid":"003X4PJJ35hOCJ","songname":"情深深雨蒙蒙","songorig":"情深深雨蒙蒙","songtype":0,"strMediaMid":"003X4PJJ35hOCJ","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7243903,"albummid":"003qd5Ov05hccy","albumname":"忘了珍惜你","alertid":2,"belongCD":1,"cdIdx":0,"interval":281,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2091885,"mid":"002CNo623C0bEr","name":"丛书"}],"size128":4498694,"size320":11246436,"size5_1":0,"sizeape":0,"sizeflac":31310200,"sizeogg":6936850,"songid":234983604,"songmid":"002A1vx92bsUca","songname":"忘了珍惜你","songorig":"忘了珍惜你","songtype":0,"strMediaMid":"002A1vx92bsUca","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":8623,"albummid":"001ZaCQY2OxVMg","albumname":"空","alertid":11,"belongCD":2,"cdIdx":0,"interval":237,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1149956,"mid":"000JSYDs2JO8Ra","name":"胡洋"}],"size128":3802798,"size320":9506687,"size5_1":0,"sizeape":0,"sizeflac":29286180,"sizeogg":3926719,"songid":230731611,"songmid":"000r4plZ13fblh","songname":"有一种悲伤","songorig":"有一种悲伤","songtype":0,"strMediaMid":"000r4plZ13fblh","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6706396,"albummid":"002z0LLa0s881K","albumname":"爱你三千遍","alertid":2,"belongCD":1,"cdIdx":0,"interval":250,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":59968,"tryend":111895,"trysize":0},"rate":23,"singer":[{"id":1518290,"mid":"000C9ZYm4fQCtg","name":"屿汐学长"}],"size128":4012612,"size320":10031224,"size5_1":0,"sizeape":0,"sizeflac":26159644,"sizeogg":5459465,"songid":231822935,"songmid":"001OfN1M1i3lkN","songname":"爱你三千遍","songorig":"爱你三千遍","songtype":0,"strMediaMid":"001OfN1M1i3lkN","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":4853928,"albummid":"0032nFGq3huiGn","albumname":"年少有为","alertid":11,"belongCD":1,"cdIdx":0,"interval":279,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":86930,"tryend":120117,"trysize":0},"rate":7,"singer":[{"id":2213625,"mid":"003R5Czw1RjI3l","name":"陈诚"}],"size128":4471941,"size320":11179559,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":5871836,"songid":218636951,"songmid":"002TgGIk4IU3N8","songname":"年少有为","songorig":"年少有为","songtype":0,"strMediaMid":"002TgGIk4IU3N8","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7178503,"albummid":"000FPSoo2EBpIE","albumname":"你怎么敢说","alertid":2,"belongCD":1,"cdIdx":0,"interval":234,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3005777,"mid":"0023Cun84T0wxh","name":"朴爱源"}],"size128":3758073,"size320":9394879,"size5_1":0,"sizeape":0,"sizeflac":52001935,"sizeogg":5571863,"songid":234569389,"songmid":"003EYY7b1kUIa5","songname":"你怎么敢说","songorig":"你怎么敢说","songtype":0,"strMediaMid":"003EYY7b1kUIa5","stream":1,"switch":17409795,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7239453,"albummid":"003ATYdZ0aizl1","albumname":"失眠飞行","alertid":11,"belongCD":1,"cdIdx":0,"interval":210,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":7,"singer":[{"id":2639759,"mid":"001ycKHZ2Nk7bu","name":"蕾儿"}],"size128":3362265,"size320":8405361,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":4428355,"songid":234959125,"songmid":"003d2jfe1uqlJx","songname":"失眠飞行","songorig":"失眠飞行","songtype":0,"strMediaMid":"003d2jfe1uqlJx","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7254225,"albummid":"003bykPX0XRdvM","albumname":"全都没差","alertid":2,"belongCD":1,"cdIdx":0,"interval":252,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":1259689,"mid":"002Sk4r80RBzj6","name":"章伟杰"}],"size128":4033086,"size320":10082418,"size5_1":0,"sizeape":0,"sizeflac":51197483,"sizeogg":6028624,"songid":235043491,"songmid":"000CAX9N3dmaio","songname":"全都没差","songorig":"全都没差","songtype":0,"strMediaMid":"000CAX9N3dmaio","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6393098,"albummid":"003xnRPR1gPQqQ","albumname":"段炼合集","alertid":11,"belongCD":2,"cdIdx":0,"interval":232,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":91841,"mid":"004cL37y1UrIQS","name":"段炼"}],"size128":3713343,"size320":9283067,"size5_1":0,"sizeape":0,"sizeflac":24118497,"sizeogg":5124779,"songid":233311212,"songmid":"004R3UGP3MD9kQ","songname":"世本常态","songorig":"世本常态","songtype":0,"strMediaMid":"004R3UGP3MD9kQ","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7264617,"albummid":"0006vb6E2RzcHW","albumname":"末车","alertid":2,"belongCD":1,"cdIdx":0,"interval":221,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3150147,"mid":"000XGYrQ3Ck5au","name":"超级帅大叔"}],"size128":3538636,"size320":8846300,"size5_1":0,"sizeape":0,"sizeflac":23078296,"sizeogg":4921032,"songid":235145794,"songmid":"002I84Hb1v9WXz","songname":"末车","songorig":"末车","songtype":0,"strMediaMid":"002I84Hb1v9WXz","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6688616,"albummid":"003Ywj8N0mPi5Y","albumname":"青城山下白素贞","alertid":11,"belongCD":1,"cdIdx":0,"interval":115,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":2116479,"mid":"000021ZO1APZRL","name":"乐静"}],"size128":1852609,"size320":4631201,"size5_1":0,"sizeape":0,"sizeflac":10188267,"sizeogg":2228679,"songid":231719436,"songmid":"002VFfGK2LUUST","songname":"青城山下白素贞","songorig":"青城山下白素贞","songtype":0,"strMediaMid":"002VFfGK2LUUST","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7262180,"albummid":"001iUTfx0ItC6v","albumname":"爱太多","alertid":2,"belongCD":1,"cdIdx":0,"interval":226,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3392738,"mid":"001rrNVs1ww7vy","name":"予风"}],"size128":3619718,"size320":9049008,"size5_1":0,"sizeape":0,"sizeflac":25398022,"sizeogg":5377471,"songid":235107133,"songmid":"002GizGz226QwA","songname":"爱太多","songorig":"爱太多","songtype":0,"strMediaMid":"002GizGz226QwA","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6605762,"albummid":"004Y9kFW0g6mrP","albumname":"只是太爱你","alertid":11,"belongCD":1,"cdIdx":0,"interval":250,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":70347,"tryend":102659,"trysize":0},"rate":23,"singer":[{"id":3005777,"mid":"0023Cun84T0wxh","name":"朴爱源"}],"size128":4001325,"size320":10003010,"size5_1":0,"sizeape":0,"sizeflac":21605575,"sizeogg":5096181,"songid":231303800,"songmid":"0027eDrL1H4vqR","songname":"只是太爱你","songorig":"只是太爱你","songtype":0,"strMediaMid":"0027eDrL1H4vqR","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7315197,"albummid":"0030tIID4Khuem","albumname":"淹没","alertid":2,"belongCD":1,"cdIdx":0,"interval":292,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3411777,"mid":"004Els9l2gEiOF","name":"沈梦婷"}],"size128":4676317,"size320":11690508,"size5_1":0,"sizeape":0,"sizeflac":33237297,"sizeogg":6812567,"songid":235770253,"songmid":"003AL2k40MsIvc","songname":"淹没","songorig":"淹没","songtype":0,"strMediaMid":"003AL2k40MsIvc","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6332327,"albummid":"001ZGqLX1bMO4m","albumname":"下坠Falling","alertid":11,"belongCD":1,"cdIdx":0,"interval":188,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":1519712,"mid":"00209Inh178YHr","name":"K.D"}],"size128":3009072,"size320":7522260,"size5_1":0,"sizeape":0,"sizeflac":18124057,"sizeogg":4152828,"songid":229279649,"songmid":"0018adXc3f2TPs","songname":"下坠Falling (Live)","songorig":"下坠Falling","songtype":0,"strMediaMid":"0018adXc3f2TPs","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7315214,"albummid":"002SDN470LLHRy","albumname":"我们之间有时差","alertid":2,"belongCD":1,"cdIdx":0,"interval":236,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3415702,"mid":"002kmYFR30uinR","name":"李珺"}],"size128":3780648,"size320":9451220,"size5_1":0,"sizeape":0,"sizeflac":23830518,"sizeogg":5357496,"songid":235770339,"songmid":"000CqdJ54WKVwP","songname":"我们之间有时差","songorig":"我们之间有时差","songtype":0,"strMediaMid":"000CqdJ54WKVwP","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6393098,"albummid":"003xnRPR1gPQqQ","albumname":"段炼合集","alertid":11,"belongCD":1,"cdIdx":0,"interval":280,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":23,"singer":[{"id":91841,"mid":"004cL37y1UrIQS","name":"段炼"}],"size128":4493679,"size320":11233898,"size5_1":0,"sizeape":0,"sizeflac":24299878,"sizeogg":5838159,"songid":233311211,"songmid":"003oNdun24xfj7","songname":"四块五","songorig":"四块五","songtype":0,"strMediaMid":"003oNdun24xfj7","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7330949,"albummid":"001SqClC1YrnBN","albumname":"致命弱点","alertid":2,"belongCD":1,"cdIdx":0,"interval":219,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":2104774,"mid":"004TZHVw24uSq6","name":"JACK方景杰"}],"size128":3520676,"size320":8801062,"size5_1":0,"sizeape":0,"sizeflac":23157806,"sizeogg":5027432,"songid":235847527,"songmid":"0020vlbC4BOyBD","songname":"致命弱点","songorig":"致命弱点","songtype":0,"strMediaMid":"0020vlbC4BOyBD","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6495546,"albummid":"004OOkun31WEra","albumname":"关于孤独我想说的话","alertid":11,"belongCD":2,"cdIdx":0,"interval":290,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":80070,"tryend":111880,"trysize":0},"rate":23,"singer":[{"id":2589003,"mid":"0023LPE848FgBO","name":"曹阳"}],"size128":4641234,"size320":11602378,"size5_1":0,"sizeape":0,"sizeflac":31186064,"sizeogg":6734841,"songid":230501090,"songmid":"003GWQml1eSO2i","songname":"关于孤独我想说的话 (Live)","songorig":"关于孤独我想说的话","songtype":0,"strMediaMid":"003GWQml1eSO2i","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7324863,"albummid":"003HdIe63jdwUM","albumname":"影","alertid":2,"belongCD":1,"cdIdx":0,"interval":301,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":91841,"mid":"004cL37y1UrIQS","name":"段炼"}],"size128":4833046,"size320":12082339,"size5_1":0,"sizeape":0,"sizeflac":36254436,"sizeogg":7440289,"songid":235837799,"songmid":"001bJXlA2cERKL","songname":"影","songorig":"影","songtype":0,"strMediaMid":"001bJXlA2cERKL","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":6380643,"albummid":"004R0GN1317VOc","albumname":"章伟杰合集","alertid":11,"belongCD":16,"cdIdx":0,"interval":209,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":48768,"tryend":78819,"trysize":0},"rate":23,"singer":[{"id":1259689,"mid":"002Sk4r80RBzj6","name":"章伟杰"}],"size128":3346803,"size320":8366702,"size5_1":0,"sizeape":0,"sizeflac":23143212,"sizeogg":4658890,"songid":229668082,"songmid":"001I6zQm4SYeA2","songname":"情火 (Live)","songorig":"情火","songtype":0,"strMediaMid":"001I6zQm4SYeA2","stream":1,"switch":81683,"type":0,"vid":""},"in_count":"0","old_count":"0"},{"Franking_value":"0","cur_count":"0","data":{"albumdesc":"","albumid":7321588,"albummid":"0045ghEh3jXjbC","albumname":"自导自演","alertid":2,"belongCD":1,"cdIdx":0,"interval":231,"isonly":1,"label":"0","msgid":14,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":1,"payinfo":1,"payplay":0,"paytrackmouth":1,"paytrackprice":200,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":960887},"rate":23,"singer":[{"id":3414400,"mid":"004JInwt3y52nm","name":"Wifi"}],"size128":3705826,"size320":9264265,"size5_1":0,"sizeape":0,"sizeflac":23451623,"sizeogg":5293312,"songid":235809686,"songmid":"002m53IY3d6FWP","songname":"自导自演","songorig":"自导自演","songtype":0,"strMediaMid":"002m53IY3d6FWP","stream":1,"switch":17413891,"type":0,"vid":""},"in_count":"0","old_count":"0"}]
-     * topinfo : {"ListName":"巅峰榜·K歌金曲","MacDetailPicUrl":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png","MacListPicUrl":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34152.png","UpdateType":"0","albuminfo":"","headPic_v12":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34154.png","info":"集结当下全民K歌热门的翻唱歌曲，为你带来最新鲜的K歌好声音。  更新频率：每周四  统计范围：全民K歌用户翻唱作品  统计数量：50首  统计算法：全民K歌榜单上兼具人气与动听的优质作品，及全民K歌小编挖掘的好声音均有机会进入推荐。","listennum":1940000,"pic":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png","picDetail":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34150.png","pic_album":"http://imgcache.qq.com/music/photo_new/T002R300x300M000001ihXVR21xtpR.jpg","pic_h5":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34143.png","pic_v11":"http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png","pic_v12":"http://y.gtimg.cn/music/photo_new/T003R300x300M000003kvVoF2FDPMv.jpg","topID":"36","type":"0"}
-     * total_song_num : 50
-     * update_time : 2019-08-15
+     * code : 200
+     * relatedVideos : null
+     * playlist : {"subscribers":[{"defaultAvatar":false,"province":110000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/QEZtYe1MAnr3_wfsi7mGDg==/19022650672194575.jpg","accountStatus":0,"gender":1,"city":110101,"birthday":873561600000,"userId":418897805,"userType":0,"nickname":"爱德花花","signature":"","description":"","detailDescription":"","avatarImgId":19022650672194576,"backgroundImgId":109951163315035400,"backgroundUrl":"http://p1.music.126.net/_qXign6BLnwzUZ6SUGAe_w==/109951163315035393.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163315035393","avatarImgIdStr":"19022650672194575","avatarImgId_str":"19022650672194575"},{"defaultAvatar":false,"province":310000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/JQSSqCOwdZjQMzXWgWb-cg==/19044640904955332.jpg","accountStatus":0,"gender":1,"city":310101,"birthday":-2209017600000,"userId":330649962,"userType":0,"nickname":"V永恒的星星","signature":"","description":"","detailDescription":"","avatarImgId":19044640904955332,"backgroundImgId":109951163692871800,"backgroundUrl":"http://p1.music.126.net/5eX8u-m_irIWCmpg9mMYWw==/109951163692871805.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163692871805","avatarImgIdStr":"19044640904955332","avatarImgId_str":"19044640904955332"},{"defaultAvatar":false,"province":330000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/206Jgbx9dFlZUZ0wU3htOQ==/18520173860275265.jpg","accountStatus":0,"gender":2,"city":330400,"birthday":-2209017600000,"userId":567805014,"userType":0,"nickname":"echo喵喵1103","signature":"","description":"","detailDescription":"","avatarImgId":18520173860275264,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"18520173860275265","avatarImgId_str":"18520173860275265"},{"defaultAvatar":false,"province":510000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/0f1JdIqJApnfUf_rJETZcw==/19094118928137042.jpg","accountStatus":0,"gender":2,"city":510100,"birthday":-2209017600000,"userId":496628695,"userType":0,"nickname":"PATIENT-a","signature":"","description":"","detailDescription":"","avatarImgId":19094118928137040,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"19094118928137042","avatarImgId_str":"19094118928137042"},{"defaultAvatar":false,"province":430000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/3huZCbUFVby4FuE1DOpGRw==/18519074348566833.jpg","accountStatus":0,"gender":1,"city":430500,"birthday":892224000000,"userId":482623115,"userType":0,"nickname":"天道酬勤_自强不息","signature":"","description":"","detailDescription":"","avatarImgId":18519074348566830,"backgroundImgId":109951163894439230,"backgroundUrl":"http://p1.music.126.net/SRtbI5jcZE8X_E4Lb_8Tog==/109951163894439230.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":11,"remarkName":null,"backgroundImgIdStr":"109951163894439230","avatarImgIdStr":"18519074348566833","avatarImgId_str":"18519074348566833"},{"defaultAvatar":false,"province":440000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/N8_BE2o7WeS5CZB-lZxX3A==/109951164214001744.jpg","accountStatus":0,"gender":2,"city":441900,"birthday":-2209017600000,"userId":1690321428,"userType":0,"nickname":"幽宮alilon","signature":"特攝真好看，朮曲真好聽","description":"","detailDescription":"","avatarImgId":109951164214001740,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"109951164214001744","avatarImgId_str":"109951164214001744"},{"defaultAvatar":false,"province":440000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/Q3Qx4JTeM9FQvQUvnFMv_w==/109951164044880253.jpg","accountStatus":0,"gender":1,"city":445300,"birthday":-2209017600000,"userId":545605569,"userType":0,"nickname":"ReuSam","signature":"","description":"","detailDescription":"","avatarImgId":109951164044880260,"backgroundImgId":109951162868126480,"backgroundUrl":"http://p1.music.126.net/_f8R60U9mZ42sSNvdPn2sQ==/109951162868126486.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868126486","avatarImgIdStr":"109951164044880253","avatarImgId_str":"109951164044880253"},{"defaultAvatar":false,"province":330000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/hGvBeVj0xXhdiPSn1U7nfQ==/3252355410657712.jpg","accountStatus":0,"gender":1,"city":330100,"birthday":-2209017600000,"userId":320556913,"userType":0,"nickname":"计划与无力","signature":"","description":"","detailDescription":"","avatarImgId":3252355410657712,"backgroundImgId":2002210674180200,"backgroundUrl":"http://p1.music.126.net/45Nu4EqvFqK_kQj6BkPwcw==/2002210674180200.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"2002210674180200","avatarImgIdStr":"3252355410657712"}],"subscribed":false,"creator":{"defaultAvatar":true,"province":110000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg","accountStatus":0,"gender":2,"city":110101,"birthday":733248000000,"userId":126187007,"userType":200,"nickname":"用户126187007","signature":"生，刻着希望；死，负着流浪。","description":"","detailDescription":"","avatarImgId":18686200114669624,"backgroundImgId":109951163902416270,"backgroundUrl":"http://p1.music.126.net/Jt4PRxT765cj3F94Nznwcg==/109951163902416278.jpg","authority":0,"mutual":false,"expertTags":["欧美","民谣","爵士"],"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163902416278","avatarImgIdStr":"18686200114669622","avatarImgId_str":"18686200114669622"},"tracks":[{"name":"Childhood Memories","id":5027855,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"","fee":0,"v":7,"crbt":null,"cf":"","al":{"id":499475,"name":"Once Upon a Time In America (Original Motion Picture Soundtrack)","picUrl":"http://p2.music.126.net/w9QqiYJ3A8s0OweHMGnq0Q==/1682252790510607.jpg","tns":["美国往事"],"pic":1682252790510607},"dt":201508,"h":{"br":320000,"fid":0,"size":8090730,"vd":1.34884},"m":{"br":160000,"fid":0,"size":4059515,"vd":1.8895},"l":{"br":96000,"fid":0,"size":2447028,"vd":1.77948},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":813859200007},{"name":"Il Buono il Brutto il Cattivo (Titoli)","id":5025749,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"600902000009006547","fee":8,"v":11,"crbt":null,"cf":"","al":{"id":499357,"name":"The Good, the Bad and the Ugly","picUrl":"http://p2.music.126.net/6eMG01jj6Yxd_OskjyVqeg==/6632254139436637.jpg","tns":["黄金三镖客"],"pic":6632254139436637},"dt":164000,"h":{"br":320000,"fid":0,"size":6592483,"vd":-2},"m":{"br":192000,"fid":0,"size":3955578,"vd":0},"l":{"br":128000,"fid":0,"size":2637126,"vd":833},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":1084809600007,"tns":["黄金三镖客(主题)"]},{"name":"Exodus (LP Version)","id":21847010,"pst":0,"t":0,"ar":[{"id":78804,"name":"The Lively Ones","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"600902000000348023","fee":8,"v":6,"crbt":null,"cf":"","al":{"id":2008665,"name":"Hang Five! The Best Of The Lively Ones","picUrl":"http://p1.music.126.net/VV01nwKqwFBzBPTcvDhlTQ==/6647647302111346.jpg","tns":[],"pic":6647647302111346},"dt":136908,"h":{"br":320000,"fid":0,"size":5519253,"vd":0.0467799},"m":{"br":160000,"fid":0,"size":2783711,"vd":-2.65076E-4},"l":{"br":96000,"fid":0,"size":1689076,"vd":-2.65076E-4},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1153670400000},{"name":"Per Qualche Dollaro In Piu","id":5026101,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":70,"st":0,"rt":"600902000009007839","fee":0,"v":5,"crbt":null,"cf":"","al":{"id":499376,"name":"Per qualche dollaro in più [Expanded Edition]","picUrl":"http://p1.music.126.net/Md17l7O5y9MhAEJM2Ndreg==/1824089790493151.jpg","tns":[],"pic":1824089790493151},"dt":230000,"h":{"br":320000,"fid":0,"size":9244101,"vd":-1.71},"m":{"br":160000,"fid":0,"size":4642894,"vd":-1.3},"l":{"br":96000,"fid":0,"size":2801992,"vd":-1.29},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":1049126400007},{"name":"For A Few Dollars More","id":1299800,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":11,"crbt":null,"cf":"","al":{"id":133986,"name":"The Legendary Italian Westerns","picUrl":"http://p2.music.126.net/TGlV5nQWbTNOShDKEsZs_g==/936783906911550.jpg","tns":[],"pic":936783906911550},"dt":168000,"h":{"br":320000,"fid":0,"size":6789310,"vd":2.75642},"m":{"br":160000,"fid":0,"size":3411678,"vd":3.07418},"l":{"br":96000,"fid":0,"size":2060207,"vd":2.98551},"a":null,"cd":"1","no":23,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1277827200007},{"name":"Faidherbe square (instrumental)","id":29789260,"pst":0,"t":0,"ar":[{"id":783257,"name":"ProleteR","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":null,"fee":0,"v":5,"crbt":null,"cf":"","al":{"id":3079697,"name":"Curses from past times","picUrl":"http://p2.music.126.net/6CZcWmIQZrgOLY3zxzJLew==/6622358535351286.jpg","tns":[],"pic":6622358535351286},"dt":209972,"h":{"br":320000,"fid":0,"size":8399978,"vd":0},"m":{"br":192000,"fid":0,"size":5040004,"vd":0},"l":{"br":128000,"fid":0,"size":3360017,"vd":0},"a":null,"cd":"2","no":5,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":1321718400007},{"name":"Theme from Mission: Impossible","id":5057039,"pst":0,"t":0,"ar":[{"id":218966,"name":"Larry Mullen Jr.","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"","fee":8,"v":36,"crbt":null,"cf":"","al":{"id":501528,"name":"Mission: Impossible (Music From And Inspired By The Motion Picture)","picUrl":"http://p2.music.126.net/cWZYoFhdd7osAzjR7l_uVw==/1722934720737061.jpg","tns":["碟中谍 / 不可能的任务"],"pic":1722934720737061},"dt":206000,"h":{"br":320000,"fid":0,"size":8249697,"vd":-12000},"m":{"br":192000,"fid":0,"size":4949909,"vd":-9400},"l":{"br":128000,"fid":0,"size":3300015,"vd":-8400},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":832003200007},{"name":"I Wanna Be Your Dog [Soundtrack Version]","id":5055329,"pst":0,"t":0,"ar":[{"id":102041,"name":"The Stooges","tns":[],"alias":[]}],"alia":[],"pop":60,"st":0,"rt":"600902000002249910","fee":8,"v":118,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":185182,"h":{"br":320000,"fid":0,"size":7408370,"vd":-34300},"m":{"br":192000,"fid":0,"size":4445040,"vd":-32100},"l":{"br":128000,"fid":0,"size":2963374,"vd":-30700},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Spooky","id":5055324,"pst":0,"t":0,"ar":[{"id":53268,"name":"Dusty Springfield","tns":[],"alias":[]}],"alia":[],"pop":75,"st":0,"rt":"","fee":8,"v":110,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":155167,"h":{"br":320000,"fid":0,"size":6207782,"vd":-2},"m":{"br":192000,"fid":0,"size":3724687,"vd":-1},"l":{"br":128000,"fid":0,"size":2483139,"vd":-1},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Hold Tight","id":5046202,"pst":0,"t":0,"ar":[{"id":55263,"name":"Dave Dee","tns":[],"alias":[]}],"alia":[],"pop":75,"st":0,"rt":"","fee":0,"v":29,"crbt":null,"cf":"","al":{"id":500921,"name":"Death Proof","picUrl":"http://p1.music.126.net/XUrTz2H8TSp6P7STs6uWuA==/1733929837015594.jpg","tns":[],"pic":1733929837015594},"dt":165000,"h":{"br":320000,"fid":0,"size":6649321,"vd":-0.95},"m":{"br":160000,"fid":0,"size":3341175,"vd":-0.51},"l":{"br":96000,"fid":0,"size":2017499,"vd":-0.57},"a":null,"cd":"1","no":11,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":1174924800007},{"name":"Surf Rider","id":5057829,"pst":0,"t":0,"ar":[{"id":78804,"name":"The Lively Ones","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"600902000000581662","fee":8,"v":35,"crbt":"2eb95a5d65d19ba76a757c86e7379c2f","cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":198740,"h":{"br":320000,"fid":0,"size":7984060,"vd":-1.83},"m":{"br":160000,"fid":0,"size":4012926,"vd":-1.41},"l":{"br":96000,"fid":0,"size":2424054,"vd":-1.45},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007},{"name":"Jungle Boogie","id":5057817,"pst":0,"t":0,"ar":[{"id":95336,"name":"Kool & the Gang","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":35,"crbt":null,"cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":183000,"h":{"br":320000,"fid":0,"size":7394744,"vd":-1.94},"m":{"br":160000,"fid":0,"size":3718271,"vd":-1.52},"l":{"br":96000,"fid":0,"size":2247264,"vd":-1.59},"a":null,"cd":"1","no":3,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007},{"name":"You Never Can Tell","id":5221779,"pst":0,"t":0,"ar":[{"id":29985,"name":"Chuck Berry","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"600902000005210054","fee":8,"v":142,"crbt":null,"cf":"","al":{"id":509820,"name":"Greatest Hits Of The Millennium 60's Vol. 1","picUrl":"http://p2.music.126.net/FC1dpllAJ96G8jyaUGVyfA==/777354720881671.jpg","tns":[],"pic":777354720881671},"dt":161000,"h":{"br":320000,"fid":0,"size":6477365,"vd":268},"m":{"br":192000,"fid":0,"size":3886436,"vd":1724},"l":{"br":128000,"fid":0,"size":2590972,"vd":3648},"a":null,"cd":"1","no":51,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":915120000007},{"name":"Don't Let Me Be Misunderstood","id":5051246,"pst":0,"t":0,"ar":[{"id":75084,"name":"Santa Esmeralda","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":45,"crbt":null,"cf":"","al":{"id":501192,"name":"Kill Bill, Vol. 1 (Original Soundtrack)","picUrl":"http://p2.music.126.net/FB5yaHxUrJUjQbauBZW3VA==/18276082277462369.jpg","tns":[],"pic_str":"18276082277462369","pic":18276082277462370},"dt":628000,"h":{"br":320000,"fid":0,"size":25172858,"vd":-0.66},"m":{"br":160000,"fid":0,"size":12600647,"vd":-0.27},"l":{"br":96000,"fid":0,"size":7571344,"vd":-0.28},"a":null,"cd":"1","no":10,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1064246400007},{"name":"Misirlou","id":5056602,"pst":0,"t":0,"ar":[{"id":53488,"name":"Dick Dale","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"","fee":8,"v":31,"crbt":null,"cf":"","al":{"id":501498,"name":"The Tarantino Connection (Soundtrack Anthology)","picUrl":"http://p2.music.126.net/AIZt0VDCV3wOxq_YzGTopg==/639915767411816.jpg","tns":[],"pic":639915767411816},"dt":134000,"h":{"br":320000,"fid":0,"size":5437719,"vd":0.0737394},"m":{"br":160000,"fid":0,"size":2738226,"vd":0.516876},"l":{"br":96000,"fid":0,"size":1658011,"vd":0.792115},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":405025,"mv":0,"publishTime":855590400007},{"name":"The Ecstasy Of Gold","id":26569499,"pst":0,"t":0,"ar":[{"id":350330,"name":"Chill Loungers","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"","fee":0,"v":135,"crbt":null,"cf":"","al":{"id":2524948,"name":"Nostalgie Café 3","picUrl":"http://p2.music.126.net/SIliWyfTMI5jAIYDrwTG4A==/4423335278553453.jpg","tns":[],"pic":4423335278553453},"dt":220656,"h":{"br":320000,"fid":0,"size":8854148,"vd":-2.55},"m":{"br":160000,"fid":0,"size":4444157,"vd":-2.13},"l":{"br":96000,"fid":0,"size":2680161,"vd":-2.14},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":1360684800007},{"name":"Trinity: Con la Stella Di Vicesceriffo","id":1371512,"pst":0,"t":0,"ar":[{"id":33713,"name":"Franco Micalizzi","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":0,"v":3,"crbt":null,"cf":"","al":{"id":140908,"name":"Lo Chiamavano Trinita (They Call Me Trinity)","picUrl":"http://p2.music.126.net/vxfwFeUU5muHWJqk58m2ug==/830131279020969.jpg","tns":[],"pic":830131279020969},"dt":119000,"h":{"br":320000,"fid":0,"size":4833463,"vd":1.90071},"m":{"br":160000,"fid":0,"size":2435848,"vd":2.39627},"l":{"br":96000,"fid":0,"size":1477049,"vd":2.28245},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":971712000007},{"name":"The Phantom Of the Opera","id":16371671,"pst":0,"t":0,"ar":[{"id":27622,"name":"Andrew Lloyd Webber","tns":[],"alias":[]}],"alia":["电影《剧院魅影》主题曲"],"pop":95,"st":0,"rt":"","fee":8,"v":29,"crbt":null,"cf":"","al":{"id":1510068,"name":"The Phantom Of The Opera (Original Motion Picture Soundtrack)","picUrl":"http://p1.music.126.net/Om5EMHiksKZ6kF02N6RXTQ==/674000627833950.jpg","tns":["歌剧魅影 2004电影版原声带"],"pic":674000627833950},"dt":216163,"h":{"br":320000,"fid":0,"size":8647619,"vd":0},"m":{"br":192000,"fid":0,"size":5188589,"vd":0},"l":{"br":128000,"fid":0,"size":3459074,"vd":1},"a":null,"cd":"1","no":5,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1101052800007},{"name":"The Diva Dance","id":1306046,"pst":0,"t":0,"ar":[{"id":32689,"name":"Eric Serra","tns":[],"alias":[]}],"alia":["电影《第五元素》最热配乐"],"pop":100,"st":0,"rt":"","fee":0,"v":7,"crbt":null,"cf":"","al":{"id":134426,"name":"The Fifth Element O.S.T","picUrl":"http://p1.music.126.net/SoBZWTs_juCkKJmDNhOQ0g==/914793674359243.jpg","tns":["第五元素"],"pic":914793674359243},"dt":95000,"h":{"br":320000,"fid":0,"size":3806763,"vd":-2},"m":{"br":192000,"fid":0,"size":2284138,"vd":-2},"l":{"br":128000,"fid":0,"size":1522825,"vd":-2},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":873475200007},{"name":"Concerning Hobbits","id":1428235,"pst":0,"t":0,"ar":[{"id":34520,"name":"Howard Shore","tns":[],"alias":[]}],"alia":["电影《指环王1》配乐"],"pop":95,"st":0,"rt":"","fee":8,"v":52,"crbt":null,"cf":"","al":{"id":146240,"name":"The Lord Of The Rings: The Fellowship Of The Ring (Original Motion Picture Soundtrack)","picUrl":"http://p2.music.126.net/FfTEP4G-02MpL3Tq2U2wnQ==/109951163596318781.jpg","tns":["指环王:护戒使者 电影原声；指环王1：魔戒再现 电影原声"],"pic_str":"109951163596318781","pic":109951163596318780},"dt":175072,"h":{"br":320000,"fid":0,"size":7003995,"vd":59506},"m":{"br":192000,"fid":0,"size":4202414,"vd":61420},"l":{"br":128000,"fid":0,"size":2801624,"vd":63890},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1006128000000},{"name":"El Condor Pasa (If I Could)","id":29784634,"pst":0,"t":0,"ar":[{"id":185017,"name":"Simon & Garfunkel","tns":[],"alias":[]}],"alia":["电影《走出荒野》最热插曲"],"pop":80,"st":0,"rt":null,"fee":8,"v":170,"crbt":null,"cf":"","al":{"id":3077427,"name":"Wild - Original Motion Picture Soundtrack","picUrl":"http://p1.music.126.net/i4Xo9PDBR3-nnHFhwXnQbg==/109951163442646034.jpg","tns":[],"pic_str":"109951163442646034","pic":109951163442646030},"dt":188133,"h":{"br":320000,"fid":0,"size":7525399,"vd":3679},"m":{"br":192000,"fid":0,"size":4515257,"vd":6795},"l":{"br":128000,"fid":0,"size":3010186,"vd":7152},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7001,"mv":0,"publishTime":1415577600000},{"name":"Come and Get Your Love","id":28864241,"pst":0,"t":0,"ar":[{"id":73866,"name":"Redbone","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":null,"fee":8,"v":11,"crbt":null,"cf":"","al":{"id":2918034,"name":"Guardians of the Galaxy (Deluxe)","picUrl":"http://p2.music.126.net/5i5SKVW_F1ub2BgDeyjI5A==/3225967119049341.jpg","tns":[],"pic":3225967119049341},"dt":208000,"h":{"br":320000,"fid":0,"size":8331138,"vd":-20200},"m":{"br":192000,"fid":0,"size":4998749,"vd":-18000},"l":{"br":128000,"fid":0,"size":3332555,"vd":-17100},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1406563200007},{"name":"Zorba The Greek","id":5055335,"pst":0,"t":0,"ar":[{"id":217877,"name":"John Murphy/David Hughes","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"","fee":8,"v":108,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":176378,"h":{"br":320000,"fid":0,"size":7056240,"vd":0},"m":{"br":192000,"fid":0,"size":4233761,"vd":0},"l":{"br":128000,"fid":0,"size":2822522,"vd":0},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Romance for Violoncello and Orchestra","id":34468339,"pst":0,"t":0,"ar":[{"id":35351,"name":"John Williams","tns":[],"alias":[]},{"id":35047,"name":"Itzhak Perlman","tns":[],"alias":[]}],"alia":[],"pop":35,"st":0,"rt":null,"fee":8,"v":193,"crbt":null,"cf":"","al":{"id":3286066,"name":"Sing Me to Sleep","picUrl":"http://p1.music.126.net/jgsqth67HsJQa6IJHuqwCQ==/109951163468193575.jpg","tns":[],"pic_str":"109951163468193575","pic":109951163468193570},"dt":573074,"h":{"br":320000,"fid":0,"size":22923015,"vd":33707},"m":{"br":192000,"fid":0,"size":13753826,"vd":34484},"l":{"br":128000,"fid":0,"size":9169232,"vd":36729},"a":null,"cd":"1","no":47,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7001,"mv":0,"publishTime":1441324800000},{"name":"Main Title (The Silence Of The Lambs)","id":18148109,"pst":0,"t":0,"ar":[{"id":271321,"name":"Munich Symphony","tns":[],"alias":[]}],"alia":[],"pop":40,"st":0,"rt":"","fee":8,"v":9,"crbt":null,"cf":"","al":{"id":1667287,"name":"The Silence Of The Lambs","picUrl":"http://p2.music.126.net/KTxpPqlsgNNAmn2WebdkAQ==/2560762581124560.jpg","tns":[],"pic":2560762581124560},"dt":308088,"h":{"br":320000,"fid":0,"size":12340954,"vd":1.74118},"m":{"br":160000,"fid":0,"size":6184939,"vd":2.16466},"l":{"br":96000,"fid":0,"size":3722114,"vd":2.20283},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1247500800000},{"name":"I Found a Reason","id":2426789,"pst":0,"t":0,"ar":[{"id":53281,"name":"Dario Marianelli","tns":[],"alias":[]}],"alia":[],"pop":60,"st":0,"rt":"","fee":8,"v":15,"crbt":null,"cf":"","al":{"id":244682,"name":"V for Vendetta","picUrl":"http://p2.music.126.net/s5tlU6KSJLU41KevNcaExA==/109951164018910822.jpg","tns":[],"pic_str":"109951164018910822","pic":109951164018910820},"dt":122491,"h":{"br":320000,"fid":0,"size":4901660,"vd":100000},"m":{"br":192000,"fid":0,"size":2941013,"vd":100000},"l":{"br":128000,"fid":0,"size":1960690,"vd":100000},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":1142870400007},{"name":"The Marriage Of Figaro \"Duetto-Sul 'Aria\"","id":2007641,"pst":0,"t":0,"ar":[{"id":44287,"name":"Thomas Newman","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":24,"crbt":null,"cf":"","al":{"id":202277,"name":"The Shawshank Redemption","picUrl":"http://p2.music.126.net/CHYEOf6_jXOpuamsZKrjZw==/921390744128083.jpg","tns":[],"pic":921390744128083},"dt":213893,"h":{"br":320000,"fid":0,"size":8558803,"vd":7.05088},"m":{"br":160000,"fid":0,"size":4279424,"vd":7.42846},"l":{"br":96000,"fid":0,"size":2567672,"vd":7.6565},"a":null,"cd":"1","no":16,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":765129600007},{"name":"Freedom","id":26145413,"pst":0,"t":0,"ar":[{"id":27661,"name":"Anthony Hamilton","tns":[],"alias":[]},{"id":13469625,"name":"Elayna Boynton","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"600902000008966343","fee":8,"v":163,"crbt":null,"cf":"","al":{"id":2397062,"name":"Django Unchained","picUrl":"http://p2.music.126.net/KrdYRIfb9ndkR36nrnTkxg==/18643319162556923.jpg","tns":[],"pic_str":"18643319162556923","pic":18643319162556924},"dt":236653,"h":{"br":320000,"fid":0,"size":9468909,"vd":-7600},"m":{"br":192000,"fid":0,"size":5681363,"vd":-5000},"l":{"br":128000,"fid":0,"size":3787590,"vd":-3300},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1355760000007},{"name":"Shape Of My Heart","id":1934649,"pst":0,"t":0,"ar":[{"id":42938,"name":"Sting","tns":[],"alias":[]}],"alia":["电影《这个杀手不太冷》片尾曲"],"pop":100,"st":0,"rt":"600902000005355274","fee":8,"v":21,"crbt":null,"cf":"","al":{"id":195040,"name":"Fifteen Healing Bites","picUrl":"http://p2.music.126.net/2XzaHeETVeYYaGEIxSq6lQ==/803742999956794.jpg","tns":[],"pic":803742999956794},"dt":280000,"h":{"br":320000,"fid":0,"size":11226565,"vd":683},"m":{"br":192000,"fid":0,"size":6736012,"vd":3485},"l":{"br":128000,"fid":0,"size":4490735,"vd":3180},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1325347200007},{"name":"You Belong To Me","id":5057793,"pst":0,"t":0,"ar":[{"id":29323,"name":"Bob Dylan","tns":[],"alias":[]}],"alia":["电影《天生杀人狂》 插曲"],"pop":100,"st":0,"rt":"","fee":8,"v":142,"crbt":null,"cf":"","al":{"id":501570,"name":"Natural Born Killers [O.S.T]","picUrl":"http://p2.music.126.net/FarL1rDvLwpBUrxxL3rvfw==/670702092988257.jpg","tns":["天生杀人狂 电影原声"],"pic":670702092988257},"dt":189887,"h":{"br":320000,"fid":0,"size":7597497,"vd":1236},"m":{"br":192000,"fid":0,"size":4558515,"vd":4209},"l":{"br":128000,"fid":0,"size":3039025,"vd":4225},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780969600000},{"name":"Little Green Bag","id":26686628,"pst":0,"t":0,"ar":[{"id":34025,"name":"George Baker Selection","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":144,"crbt":null,"cf":"","al":{"id":2545614,"name":"Reservoir Dogs","picUrl":"http://p1.music.126.net/DJZiZnJG3luL9x3ZVubboQ==/5714161929634376.jpg","tns":["落水狗"],"pic":5714161929634376},"dt":195762,"h":{"br":320000,"fid":0,"size":7870080,"vd":0.190276},"m":{"br":160000,"fid":0,"size":3957460,"vd":0.0265486},"l":{"br":96000,"fid":0,"size":2392412,"vd":0},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":718905600007},{"name":"Hooked On A Feeling","id":26686630,"pst":0,"t":0,"ar":[{"id":48934,"name":"Blue Swede","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":152,"crbt":null,"cf":"","al":{"id":2545614,"name":"Reservoir Dogs","picUrl":"http://p1.music.126.net/DJZiZnJG3luL9x3ZVubboQ==/5714161929634376.jpg","tns":["落水狗"],"pic":5714161929634376},"dt":173923,"h":{"br":320000,"fid":0,"size":6997596,"vd":0.319391},"m":{"br":160000,"fid":0,"size":3521221,"vd":0.430654},"l":{"br":96000,"fid":0,"size":2130671,"vd":0.418407},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":718905600007},{"name":"Goodnight Moon","id":5050623,"pst":0,"t":0,"ar":[{"id":74630,"name":"Shivaree","tns":[],"alias":[]}],"alia":["电影《杀死比尔2》插曲"],"pop":100,"st":0,"rt":"600902000003457536","fee":8,"v":75,"crbt":null,"cf":"","al":{"id":501151,"name":"Kill Bill Vol. 2 Original Soundtrack","picUrl":"http://p1.music.126.net/4kM6GdN1_-2RW0mkg3bJfw==/1787805906776671.jpg","tns":[],"pic":1787805906776671},"dt":243826,"h":{"br":320000,"fid":0,"size":9754166,"vd":-2},"m":{"br":192000,"fid":0,"size":5852517,"vd":-2},"l":{"br":128000,"fid":0,"size":3901693,"vd":-2},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1082073600000},{"name":"Battle Without Honor Or Humanity","id":5051245,"pst":0,"t":0,"ar":[{"id":14176,"name":"布袋寅泰","tns":[],"alias":[]}],"alia":["电影《杀死比尔》配乐"],"pop":100,"st":0,"rt":"","fee":8,"v":60,"crbt":null,"cf":"","al":{"id":501192,"name":"Kill Bill, Vol. 1 (Original Soundtrack)","picUrl":"http://p2.music.126.net/FB5yaHxUrJUjQbauBZW3VA==/18276082277462369.jpg","tns":[],"pic_str":"18276082277462369","pic":18276082277462370},"dt":148000,"h":{"br":320000,"fid":0,"size":5957182,"vd":-30300},"m":{"br":192000,"fid":0,"size":3574397,"vd":-27800},"l":{"br":128000,"fid":0,"size":2383004,"vd":-26400},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":5469114,"publishTime":1064246400007,"tns":["野兽之战"]},{"name":"Lonesome Town","id":5057820,"pst":0,"t":0,"ar":[{"id":72890,"name":"Rick Nelson","tns":[],"alias":[]}],"alia":["电影《低俗小说》插曲"],"pop":100,"st":0,"rt":"600902000009024483","fee":8,"v":38,"crbt":null,"cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":134000,"h":{"br":320000,"fid":0,"size":5364712,"vd":-2},"m":{"br":192000,"fid":0,"size":3218909,"vd":2318},"l":{"br":128000,"fid":0,"size":2146008,"vd":3856},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007}],"trackIds":[{"id":5027855,"v":7,"alg":null},{"id":5025749,"v":11,"alg":null},{"id":21847010,"v":6,"alg":null},{"id":5026101,"v":5,"alg":null},{"id":1299800,"v":11,"alg":null},{"id":29789260,"v":5,"alg":null},{"id":5057039,"v":36,"alg":null},{"id":5055329,"v":118,"alg":null},{"id":5055324,"v":110,"alg":null},{"id":5046202,"v":29,"alg":null},{"id":5057829,"v":35,"alg":null},{"id":5057817,"v":35,"alg":null},{"id":5221779,"v":142,"alg":null},{"id":5051246,"v":45,"alg":null},{"id":5056602,"v":31,"alg":null},{"id":26569499,"v":135,"alg":null},{"id":1371512,"v":3,"alg":null},{"id":16371671,"v":29,"alg":null},{"id":1306046,"v":7,"alg":null},{"id":1428235,"v":52,"alg":null},{"id":29784634,"v":170,"alg":null},{"id":28864241,"v":11,"alg":null},{"id":5055335,"v":108,"alg":null},{"id":34468339,"v":193,"alg":null},{"id":18148109,"v":9,"alg":null},{"id":2426789,"v":15,"alg":null},{"id":2007641,"v":24,"alg":null},{"id":26145413,"v":163,"alg":null},{"id":1934649,"v":21,"alg":null},{"id":5057793,"v":142,"alg":null},{"id":26686628,"v":144,"alg":null},{"id":26686630,"v":152,"alg":null},{"id":5050623,"v":75,"alg":null},{"id":5051245,"v":60,"alg":null},{"id":5057820,"v":38,"alg":null}],"updateFrequency":null,"backgroundCoverId":0,"backgroundCoverUrl":null,"adType":0,"trackNumberUpdateTime":1551470677700,"subscribedCount":3927,"cloudTrackCount":0,"createTime":1532764390897,"highQuality":false,"privacy":0,"trackUpdateTime":1562408340143,"userId":126187007,"updateTime":1551470677700,"coverImgId":109951163897711680,"newImported":false,"specialType":0,"coverImgUrl":"http://p2.music.126.net/05xtHVg_0G3fFWVjJciexA==/109951163897711683.jpg","trackCount":35,"commentThreadId":"A_PL_0_2336345537","playCount":168107,"tags":["欧美","怀旧","影视原声"],"ordered":true,"description":"摩西默默扫视着正午烈日炙烤下的荒漠，隐藏在牛仔帽檐下的双眼透出无比坚定的意味。他骑着一匹高大但消瘦的老马，一手搭在腰畔枪套里的柯尔特M1873上，那坚硬踏实的触感令他安心不少。他的身后，茫茫风沙里，许多成年男子荷枪骑马，拱卫着一辆辆大篷车，长长的队伍迤逦前行\u2026\u2026\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014","status":0,"name":"电影配乐 | 黑暗美学中的荒诞主义","id":2336345537,"shareCount":48,"coverImgId_str":"109951163897711683","commentCount":55}
+     * urls : null
+     * privileges : [{"id":5027855,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":5025749,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":0,"preSell":false},{"id":21847010,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5026101,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":1299800,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":29789260,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":5057039,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5055329,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5055324,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5046202,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":5057829,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":5057817,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":5221779,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":0,"preSell":false},{"id":5051246,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5056602,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":0,"preSell":false},{"id":26569499,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":1371512,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":16371671,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":1306046,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":999000,"toast":false,"flag":128,"preSell":false},{"id":1428235,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":260,"preSell":false},{"id":29784634,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":260,"preSell":false},{"id":28864241,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":5055335,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":34468339,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":260,"preSell":false},{"id":18148109,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":2426789,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":2007641,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":26145413,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":1934649,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":5057793,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":26686628,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":26686630,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false},{"id":5050623,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5051245,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":256,"preSell":false},{"id":5057820,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":128000,"toast":false,"flag":4,"preSell":false}]
      */
 
     private int code;
-    private int color;
-    private int comment_num;
-    private int cur_song_num;
-    private String date;
-    private String day_of_year;
-    private int song_begin;
-    private TopinfoBean topinfo;
-    private int total_song_num;
-    private String update_time;
-    private List<SonglistBean> songlist;
+    private Object relatedVideos;
+    private PlaylistBean playlist;
+    private Object urls;
+    private List<PrivilegesBean> privileges;
 
     public int getCode() {
         return code;
@@ -44,755 +33,1325 @@ public class RecommendedMusicBean {
         this.code = code;
     }
 
-    public int getColor() {
-        return color;
+    public Object getRelatedVideos() {
+        return relatedVideos;
     }
 
-    public void setColor(int color) {
-        this.color = color;
+    public void setRelatedVideos(Object relatedVideos) {
+        this.relatedVideos = relatedVideos;
     }
 
-    public int getComment_num() {
-        return comment_num;
+    public PlaylistBean getPlaylist() {
+        return playlist;
     }
 
-    public void setComment_num(int comment_num) {
-        this.comment_num = comment_num;
+    public void setPlaylist(PlaylistBean playlist) {
+        this.playlist = playlist;
     }
 
-    public int getCur_song_num() {
-        return cur_song_num;
+    public Object getUrls() {
+        return urls;
     }
 
-    public void setCur_song_num(int cur_song_num) {
-        this.cur_song_num = cur_song_num;
+    public void setUrls(Object urls) {
+        this.urls = urls;
     }
 
-    public String getDate() {
-        return date;
+    public List<PrivilegesBean> getPrivileges() {
+        return privileges;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setPrivileges(List<PrivilegesBean> privileges) {
+        this.privileges = privileges;
     }
 
-    public String getDay_of_year() {
-        return day_of_year;
-    }
-
-    public void setDay_of_year(String day_of_year) {
-        this.day_of_year = day_of_year;
-    }
-
-    public int getSong_begin() {
-        return song_begin;
-    }
-
-    public void setSong_begin(int song_begin) {
-        this.song_begin = song_begin;
-    }
-
-    public TopinfoBean getTopinfo() {
-        return topinfo;
-    }
-
-    public void setTopinfo(TopinfoBean topinfo) {
-        this.topinfo = topinfo;
-    }
-
-    public int getTotal_song_num() {
-        return total_song_num;
-    }
-
-    public void setTotal_song_num(int total_song_num) {
-        this.total_song_num = total_song_num;
-    }
-
-    public String getUpdate_time() {
-        return update_time;
-    }
-
-    public void setUpdate_time(String update_time) {
-        this.update_time = update_time;
-    }
-
-    public List<SonglistBean> getSonglist() {
-        return songlist;
-    }
-
-    public void setSonglist(List<SonglistBean> songlist) {
-        this.songlist = songlist;
-    }
-
-    public static class TopinfoBean {
+    public static class PlaylistBean {
         /**
-         * ListName : 巅峰榜·K歌金曲
-         * MacDetailPicUrl : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png
-         * MacListPicUrl : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34152.png
-         * UpdateType : 0
-         * albuminfo :
-         * headPic_v12 : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34154.png
-         * info : 集结当下全民K歌热门的翻唱歌曲，为你带来最新鲜的K歌好声音。  更新频率：每周四  统计范围：全民K歌用户翻唱作品  统计数量：50首  统计算法：全民K歌榜单上兼具人气与动听的优质作品，及全民K歌小编挖掘的好声音均有机会进入推荐。
-         * listennum : 1940000
-         * pic : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png
-         * picDetail : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34150.png
-         * pic_album : http://imgcache.qq.com/music/photo_new/T002R300x300M000001ihXVR21xtpR.jpg
-         * pic_h5 : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34143.png
-         * pic_v11 : http://y.gtimg.cn/music/common/upload/t_order_channel_hitlist_conf/34151.png
-         * pic_v12 : http://y.gtimg.cn/music/photo_new/T003R300x300M000003kvVoF2FDPMv.jpg
-         * topID : 36
-         * type : 0
+         * subscribers : [{"defaultAvatar":false,"province":110000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/QEZtYe1MAnr3_wfsi7mGDg==/19022650672194575.jpg","accountStatus":0,"gender":1,"city":110101,"birthday":873561600000,"userId":418897805,"userType":0,"nickname":"爱德花花","signature":"","description":"","detailDescription":"","avatarImgId":19022650672194576,"backgroundImgId":109951163315035400,"backgroundUrl":"http://p1.music.126.net/_qXign6BLnwzUZ6SUGAe_w==/109951163315035393.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163315035393","avatarImgIdStr":"19022650672194575","avatarImgId_str":"19022650672194575"},{"defaultAvatar":false,"province":310000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/JQSSqCOwdZjQMzXWgWb-cg==/19044640904955332.jpg","accountStatus":0,"gender":1,"city":310101,"birthday":-2209017600000,"userId":330649962,"userType":0,"nickname":"V永恒的星星","signature":"","description":"","detailDescription":"","avatarImgId":19044640904955332,"backgroundImgId":109951163692871800,"backgroundUrl":"http://p1.music.126.net/5eX8u-m_irIWCmpg9mMYWw==/109951163692871805.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163692871805","avatarImgIdStr":"19044640904955332","avatarImgId_str":"19044640904955332"},{"defaultAvatar":false,"province":330000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/206Jgbx9dFlZUZ0wU3htOQ==/18520173860275265.jpg","accountStatus":0,"gender":2,"city":330400,"birthday":-2209017600000,"userId":567805014,"userType":0,"nickname":"echo喵喵1103","signature":"","description":"","detailDescription":"","avatarImgId":18520173860275264,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"18520173860275265","avatarImgId_str":"18520173860275265"},{"defaultAvatar":false,"province":510000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/0f1JdIqJApnfUf_rJETZcw==/19094118928137042.jpg","accountStatus":0,"gender":2,"city":510100,"birthday":-2209017600000,"userId":496628695,"userType":0,"nickname":"PATIENT-a","signature":"","description":"","detailDescription":"","avatarImgId":19094118928137040,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"19094118928137042","avatarImgId_str":"19094118928137042"},{"defaultAvatar":false,"province":430000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/3huZCbUFVby4FuE1DOpGRw==/18519074348566833.jpg","accountStatus":0,"gender":1,"city":430500,"birthday":892224000000,"userId":482623115,"userType":0,"nickname":"天道酬勤_自强不息","signature":"","description":"","detailDescription":"","avatarImgId":18519074348566830,"backgroundImgId":109951163894439230,"backgroundUrl":"http://p1.music.126.net/SRtbI5jcZE8X_E4Lb_8Tog==/109951163894439230.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":11,"remarkName":null,"backgroundImgIdStr":"109951163894439230","avatarImgIdStr":"18519074348566833","avatarImgId_str":"18519074348566833"},{"defaultAvatar":false,"province":440000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/N8_BE2o7WeS5CZB-lZxX3A==/109951164214001744.jpg","accountStatus":0,"gender":2,"city":441900,"birthday":-2209017600000,"userId":1690321428,"userType":0,"nickname":"幽宮alilon","signature":"特攝真好看，朮曲真好聽","description":"","detailDescription":"","avatarImgId":109951164214001740,"backgroundImgId":109951162868128400,"backgroundUrl":"http://p1.music.126.net/2zSNIqTcpHL2jIvU6hG0EA==/109951162868128395.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868128395","avatarImgIdStr":"109951164214001744","avatarImgId_str":"109951164214001744"},{"defaultAvatar":false,"province":440000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/Q3Qx4JTeM9FQvQUvnFMv_w==/109951164044880253.jpg","accountStatus":0,"gender":1,"city":445300,"birthday":-2209017600000,"userId":545605569,"userType":0,"nickname":"ReuSam","signature":"","description":"","detailDescription":"","avatarImgId":109951164044880260,"backgroundImgId":109951162868126480,"backgroundUrl":"http://p1.music.126.net/_f8R60U9mZ42sSNvdPn2sQ==/109951162868126486.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951162868126486","avatarImgIdStr":"109951164044880253","avatarImgId_str":"109951164044880253"},{"defaultAvatar":false,"province":330000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/hGvBeVj0xXhdiPSn1U7nfQ==/3252355410657712.jpg","accountStatus":0,"gender":1,"city":330100,"birthday":-2209017600000,"userId":320556913,"userType":0,"nickname":"计划与无力","signature":"","description":"","detailDescription":"","avatarImgId":3252355410657712,"backgroundImgId":2002210674180200,"backgroundUrl":"http://p1.music.126.net/45Nu4EqvFqK_kQj6BkPwcw==/2002210674180200.jpg","authority":0,"mutual":false,"expertTags":null,"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"2002210674180200","avatarImgIdStr":"3252355410657712"}]
+         * subscribed : false
+         * creator : {"defaultAvatar":true,"province":110000,"authStatus":0,"followed":false,"avatarUrl":"http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg","accountStatus":0,"gender":2,"city":110101,"birthday":733248000000,"userId":126187007,"userType":200,"nickname":"用户126187007","signature":"生，刻着希望；死，负着流浪。","description":"","detailDescription":"","avatarImgId":18686200114669624,"backgroundImgId":109951163902416270,"backgroundUrl":"http://p1.music.126.net/Jt4PRxT765cj3F94Nznwcg==/109951163902416278.jpg","authority":0,"mutual":false,"expertTags":["欧美","民谣","爵士"],"experts":null,"djStatus":0,"vipType":0,"remarkName":null,"backgroundImgIdStr":"109951163902416278","avatarImgIdStr":"18686200114669622","avatarImgId_str":"18686200114669622"}
+         * tracks : [{"name":"Childhood Memories","id":5027855,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"","fee":0,"v":7,"crbt":null,"cf":"","al":{"id":499475,"name":"Once Upon a Time In America (Original Motion Picture Soundtrack)","picUrl":"http://p2.music.126.net/w9QqiYJ3A8s0OweHMGnq0Q==/1682252790510607.jpg","tns":["美国往事"],"pic":1682252790510607},"dt":201508,"h":{"br":320000,"fid":0,"size":8090730,"vd":1.34884},"m":{"br":160000,"fid":0,"size":4059515,"vd":1.8895},"l":{"br":96000,"fid":0,"size":2447028,"vd":1.77948},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":813859200007},{"name":"Il Buono il Brutto il Cattivo (Titoli)","id":5025749,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"600902000009006547","fee":8,"v":11,"crbt":null,"cf":"","al":{"id":499357,"name":"The Good, the Bad and the Ugly","picUrl":"http://p2.music.126.net/6eMG01jj6Yxd_OskjyVqeg==/6632254139436637.jpg","tns":["黄金三镖客"],"pic":6632254139436637},"dt":164000,"h":{"br":320000,"fid":0,"size":6592483,"vd":-2},"m":{"br":192000,"fid":0,"size":3955578,"vd":0},"l":{"br":128000,"fid":0,"size":2637126,"vd":833},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":1084809600007,"tns":["黄金三镖客(主题)"]},{"name":"Exodus (LP Version)","id":21847010,"pst":0,"t":0,"ar":[{"id":78804,"name":"The Lively Ones","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"600902000000348023","fee":8,"v":6,"crbt":null,"cf":"","al":{"id":2008665,"name":"Hang Five! The Best Of The Lively Ones","picUrl":"http://p1.music.126.net/VV01nwKqwFBzBPTcvDhlTQ==/6647647302111346.jpg","tns":[],"pic":6647647302111346},"dt":136908,"h":{"br":320000,"fid":0,"size":5519253,"vd":0.0467799},"m":{"br":160000,"fid":0,"size":2783711,"vd":-2.65076E-4},"l":{"br":96000,"fid":0,"size":1689076,"vd":-2.65076E-4},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1153670400000},{"name":"Per Qualche Dollaro In Piu","id":5026101,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":70,"st":0,"rt":"600902000009007839","fee":0,"v":5,"crbt":null,"cf":"","al":{"id":499376,"name":"Per qualche dollaro in più [Expanded Edition]","picUrl":"http://p1.music.126.net/Md17l7O5y9MhAEJM2Ndreg==/1824089790493151.jpg","tns":[],"pic":1824089790493151},"dt":230000,"h":{"br":320000,"fid":0,"size":9244101,"vd":-1.71},"m":{"br":160000,"fid":0,"size":4642894,"vd":-1.3},"l":{"br":96000,"fid":0,"size":2801992,"vd":-1.29},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":1049126400007},{"name":"For A Few Dollars More","id":1299800,"pst":0,"t":0,"ar":[{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":11,"crbt":null,"cf":"","al":{"id":133986,"name":"The Legendary Italian Westerns","picUrl":"http://p2.music.126.net/TGlV5nQWbTNOShDKEsZs_g==/936783906911550.jpg","tns":[],"pic":936783906911550},"dt":168000,"h":{"br":320000,"fid":0,"size":6789310,"vd":2.75642},"m":{"br":160000,"fid":0,"size":3411678,"vd":3.07418},"l":{"br":96000,"fid":0,"size":2060207,"vd":2.98551},"a":null,"cd":"1","no":23,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1277827200007},{"name":"Faidherbe square (instrumental)","id":29789260,"pst":0,"t":0,"ar":[{"id":783257,"name":"ProleteR","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":null,"fee":0,"v":5,"crbt":null,"cf":"","al":{"id":3079697,"name":"Curses from past times","picUrl":"http://p2.music.126.net/6CZcWmIQZrgOLY3zxzJLew==/6622358535351286.jpg","tns":[],"pic":6622358535351286},"dt":209972,"h":{"br":320000,"fid":0,"size":8399978,"vd":0},"m":{"br":192000,"fid":0,"size":5040004,"vd":0},"l":{"br":128000,"fid":0,"size":3360017,"vd":0},"a":null,"cd":"2","no":5,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":1321718400007},{"name":"Theme from Mission: Impossible","id":5057039,"pst":0,"t":0,"ar":[{"id":218966,"name":"Larry Mullen Jr.","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"","fee":8,"v":36,"crbt":null,"cf":"","al":{"id":501528,"name":"Mission: Impossible (Music From And Inspired By The Motion Picture)","picUrl":"http://p2.music.126.net/cWZYoFhdd7osAzjR7l_uVw==/1722934720737061.jpg","tns":["碟中谍 / 不可能的任务"],"pic":1722934720737061},"dt":206000,"h":{"br":320000,"fid":0,"size":8249697,"vd":-12000},"m":{"br":192000,"fid":0,"size":4949909,"vd":-9400},"l":{"br":128000,"fid":0,"size":3300015,"vd":-8400},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":832003200007},{"name":"I Wanna Be Your Dog [Soundtrack Version]","id":5055329,"pst":0,"t":0,"ar":[{"id":102041,"name":"The Stooges","tns":[],"alias":[]}],"alia":[],"pop":60,"st":0,"rt":"600902000002249910","fee":8,"v":118,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":185182,"h":{"br":320000,"fid":0,"size":7408370,"vd":-34300},"m":{"br":192000,"fid":0,"size":4445040,"vd":-32100},"l":{"br":128000,"fid":0,"size":2963374,"vd":-30700},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Spooky","id":5055324,"pst":0,"t":0,"ar":[{"id":53268,"name":"Dusty Springfield","tns":[],"alias":[]}],"alia":[],"pop":75,"st":0,"rt":"","fee":8,"v":110,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":155167,"h":{"br":320000,"fid":0,"size":6207782,"vd":-2},"m":{"br":192000,"fid":0,"size":3724687,"vd":-1},"l":{"br":128000,"fid":0,"size":2483139,"vd":-1},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Hold Tight","id":5046202,"pst":0,"t":0,"ar":[{"id":55263,"name":"Dave Dee","tns":[],"alias":[]}],"alia":[],"pop":75,"st":0,"rt":"","fee":0,"v":29,"crbt":null,"cf":"","al":{"id":500921,"name":"Death Proof","picUrl":"http://p1.music.126.net/XUrTz2H8TSp6P7STs6uWuA==/1733929837015594.jpg","tns":[],"pic":1733929837015594},"dt":165000,"h":{"br":320000,"fid":0,"size":6649321,"vd":-0.95},"m":{"br":160000,"fid":0,"size":3341175,"vd":-0.51},"l":{"br":96000,"fid":0,"size":2017499,"vd":-0.57},"a":null,"cd":"1","no":11,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":1174924800007},{"name":"Surf Rider","id":5057829,"pst":0,"t":0,"ar":[{"id":78804,"name":"The Lively Ones","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"600902000000581662","fee":8,"v":35,"crbt":"2eb95a5d65d19ba76a757c86e7379c2f","cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":198740,"h":{"br":320000,"fid":0,"size":7984060,"vd":-1.83},"m":{"br":160000,"fid":0,"size":4012926,"vd":-1.41},"l":{"br":96000,"fid":0,"size":2424054,"vd":-1.45},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007},{"name":"Jungle Boogie","id":5057817,"pst":0,"t":0,"ar":[{"id":95336,"name":"Kool & the Gang","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":35,"crbt":null,"cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":183000,"h":{"br":320000,"fid":0,"size":7394744,"vd":-1.94},"m":{"br":160000,"fid":0,"size":3718271,"vd":-1.52},"l":{"br":96000,"fid":0,"size":2247264,"vd":-1.59},"a":null,"cd":"1","no":3,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007},{"name":"You Never Can Tell","id":5221779,"pst":0,"t":0,"ar":[{"id":29985,"name":"Chuck Berry","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"600902000005210054","fee":8,"v":142,"crbt":null,"cf":"","al":{"id":509820,"name":"Greatest Hits Of The Millennium 60's Vol. 1","picUrl":"http://p2.music.126.net/FC1dpllAJ96G8jyaUGVyfA==/777354720881671.jpg","tns":[],"pic":777354720881671},"dt":161000,"h":{"br":320000,"fid":0,"size":6477365,"vd":268},"m":{"br":192000,"fid":0,"size":3886436,"vd":1724},"l":{"br":128000,"fid":0,"size":2590972,"vd":3648},"a":null,"cd":"1","no":51,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":915120000007},{"name":"Don't Let Me Be Misunderstood","id":5051246,"pst":0,"t":0,"ar":[{"id":75084,"name":"Santa Esmeralda","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":45,"crbt":null,"cf":"","al":{"id":501192,"name":"Kill Bill, Vol. 1 (Original Soundtrack)","picUrl":"http://p2.music.126.net/FB5yaHxUrJUjQbauBZW3VA==/18276082277462369.jpg","tns":[],"pic_str":"18276082277462369","pic":18276082277462370},"dt":628000,"h":{"br":320000,"fid":0,"size":25172858,"vd":-0.66},"m":{"br":160000,"fid":0,"size":12600647,"vd":-0.27},"l":{"br":96000,"fid":0,"size":7571344,"vd":-0.28},"a":null,"cd":"1","no":10,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1064246400007},{"name":"Misirlou","id":5056602,"pst":0,"t":0,"ar":[{"id":53488,"name":"Dick Dale","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"","fee":8,"v":31,"crbt":null,"cf":"","al":{"id":501498,"name":"The Tarantino Connection (Soundtrack Anthology)","picUrl":"http://p2.music.126.net/AIZt0VDCV3wOxq_YzGTopg==/639915767411816.jpg","tns":[],"pic":639915767411816},"dt":134000,"h":{"br":320000,"fid":0,"size":5437719,"vd":0.0737394},"m":{"br":160000,"fid":0,"size":2738226,"vd":0.516876},"l":{"br":96000,"fid":0,"size":1658011,"vd":0.792115},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":405025,"mv":0,"publishTime":855590400007},{"name":"The Ecstasy Of Gold","id":26569499,"pst":0,"t":0,"ar":[{"id":350330,"name":"Chill Loungers","tns":[],"alias":[]}],"alia":[],"pop":85,"st":0,"rt":"","fee":0,"v":135,"crbt":null,"cf":"","al":{"id":2524948,"name":"Nostalgie Café 3","picUrl":"http://p2.music.126.net/SIliWyfTMI5jAIYDrwTG4A==/4423335278553453.jpg","tns":[],"pic":4423335278553453},"dt":220656,"h":{"br":320000,"fid":0,"size":8854148,"vd":-2.55},"m":{"br":160000,"fid":0,"size":4444157,"vd":-2.13},"l":{"br":96000,"fid":0,"size":2680161,"vd":-2.14},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":1360684800007},{"name":"Trinity: Con la Stella Di Vicesceriffo","id":1371512,"pst":0,"t":0,"ar":[{"id":33713,"name":"Franco Micalizzi","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":0,"v":3,"crbt":null,"cf":"","al":{"id":140908,"name":"Lo Chiamavano Trinita (They Call Me Trinity)","picUrl":"http://p2.music.126.net/vxfwFeUU5muHWJqk58m2ug==/830131279020969.jpg","tns":[],"pic":830131279020969},"dt":119000,"h":{"br":320000,"fid":0,"size":4833463,"vd":1.90071},"m":{"br":160000,"fid":0,"size":2435848,"vd":2.39627},"l":{"br":96000,"fid":0,"size":1477049,"vd":2.28245},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":5003,"mv":0,"publishTime":971712000007},{"name":"The Phantom Of the Opera","id":16371671,"pst":0,"t":0,"ar":[{"id":27622,"name":"Andrew Lloyd Webber","tns":[],"alias":[]}],"alia":["电影《剧院魅影》主题曲"],"pop":95,"st":0,"rt":"","fee":8,"v":29,"crbt":null,"cf":"","al":{"id":1510068,"name":"The Phantom Of The Opera (Original Motion Picture Soundtrack)","picUrl":"http://p1.music.126.net/Om5EMHiksKZ6kF02N6RXTQ==/674000627833950.jpg","tns":["歌剧魅影 2004电影版原声带"],"pic":674000627833950},"dt":216163,"h":{"br":320000,"fid":0,"size":8647619,"vd":0},"m":{"br":192000,"fid":0,"size":5188589,"vd":0},"l":{"br":128000,"fid":0,"size":3459074,"vd":1},"a":null,"cd":"1","no":5,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1101052800007},{"name":"The Diva Dance","id":1306046,"pst":0,"t":0,"ar":[{"id":32689,"name":"Eric Serra","tns":[],"alias":[]}],"alia":["电影《第五元素》最热配乐"],"pop":100,"st":0,"rt":"","fee":0,"v":7,"crbt":null,"cf":"","al":{"id":134426,"name":"The Fifth Element O.S.T","picUrl":"http://p1.music.126.net/SoBZWTs_juCkKJmDNhOQ0g==/914793674359243.jpg","tns":["第五元素"],"pic":914793674359243},"dt":95000,"h":{"br":320000,"fid":0,"size":3806763,"vd":-2},"m":{"br":192000,"fid":0,"size":2284138,"vd":-2},"l":{"br":128000,"fid":0,"size":1522825,"vd":-2},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":0,"mv":0,"publishTime":873475200007},{"name":"Concerning Hobbits","id":1428235,"pst":0,"t":0,"ar":[{"id":34520,"name":"Howard Shore","tns":[],"alias":[]}],"alia":["电影《指环王1》配乐"],"pop":95,"st":0,"rt":"","fee":8,"v":52,"crbt":null,"cf":"","al":{"id":146240,"name":"The Lord Of The Rings: The Fellowship Of The Ring (Original Motion Picture Soundtrack)","picUrl":"http://p2.music.126.net/FfTEP4G-02MpL3Tq2U2wnQ==/109951163596318781.jpg","tns":["指环王:护戒使者 电影原声；指环王1：魔戒再现 电影原声"],"pic_str":"109951163596318781","pic":109951163596318780},"dt":175072,"h":{"br":320000,"fid":0,"size":7003995,"vd":59506},"m":{"br":192000,"fid":0,"size":4202414,"vd":61420},"l":{"br":128000,"fid":0,"size":2801624,"vd":63890},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1006128000000},{"name":"El Condor Pasa (If I Could)","id":29784634,"pst":0,"t":0,"ar":[{"id":185017,"name":"Simon & Garfunkel","tns":[],"alias":[]}],"alia":["电影《走出荒野》最热插曲"],"pop":80,"st":0,"rt":null,"fee":8,"v":170,"crbt":null,"cf":"","al":{"id":3077427,"name":"Wild - Original Motion Picture Soundtrack","picUrl":"http://p1.music.126.net/i4Xo9PDBR3-nnHFhwXnQbg==/109951163442646034.jpg","tns":[],"pic_str":"109951163442646034","pic":109951163442646030},"dt":188133,"h":{"br":320000,"fid":0,"size":7525399,"vd":3679},"m":{"br":192000,"fid":0,"size":4515257,"vd":6795},"l":{"br":128000,"fid":0,"size":3010186,"vd":7152},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7001,"mv":0,"publishTime":1415577600000},{"name":"Come and Get Your Love","id":28864241,"pst":0,"t":0,"ar":[{"id":73866,"name":"Redbone","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":null,"fee":8,"v":11,"crbt":null,"cf":"","al":{"id":2918034,"name":"Guardians of the Galaxy (Deluxe)","picUrl":"http://p2.music.126.net/5i5SKVW_F1ub2BgDeyjI5A==/3225967119049341.jpg","tns":[],"pic":3225967119049341},"dt":208000,"h":{"br":320000,"fid":0,"size":8331138,"vd":-20200},"m":{"br":192000,"fid":0,"size":4998749,"vd":-18000},"l":{"br":128000,"fid":0,"size":3332555,"vd":-17100},"a":null,"cd":"1","no":8,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1406563200007},{"name":"Zorba The Greek","id":5055335,"pst":0,"t":0,"ar":[{"id":217877,"name":"John Murphy/David Hughes","tns":[],"alias":[]}],"alia":[],"pop":95,"st":0,"rt":"","fee":8,"v":108,"crbt":null,"cf":"","al":{"id":501426,"name":"Music From The Motion Picture Lock, Stock And Two Smoking Barrels","picUrl":"http://p2.music.126.net/tMJP7lSj3JcGk2FBrehbuQ==/1807597116074443.jpg","tns":[],"pic":1807597116074443},"dt":176378,"h":{"br":320000,"fid":0,"size":7056240,"vd":0},"m":{"br":192000,"fid":0,"size":4233761,"vd":0},"l":{"br":128000,"fid":0,"size":2822522,"vd":0},"a":null,"cd":"1","no":15,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":915148800000},{"name":"Romance for Violoncello and Orchestra","id":34468339,"pst":0,"t":0,"ar":[{"id":35351,"name":"John Williams","tns":[],"alias":[]},{"id":35047,"name":"Itzhak Perlman","tns":[],"alias":[]}],"alia":[],"pop":35,"st":0,"rt":null,"fee":8,"v":193,"crbt":null,"cf":"","al":{"id":3286066,"name":"Sing Me to Sleep","picUrl":"http://p1.music.126.net/jgsqth67HsJQa6IJHuqwCQ==/109951163468193575.jpg","tns":[],"pic_str":"109951163468193575","pic":109951163468193570},"dt":573074,"h":{"br":320000,"fid":0,"size":22923015,"vd":33707},"m":{"br":192000,"fid":0,"size":13753826,"vd":34484},"l":{"br":128000,"fid":0,"size":9169232,"vd":36729},"a":null,"cd":"1","no":47,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":0,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7001,"mv":0,"publishTime":1441324800000},{"name":"Main Title (The Silence Of The Lambs)","id":18148109,"pst":0,"t":0,"ar":[{"id":271321,"name":"Munich Symphony","tns":[],"alias":[]}],"alia":[],"pop":40,"st":0,"rt":"","fee":8,"v":9,"crbt":null,"cf":"","al":{"id":1667287,"name":"The Silence Of The Lambs","picUrl":"http://p2.music.126.net/KTxpPqlsgNNAmn2WebdkAQ==/2560762581124560.jpg","tns":[],"pic":2560762581124560},"dt":308088,"h":{"br":320000,"fid":0,"size":12340954,"vd":1.74118},"m":{"br":160000,"fid":0,"size":6184939,"vd":2.16466},"l":{"br":96000,"fid":0,"size":3722114,"vd":2.20283},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1247500800000},{"name":"I Found a Reason","id":2426789,"pst":0,"t":0,"ar":[{"id":53281,"name":"Dario Marianelli","tns":[],"alias":[]}],"alia":[],"pop":60,"st":0,"rt":"","fee":8,"v":15,"crbt":null,"cf":"","al":{"id":244682,"name":"V for Vendetta","picUrl":"http://p2.music.126.net/s5tlU6KSJLU41KevNcaExA==/109951164018910822.jpg","tns":[],"pic_str":"109951164018910822","pic":109951164018910820},"dt":122491,"h":{"br":320000,"fid":0,"size":4901660,"vd":100000},"m":{"br":192000,"fid":0,"size":2941013,"vd":100000},"l":{"br":128000,"fid":0,"size":1960690,"vd":100000},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":2,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":1416089,"mv":0,"publishTime":1142870400007},{"name":"The Marriage Of Figaro \"Duetto-Sul 'Aria\"","id":2007641,"pst":0,"t":0,"ar":[{"id":44287,"name":"Thomas Newman","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":24,"crbt":null,"cf":"","al":{"id":202277,"name":"The Shawshank Redemption","picUrl":"http://p2.music.126.net/CHYEOf6_jXOpuamsZKrjZw==/921390744128083.jpg","tns":[],"pic":921390744128083},"dt":213893,"h":{"br":320000,"fid":0,"size":8558803,"vd":7.05088},"m":{"br":160000,"fid":0,"size":4279424,"vd":7.42846},"l":{"br":96000,"fid":0,"size":2567672,"vd":7.6565},"a":null,"cd":"1","no":16,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":765129600007},{"name":"Freedom","id":26145413,"pst":0,"t":0,"ar":[{"id":27661,"name":"Anthony Hamilton","tns":[],"alias":[]},{"id":13469625,"name":"Elayna Boynton","tns":[],"alias":[]}],"alia":[],"pop":100,"st":0,"rt":"600902000008966343","fee":8,"v":163,"crbt":null,"cf":"","al":{"id":2397062,"name":"Django Unchained","picUrl":"http://p2.music.126.net/KrdYRIfb9ndkR36nrnTkxg==/18643319162556923.jpg","tns":[],"pic_str":"18643319162556923","pic":18643319162556924},"dt":236653,"h":{"br":320000,"fid":0,"size":9468909,"vd":-7600},"m":{"br":192000,"fid":0,"size":5681363,"vd":-5000},"l":{"br":128000,"fid":0,"size":3787590,"vd":-3300},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1355760000007},{"name":"Shape Of My Heart","id":1934649,"pst":0,"t":0,"ar":[{"id":42938,"name":"Sting","tns":[],"alias":[]}],"alia":["电影《这个杀手不太冷》片尾曲"],"pop":100,"st":0,"rt":"600902000005355274","fee":8,"v":21,"crbt":null,"cf":"","al":{"id":195040,"name":"Fifteen Healing Bites","picUrl":"http://p2.music.126.net/2XzaHeETVeYYaGEIxSq6lQ==/803742999956794.jpg","tns":[],"pic":803742999956794},"dt":280000,"h":{"br":320000,"fid":0,"size":11226565,"vd":683},"m":{"br":192000,"fid":0,"size":6736012,"vd":3485},"l":{"br":128000,"fid":0,"size":4490735,"vd":3180},"a":null,"cd":"1","no":1,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":1325347200007},{"name":"You Belong To Me","id":5057793,"pst":0,"t":0,"ar":[{"id":29323,"name":"Bob Dylan","tns":[],"alias":[]}],"alia":["电影《天生杀人狂》 插曲"],"pop":100,"st":0,"rt":"","fee":8,"v":142,"crbt":null,"cf":"","al":{"id":501570,"name":"Natural Born Killers [O.S.T]","picUrl":"http://p2.music.126.net/FarL1rDvLwpBUrxxL3rvfw==/670702092988257.jpg","tns":["天生杀人狂 电影原声"],"pic":670702092988257},"dt":189887,"h":{"br":320000,"fid":0,"size":7597497,"vd":1236},"m":{"br":192000,"fid":0,"size":4558515,"vd":4209},"l":{"br":128000,"fid":0,"size":3039025,"vd":4225},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780969600000},{"name":"Little Green Bag","id":26686628,"pst":0,"t":0,"ar":[{"id":34025,"name":"George Baker Selection","tns":[],"alias":[]}],"alia":[],"pop":80,"st":0,"rt":"","fee":8,"v":144,"crbt":null,"cf":"","al":{"id":2545614,"name":"Reservoir Dogs","picUrl":"http://p1.music.126.net/DJZiZnJG3luL9x3ZVubboQ==/5714161929634376.jpg","tns":["落水狗"],"pic":5714161929634376},"dt":195762,"h":{"br":320000,"fid":0,"size":7870080,"vd":0.190276},"m":{"br":160000,"fid":0,"size":3957460,"vd":0.0265486},"l":{"br":96000,"fid":0,"size":2392412,"vd":0},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":718905600007},{"name":"Hooked On A Feeling","id":26686630,"pst":0,"t":0,"ar":[{"id":48934,"name":"Blue Swede","tns":[],"alias":[]}],"alia":[],"pop":90,"st":0,"rt":"","fee":8,"v":152,"crbt":null,"cf":"","al":{"id":2545614,"name":"Reservoir Dogs","picUrl":"http://p1.music.126.net/DJZiZnJG3luL9x3ZVubboQ==/5714161929634376.jpg","tns":["落水狗"],"pic":5714161929634376},"dt":173923,"h":{"br":320000,"fid":0,"size":6997596,"vd":0.319391},"m":{"br":160000,"fid":0,"size":3521221,"vd":0.430654},"l":{"br":96000,"fid":0,"size":2130671,"vd":0.418407},"a":null,"cd":"1","no":4,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":718905600007},{"name":"Goodnight Moon","id":5050623,"pst":0,"t":0,"ar":[{"id":74630,"name":"Shivaree","tns":[],"alias":[]}],"alia":["电影《杀死比尔2》插曲"],"pop":100,"st":0,"rt":"600902000003457536","fee":8,"v":75,"crbt":null,"cf":"","al":{"id":501151,"name":"Kill Bill Vol. 2 Original Soundtrack","picUrl":"http://p1.music.126.net/4kM6GdN1_-2RW0mkg3bJfw==/1787805906776671.jpg","tns":[],"pic":1787805906776671},"dt":243826,"h":{"br":320000,"fid":0,"size":9754166,"vd":-2},"m":{"br":192000,"fid":0,"size":5852517,"vd":-2},"l":{"br":128000,"fid":0,"size":3901693,"vd":-2},"a":null,"cd":"1","no":2,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":0,"publishTime":1082073600000},{"name":"Battle Without Honor Or Humanity","id":5051245,"pst":0,"t":0,"ar":[{"id":14176,"name":"布袋寅泰","tns":[],"alias":[]}],"alia":["电影《杀死比尔》配乐"],"pop":100,"st":0,"rt":"","fee":8,"v":60,"crbt":null,"cf":"","al":{"id":501192,"name":"Kill Bill, Vol. 1 (Original Soundtrack)","picUrl":"http://p2.music.126.net/FB5yaHxUrJUjQbauBZW3VA==/18276082277462369.jpg","tns":[],"pic_str":"18276082277462369","pic":18276082277462370},"dt":148000,"h":{"br":320000,"fid":0,"size":5957182,"vd":-30300},"m":{"br":192000,"fid":0,"size":3574397,"vd":-27800},"l":{"br":128000,"fid":0,"size":2383004,"vd":-26400},"a":null,"cd":"1","no":9,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":0,"rtype":0,"rurl":null,"mst":9,"cp":7002,"mv":5469114,"publishTime":1064246400007,"tns":["野兽之战"]},{"name":"Lonesome Town","id":5057820,"pst":0,"t":0,"ar":[{"id":72890,"name":"Rick Nelson","tns":[],"alias":[]}],"alia":["电影《低俗小说》插曲"],"pop":100,"st":0,"rt":"600902000009024483","fee":8,"v":38,"crbt":null,"cf":"","al":{"id":501571,"name":"Pulp Fiction (Music From The Motion Picture)","picUrl":"http://p2.music.126.net/DsHu2vLyGib364QKJbBvdA==/6661940953629711.jpg","tns":["低俗小说 电影原声"],"pic":6661940953629711},"dt":134000,"h":{"br":320000,"fid":0,"size":5364712,"vd":-2},"m":{"br":192000,"fid":0,"size":3218909,"vd":2318},"l":{"br":128000,"fid":0,"size":2146008,"vd":3856},"a":null,"cd":"1","no":6,"rtUrl":null,"ftype":0,"rtUrls":[],"djId":0,"copyright":1,"s_id":0,"mark":8192,"rtype":0,"rurl":null,"mst":9,"cp":7003,"mv":0,"publishTime":780595200007}]
+         * trackIds : [{"id":5027855,"v":7,"alg":null},{"id":5025749,"v":11,"alg":null},{"id":21847010,"v":6,"alg":null},{"id":5026101,"v":5,"alg":null},{"id":1299800,"v":11,"alg":null},{"id":29789260,"v":5,"alg":null},{"id":5057039,"v":36,"alg":null},{"id":5055329,"v":118,"alg":null},{"id":5055324,"v":110,"alg":null},{"id":5046202,"v":29,"alg":null},{"id":5057829,"v":35,"alg":null},{"id":5057817,"v":35,"alg":null},{"id":5221779,"v":142,"alg":null},{"id":5051246,"v":45,"alg":null},{"id":5056602,"v":31,"alg":null},{"id":26569499,"v":135,"alg":null},{"id":1371512,"v":3,"alg":null},{"id":16371671,"v":29,"alg":null},{"id":1306046,"v":7,"alg":null},{"id":1428235,"v":52,"alg":null},{"id":29784634,"v":170,"alg":null},{"id":28864241,"v":11,"alg":null},{"id":5055335,"v":108,"alg":null},{"id":34468339,"v":193,"alg":null},{"id":18148109,"v":9,"alg":null},{"id":2426789,"v":15,"alg":null},{"id":2007641,"v":24,"alg":null},{"id":26145413,"v":163,"alg":null},{"id":1934649,"v":21,"alg":null},{"id":5057793,"v":142,"alg":null},{"id":26686628,"v":144,"alg":null},{"id":26686630,"v":152,"alg":null},{"id":5050623,"v":75,"alg":null},{"id":5051245,"v":60,"alg":null},{"id":5057820,"v":38,"alg":null}]
+         * updateFrequency : null
+         * backgroundCoverId : 0
+         * backgroundCoverUrl : null
+         * adType : 0
+         * trackNumberUpdateTime : 1551470677700
+         * subscribedCount : 3927
+         * cloudTrackCount : 0
+         * createTime : 1532764390897
+         * highQuality : false
+         * privacy : 0
+         * trackUpdateTime : 1562408340143
+         * userId : 126187007
+         * updateTime : 1551470677700
+         * coverImgId : 109951163897711680
+         * newImported : false
+         * specialType : 0
+         * coverImgUrl : http://p2.music.126.net/05xtHVg_0G3fFWVjJciexA==/109951163897711683.jpg
+         * trackCount : 35
+         * commentThreadId : A_PL_0_2336345537
+         * playCount : 168107
+         * tags : ["欧美","怀旧","影视原声"]
+         * ordered : true
+         * description : 摩西默默扫视着正午烈日炙烤下的荒漠，隐藏在牛仔帽檐下的双眼透出无比坚定的意味。他骑着一匹高大但消瘦的老马，一手搭在腰畔枪套里的柯尔特M1873上，那坚硬踏实的触感令他安心不少。他的身后，茫茫风沙里，许多成年男子荷枪骑马，拱卫着一辆辆大篷车，长长的队伍迤逦前行……
+         ———————————————————————
+         * status : 0
+         * name : 电影配乐 | 黑暗美学中的荒诞主义
+         * id : 2336345537
+         * shareCount : 48
+         * coverImgId_str : 109951163897711683
+         * commentCount : 55
          */
 
-        private String ListName;
-        private String MacDetailPicUrl;
-        private String MacListPicUrl;
-        private String UpdateType;
-        private String albuminfo;
-        private String headPic_v12;
-        private String info;
-        private int listennum;
-        private String pic;
-        private String picDetail;
-        private String pic_album;
-        private String pic_h5;
-        private String pic_v11;
-        private String pic_v12;
-        private String topID;
-        private String type;
+        private boolean subscribed;
+        private CreatorBean creator;
+        private Object updateFrequency;
+        private int backgroundCoverId;
+        private Object backgroundCoverUrl;
+        private int adType;
+        private long trackNumberUpdateTime;
+        private int subscribedCount;
+        private int cloudTrackCount;
+        private long createTime;
+        private boolean highQuality;
+        private int privacy;
+        private long trackUpdateTime;
+        private int userId;
+        private long updateTime;
+        private long coverImgId;
+        private boolean newImported;
+        private int specialType;
+        private String coverImgUrl;
+        private int trackCount;
+        private String commentThreadId;
+        private int playCount;
+        private boolean ordered;
+        private String description;
+        private int status;
+        private String name;
+        private long id;
+        private int shareCount;
+        private String coverImgId_str;
+        private int commentCount;
+        private List<SubscribersBean> subscribers;
+        private List<TracksBean> tracks;
+        private List<TrackIdsBean> trackIds;
+        private List<String> tags;
 
-        public String getListName() {
-            return ListName;
+        public boolean isSubscribed() {
+            return subscribed;
         }
 
-        public void setListName(String ListName) {
-            this.ListName = ListName;
+        public void setSubscribed(boolean subscribed) {
+            this.subscribed = subscribed;
         }
 
-        public String getMacDetailPicUrl() {
-            return MacDetailPicUrl;
+        public CreatorBean getCreator() {
+            return creator;
         }
 
-        public void setMacDetailPicUrl(String MacDetailPicUrl) {
-            this.MacDetailPicUrl = MacDetailPicUrl;
+        public void setCreator(CreatorBean creator) {
+            this.creator = creator;
         }
 
-        public String getMacListPicUrl() {
-            return MacListPicUrl;
+        public Object getUpdateFrequency() {
+            return updateFrequency;
         }
 
-        public void setMacListPicUrl(String MacListPicUrl) {
-            this.MacListPicUrl = MacListPicUrl;
+        public void setUpdateFrequency(Object updateFrequency) {
+            this.updateFrequency = updateFrequency;
         }
 
-        public String getUpdateType() {
-            return UpdateType;
+        public int getBackgroundCoverId() {
+            return backgroundCoverId;
         }
 
-        public void setUpdateType(String UpdateType) {
-            this.UpdateType = UpdateType;
+        public void setBackgroundCoverId(int backgroundCoverId) {
+            this.backgroundCoverId = backgroundCoverId;
         }
 
-        public String getAlbuminfo() {
-            return albuminfo;
+        public Object getBackgroundCoverUrl() {
+            return backgroundCoverUrl;
         }
 
-        public void setAlbuminfo(String albuminfo) {
-            this.albuminfo = albuminfo;
+        public void setBackgroundCoverUrl(Object backgroundCoverUrl) {
+            this.backgroundCoverUrl = backgroundCoverUrl;
         }
 
-        public String getHeadPic_v12() {
-            return headPic_v12;
+        public int getAdType() {
+            return adType;
         }
 
-        public void setHeadPic_v12(String headPic_v12) {
-            this.headPic_v12 = headPic_v12;
+        public void setAdType(int adType) {
+            this.adType = adType;
         }
 
-        public String getInfo() {
-            return info;
+        public long getTrackNumberUpdateTime() {
+            return trackNumberUpdateTime;
         }
 
-        public void setInfo(String info) {
-            this.info = info;
+        public void setTrackNumberUpdateTime(long trackNumberUpdateTime) {
+            this.trackNumberUpdateTime = trackNumberUpdateTime;
         }
 
-        public int getListennum() {
-            return listennum;
+        public int getSubscribedCount() {
+            return subscribedCount;
         }
 
-        public void setListennum(int listennum) {
-            this.listennum = listennum;
+        public void setSubscribedCount(int subscribedCount) {
+            this.subscribedCount = subscribedCount;
         }
 
-        public String getPic() {
-            return pic;
+        public int getCloudTrackCount() {
+            return cloudTrackCount;
         }
 
-        public void setPic(String pic) {
-            this.pic = pic;
+        public void setCloudTrackCount(int cloudTrackCount) {
+            this.cloudTrackCount = cloudTrackCount;
         }
 
-        public String getPicDetail() {
-            return picDetail;
+        public long getCreateTime() {
+            return createTime;
         }
 
-        public void setPicDetail(String picDetail) {
-            this.picDetail = picDetail;
+        public void setCreateTime(long createTime) {
+            this.createTime = createTime;
         }
 
-        public String getPic_album() {
-            return pic_album;
+        public boolean isHighQuality() {
+            return highQuality;
         }
 
-        public void setPic_album(String pic_album) {
-            this.pic_album = pic_album;
+        public void setHighQuality(boolean highQuality) {
+            this.highQuality = highQuality;
         }
 
-        public String getPic_h5() {
-            return pic_h5;
+        public int getPrivacy() {
+            return privacy;
         }
 
-        public void setPic_h5(String pic_h5) {
-            this.pic_h5 = pic_h5;
+        public void setPrivacy(int privacy) {
+            this.privacy = privacy;
         }
 
-        public String getPic_v11() {
-            return pic_v11;
+        public long getTrackUpdateTime() {
+            return trackUpdateTime;
         }
 
-        public void setPic_v11(String pic_v11) {
-            this.pic_v11 = pic_v11;
+        public void setTrackUpdateTime(long trackUpdateTime) {
+            this.trackUpdateTime = trackUpdateTime;
         }
 
-        public String getPic_v12() {
-            return pic_v12;
+        public int getUserId() {
+            return userId;
         }
 
-        public void setPic_v12(String pic_v12) {
-            this.pic_v12 = pic_v12;
+        public void setUserId(int userId) {
+            this.userId = userId;
         }
 
-        public String getTopID() {
-            return topID;
+        public long getUpdateTime() {
+            return updateTime;
         }
 
-        public void setTopID(String topID) {
-            this.topID = topID;
+        public void setUpdateTime(long updateTime) {
+            this.updateTime = updateTime;
         }
 
-        public String getType() {
-            return type;
+        public long getCoverImgId() {
+            return coverImgId;
         }
 
-        public void setType(String type) {
-            this.type = type;
-        }
-    }
-
-    public static class SonglistBean {
-        /**
-         * Franking_value : 0
-         * cur_count : 0
-         * data : {"albumdesc":"","albumid":7347298,"albummid":"001ihXVR21xtpR","albumname":"画","alertid":11,"belongCD":10,"cdIdx":0,"interval":168,"isonly":0,"label":"0","msgid":0,"pay":{"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0},"preview":{"trybegin":0,"tryend":0,"trysize":0},"rate":7,"singer":[{"id":1511644,"mid":"002qrSu92q8XKu","name":"绿巨人先森"}],"size128":2691023,"size320":6726891,"size5_1":0,"sizeape":0,"sizeflac":0,"sizeogg":3397887,"songid":235879319,"songmid":"000fHtpp34UK7N","songname":"画","songorig":"画","songtype":0,"strMediaMid":"000fHtpp34UK7N","stream":1,"switch":81683,"type":0,"vid":""}
-         * in_count : 0
-         * old_count : 0
-         */
-
-        private String Franking_value;
-        private String cur_count;
-        private DataBean data;
-        private String in_count;
-        private String old_count;
-
-        public String getFranking_value() {
-            return Franking_value;
+        public void setCoverImgId(long coverImgId) {
+            this.coverImgId = coverImgId;
         }
 
-        public void setFranking_value(String Franking_value) {
-            this.Franking_value = Franking_value;
+        public boolean isNewImported() {
+            return newImported;
         }
 
-        public String getCur_count() {
-            return cur_count;
+        public void setNewImported(boolean newImported) {
+            this.newImported = newImported;
         }
 
-        public void setCur_count(String cur_count) {
-            this.cur_count = cur_count;
+        public int getSpecialType() {
+            return specialType;
         }
 
-        public DataBean getData() {
-            return data;
+        public void setSpecialType(int specialType) {
+            this.specialType = specialType;
         }
 
-        public void setData(DataBean data) {
-            this.data = data;
+        public String getCoverImgUrl() {
+            return coverImgUrl;
         }
 
-        public String getIn_count() {
-            return in_count;
+        public void setCoverImgUrl(String coverImgUrl) {
+            this.coverImgUrl = coverImgUrl;
         }
 
-        public void setIn_count(String in_count) {
-            this.in_count = in_count;
+        public int getTrackCount() {
+            return trackCount;
         }
 
-        public String getOld_count() {
-            return old_count;
+        public void setTrackCount(int trackCount) {
+            this.trackCount = trackCount;
         }
 
-        public void setOld_count(String old_count) {
-            this.old_count = old_count;
+        public String getCommentThreadId() {
+            return commentThreadId;
         }
 
-        public static class DataBean {
+        public void setCommentThreadId(String commentThreadId) {
+            this.commentThreadId = commentThreadId;
+        }
+
+        public int getPlayCount() {
+            return playCount;
+        }
+
+        public void setPlayCount(int playCount) {
+            this.playCount = playCount;
+        }
+
+        public boolean isOrdered() {
+            return ordered;
+        }
+
+        public void setOrdered(boolean ordered) {
+            this.ordered = ordered;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+
+        public void setStatus(int status) {
+            this.status = status;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public int getShareCount() {
+            return shareCount;
+        }
+
+        public void setShareCount(int shareCount) {
+            this.shareCount = shareCount;
+        }
+
+        public String getCoverImgId_str() {
+            return coverImgId_str;
+        }
+
+        public void setCoverImgId_str(String coverImgId_str) {
+            this.coverImgId_str = coverImgId_str;
+        }
+
+        public int getCommentCount() {
+            return commentCount;
+        }
+
+        public void setCommentCount(int commentCount) {
+            this.commentCount = commentCount;
+        }
+
+        public List<SubscribersBean> getSubscribers() {
+            return subscribers;
+        }
+
+        public void setSubscribers(List<SubscribersBean> subscribers) {
+            this.subscribers = subscribers;
+        }
+
+        public List<TracksBean> getTracks() {
+            return tracks;
+        }
+
+        public void setTracks(List<TracksBean> tracks) {
+            this.tracks = tracks;
+        }
+
+        public List<TrackIdsBean> getTrackIds() {
+            return trackIds;
+        }
+
+        public void setTrackIds(List<TrackIdsBean> trackIds) {
+            this.trackIds = trackIds;
+        }
+
+        public List<String> getTags() {
+            return tags;
+        }
+
+        public void setTags(List<String> tags) {
+            this.tags = tags;
+        }
+
+        public static class CreatorBean {
             /**
-             * albumdesc :
-             * albumid : 7347298
-             * albummid : 001ihXVR21xtpR
-             * albumname : 画
-             * alertid : 11
-             * belongCD : 10
-             * cdIdx : 0
-             * interval : 168
-             * isonly : 0
-             * label : 0
-             * msgid : 0
-             * pay : {"payalbum":0,"payalbumprice":0,"paydownload":0,"payinfo":0,"payplay":0,"paytrackmouth":0,"paytrackprice":0,"timefree":0}
-             * preview : {"trybegin":0,"tryend":0,"trysize":0}
-             * rate : 7
-             * singer : [{"id":1511644,"mid":"002qrSu92q8XKu","name":"绿巨人先森"}]
-             * size128 : 2691023
-             * size320 : 6726891
-             * size5_1 : 0
-             * sizeape : 0
-             * sizeflac : 0
-             * sizeogg : 3397887
-             * songid : 235879319
-             * songmid : 000fHtpp34UK7N
-             * songname : 画
-             * songorig : 画
-             * songtype : 0
-             * strMediaMid : 000fHtpp34UK7N
-             * stream : 1
-             * switch : 81683
-             * type : 0
-             * vid :
+             * defaultAvatar : true
+             * province : 110000
+             * authStatus : 0
+             * followed : false
+             * avatarUrl : http://p1.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg
+             * accountStatus : 0
+             * gender : 2
+             * city : 110101
+             * birthday : 733248000000
+             * userId : 126187007
+             * userType : 200
+             * nickname : 用户126187007
+             * signature : 生，刻着希望；死，负着流浪。
+             * description :
+             * detailDescription :
+             * avatarImgId : 18686200114669624
+             * backgroundImgId : 109951163902416270
+             * backgroundUrl : http://p1.music.126.net/Jt4PRxT765cj3F94Nznwcg==/109951163902416278.jpg
+             * authority : 0
+             * mutual : false
+             * expertTags : ["欧美","民谣","爵士"]
+             * experts : null
+             * djStatus : 0
+             * vipType : 0
+             * remarkName : null
+             * backgroundImgIdStr : 109951163902416278
+             * avatarImgIdStr : 18686200114669622
+             * avatarImgId_str : 18686200114669622
              */
 
-            private String albumdesc;
-            private int albumid;
-            private String albummid;
-            private String albumname;
-            private int alertid;
-            private int belongCD;
-            private int cdIdx;
-            private int interval;
-            private int isonly;
-            private String label;
-            private int msgid;
-            private PayBean pay;
-            private PreviewBean preview;
-            private int rate;
-            private int size128;
-            private int size320;
-            private int size5_1;
-            private int sizeape;
-            private int sizeflac;
-            private int sizeogg;
-            private int songid;
-            private String songmid;
-            private String songname;
-            private String songorig;
-            private int songtype;
-            private String strMediaMid;
-            private int stream;
-            @SerializedName("switch")
-            private int switchX;
-            private int type;
-            private String vid;
-            private List<SingerBean> singer;
+            private boolean defaultAvatar;
+            private int province;
+            private int authStatus;
+            private boolean followed;
+            private String avatarUrl;
+            private int accountStatus;
+            private int gender;
+            private int city;
+            private long birthday;
+            private int userId;
+            private int userType;
+            private String nickname;
+            private String signature;
+            private String description;
+            private String detailDescription;
+            private long avatarImgId;
+            private long backgroundImgId;
+            private String backgroundUrl;
+            private int authority;
+            private boolean mutual;
+            private Object experts;
+            private int djStatus;
+            private int vipType;
+            private Object remarkName;
+            private String backgroundImgIdStr;
+            private String avatarImgIdStr;
+            private String avatarImgId_str;
+            private List<String> expertTags;
 
-            public String getAlbumdesc() {
-                return albumdesc;
+            public boolean isDefaultAvatar() {
+                return defaultAvatar;
             }
 
-            public void setAlbumdesc(String albumdesc) {
-                this.albumdesc = albumdesc;
+            public void setDefaultAvatar(boolean defaultAvatar) {
+                this.defaultAvatar = defaultAvatar;
             }
 
-            public int getAlbumid() {
-                return albumid;
+            public int getProvince() {
+                return province;
             }
 
-            public void setAlbumid(int albumid) {
-                this.albumid = albumid;
+            public void setProvince(int province) {
+                this.province = province;
             }
 
-            public String getAlbummid() {
-                return albummid;
+            public int getAuthStatus() {
+                return authStatus;
             }
 
-            public void setAlbummid(String albummid) {
-                this.albummid = albummid;
+            public void setAuthStatus(int authStatus) {
+                this.authStatus = authStatus;
             }
 
-            public String getAlbumname() {
-                return albumname;
+            public boolean isFollowed() {
+                return followed;
             }
 
-            public void setAlbumname(String albumname) {
-                this.albumname = albumname;
+            public void setFollowed(boolean followed) {
+                this.followed = followed;
             }
 
-            public int getAlertid() {
-                return alertid;
+            public String getAvatarUrl() {
+                return avatarUrl;
             }
 
-            public void setAlertid(int alertid) {
-                this.alertid = alertid;
+            public void setAvatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
             }
 
-            public int getBelongCD() {
-                return belongCD;
+            public int getAccountStatus() {
+                return accountStatus;
             }
 
-            public void setBelongCD(int belongCD) {
-                this.belongCD = belongCD;
+            public void setAccountStatus(int accountStatus) {
+                this.accountStatus = accountStatus;
             }
 
-            public int getCdIdx() {
-                return cdIdx;
+            public int getGender() {
+                return gender;
             }
 
-            public void setCdIdx(int cdIdx) {
-                this.cdIdx = cdIdx;
+            public void setGender(int gender) {
+                this.gender = gender;
             }
 
-            public int getInterval() {
-                return interval;
+            public int getCity() {
+                return city;
             }
 
-            public void setInterval(int interval) {
-                this.interval = interval;
+            public void setCity(int city) {
+                this.city = city;
             }
 
-            public int getIsonly() {
-                return isonly;
+            public long getBirthday() {
+                return birthday;
             }
 
-            public void setIsonly(int isonly) {
-                this.isonly = isonly;
+            public void setBirthday(long birthday) {
+                this.birthday = birthday;
             }
 
-            public String getLabel() {
-                return label;
+            public int getUserId() {
+                return userId;
             }
 
-            public void setLabel(String label) {
-                this.label = label;
+            public void setUserId(int userId) {
+                this.userId = userId;
             }
 
-            public int getMsgid() {
-                return msgid;
+            public int getUserType() {
+                return userType;
             }
 
-            public void setMsgid(int msgid) {
-                this.msgid = msgid;
+            public void setUserType(int userType) {
+                this.userType = userType;
             }
 
-            public PayBean getPay() {
-                return pay;
+            public String getNickname() {
+                return nickname;
             }
 
-            public void setPay(PayBean pay) {
-                this.pay = pay;
+            public void setNickname(String nickname) {
+                this.nickname = nickname;
             }
 
-            public PreviewBean getPreview() {
-                return preview;
+            public String getSignature() {
+                return signature;
             }
 
-            public void setPreview(PreviewBean preview) {
-                this.preview = preview;
+            public void setSignature(String signature) {
+                this.signature = signature;
             }
 
-            public int getRate() {
-                return rate;
+            public String getDescription() {
+                return description;
             }
 
-            public void setRate(int rate) {
-                this.rate = rate;
+            public void setDescription(String description) {
+                this.description = description;
             }
 
-            public int getSize128() {
-                return size128;
+            public String getDetailDescription() {
+                return detailDescription;
             }
 
-            public void setSize128(int size128) {
-                this.size128 = size128;
+            public void setDetailDescription(String detailDescription) {
+                this.detailDescription = detailDescription;
             }
 
-            public int getSize320() {
-                return size320;
+            public long getAvatarImgId() {
+                return avatarImgId;
             }
 
-            public void setSize320(int size320) {
-                this.size320 = size320;
+            public void setAvatarImgId(long avatarImgId) {
+                this.avatarImgId = avatarImgId;
             }
 
-            public int getSize5_1() {
-                return size5_1;
+            public long getBackgroundImgId() {
+                return backgroundImgId;
             }
 
-            public void setSize5_1(int size5_1) {
-                this.size5_1 = size5_1;
+            public void setBackgroundImgId(long backgroundImgId) {
+                this.backgroundImgId = backgroundImgId;
             }
 
-            public int getSizeape() {
-                return sizeape;
+            public String getBackgroundUrl() {
+                return backgroundUrl;
             }
 
-            public void setSizeape(int sizeape) {
-                this.sizeape = sizeape;
+            public void setBackgroundUrl(String backgroundUrl) {
+                this.backgroundUrl = backgroundUrl;
             }
 
-            public int getSizeflac() {
-                return sizeflac;
+            public int getAuthority() {
+                return authority;
             }
 
-            public void setSizeflac(int sizeflac) {
-                this.sizeflac = sizeflac;
+            public void setAuthority(int authority) {
+                this.authority = authority;
             }
 
-            public int getSizeogg() {
-                return sizeogg;
+            public boolean isMutual() {
+                return mutual;
             }
 
-            public void setSizeogg(int sizeogg) {
-                this.sizeogg = sizeogg;
+            public void setMutual(boolean mutual) {
+                this.mutual = mutual;
             }
 
-            public int getSongid() {
-                return songid;
+            public Object getExperts() {
+                return experts;
             }
 
-            public void setSongid(int songid) {
-                this.songid = songid;
+            public void setExperts(Object experts) {
+                this.experts = experts;
             }
 
-            public String getSongmid() {
-                return songmid;
+            public int getDjStatus() {
+                return djStatus;
             }
 
-            public void setSongmid(String songmid) {
-                this.songmid = songmid;
+            public void setDjStatus(int djStatus) {
+                this.djStatus = djStatus;
             }
 
-            public String getSongname() {
-                return songname;
+            public int getVipType() {
+                return vipType;
             }
 
-            public void setSongname(String songname) {
-                this.songname = songname;
+            public void setVipType(int vipType) {
+                this.vipType = vipType;
             }
 
-            public String getSongorig() {
-                return songorig;
+            public Object getRemarkName() {
+                return remarkName;
             }
 
-            public void setSongorig(String songorig) {
-                this.songorig = songorig;
+            public void setRemarkName(Object remarkName) {
+                this.remarkName = remarkName;
             }
 
-            public int getSongtype() {
-                return songtype;
+            public String getBackgroundImgIdStr() {
+                return backgroundImgIdStr;
             }
 
-            public void setSongtype(int songtype) {
-                this.songtype = songtype;
+            public void setBackgroundImgIdStr(String backgroundImgIdStr) {
+                this.backgroundImgIdStr = backgroundImgIdStr;
             }
 
-            public String getStrMediaMid() {
-                return strMediaMid;
+            public String getAvatarImgIdStr() {
+                return avatarImgIdStr;
             }
 
-            public void setStrMediaMid(String strMediaMid) {
-                this.strMediaMid = strMediaMid;
+            public void setAvatarImgIdStr(String avatarImgIdStr) {
+                this.avatarImgIdStr = avatarImgIdStr;
             }
 
-            public int getStream() {
-                return stream;
+            public String getAvatarImgId_str() {
+                return avatarImgId_str;
             }
 
-            public void setStream(int stream) {
-                this.stream = stream;
+            public void setAvatarImgId_str(String avatarImgId_str) {
+                this.avatarImgId_str = avatarImgId_str;
             }
 
-            public int getSwitchX() {
-                return switchX;
+            public List<String> getExpertTags() {
+                return expertTags;
             }
 
-            public void setSwitchX(int switchX) {
-                this.switchX = switchX;
+            public void setExpertTags(List<String> expertTags) {
+                this.expertTags = expertTags;
+            }
+        }
+
+        public static class SubscribersBean {
+            /**
+             * defaultAvatar : false
+             * province : 110000
+             * authStatus : 0
+             * followed : false
+             * avatarUrl : http://p1.music.126.net/QEZtYe1MAnr3_wfsi7mGDg==/19022650672194575.jpg
+             * accountStatus : 0
+             * gender : 1
+             * city : 110101
+             * birthday : 873561600000
+             * userId : 418897805
+             * userType : 0
+             * nickname : 爱德花花
+             * signature :
+             * description :
+             * detailDescription :
+             * avatarImgId : 19022650672194576
+             * backgroundImgId : 109951163315035400
+             * backgroundUrl : http://p1.music.126.net/_qXign6BLnwzUZ6SUGAe_w==/109951163315035393.jpg
+             * authority : 0
+             * mutual : false
+             * expertTags : null
+             * experts : null
+             * djStatus : 0
+             * vipType : 0
+             * remarkName : null
+             * backgroundImgIdStr : 109951163315035393
+             * avatarImgIdStr : 19022650672194575
+             * avatarImgId_str : 19022650672194575
+             */
+
+            private boolean defaultAvatar;
+            private int province;
+            private int authStatus;
+            private boolean followed;
+            private String avatarUrl;
+            private int accountStatus;
+            private int gender;
+            private int city;
+            private long birthday;
+            private int userId;
+            private int userType;
+            private String nickname;
+            private String signature;
+            private String description;
+            private String detailDescription;
+            private long avatarImgId;
+            private long backgroundImgId;
+            private String backgroundUrl;
+            private int authority;
+            private boolean mutual;
+            private Object expertTags;
+            private Object experts;
+            private int djStatus;
+            private int vipType;
+            private Object remarkName;
+            private String backgroundImgIdStr;
+            private String avatarImgIdStr;
+            private String avatarImgId_str;
+
+            public boolean isDefaultAvatar() {
+                return defaultAvatar;
             }
 
-            public int getType() {
-                return type;
+            public void setDefaultAvatar(boolean defaultAvatar) {
+                this.defaultAvatar = defaultAvatar;
             }
 
-            public void setType(int type) {
-                this.type = type;
+            public int getProvince() {
+                return province;
             }
 
-            public String getVid() {
-                return vid;
+            public void setProvince(int province) {
+                this.province = province;
             }
 
-            public void setVid(String vid) {
-                this.vid = vid;
+            public int getAuthStatus() {
+                return authStatus;
             }
 
-            public List<SingerBean> getSinger() {
-                return singer;
+            public void setAuthStatus(int authStatus) {
+                this.authStatus = authStatus;
             }
 
-            public void setSinger(List<SingerBean> singer) {
-                this.singer = singer;
+            public boolean isFollowed() {
+                return followed;
             }
 
-            public static class PayBean {
+            public void setFollowed(boolean followed) {
+                this.followed = followed;
+            }
+
+            public String getAvatarUrl() {
+                return avatarUrl;
+            }
+
+            public void setAvatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
+            }
+
+            public int getAccountStatus() {
+                return accountStatus;
+            }
+
+            public void setAccountStatus(int accountStatus) {
+                this.accountStatus = accountStatus;
+            }
+
+            public int getGender() {
+                return gender;
+            }
+
+            public void setGender(int gender) {
+                this.gender = gender;
+            }
+
+            public int getCity() {
+                return city;
+            }
+
+            public void setCity(int city) {
+                this.city = city;
+            }
+
+            public long getBirthday() {
+                return birthday;
+            }
+
+            public void setBirthday(long birthday) {
+                this.birthday = birthday;
+            }
+
+            public int getUserId() {
+                return userId;
+            }
+
+            public void setUserId(int userId) {
+                this.userId = userId;
+            }
+
+            public int getUserType() {
+                return userType;
+            }
+
+            public void setUserType(int userType) {
+                this.userType = userType;
+            }
+
+            public String getNickname() {
+                return nickname;
+            }
+
+            public void setNickname(String nickname) {
+                this.nickname = nickname;
+            }
+
+            public String getSignature() {
+                return signature;
+            }
+
+            public void setSignature(String signature) {
+                this.signature = signature;
+            }
+
+            public String getDescription() {
+                return description;
+            }
+
+            public void setDescription(String description) {
+                this.description = description;
+            }
+
+            public String getDetailDescription() {
+                return detailDescription;
+            }
+
+            public void setDetailDescription(String detailDescription) {
+                this.detailDescription = detailDescription;
+            }
+
+            public long getAvatarImgId() {
+                return avatarImgId;
+            }
+
+            public void setAvatarImgId(long avatarImgId) {
+                this.avatarImgId = avatarImgId;
+            }
+
+            public long getBackgroundImgId() {
+                return backgroundImgId;
+            }
+
+            public void setBackgroundImgId(long backgroundImgId) {
+                this.backgroundImgId = backgroundImgId;
+            }
+
+            public String getBackgroundUrl() {
+                return backgroundUrl;
+            }
+
+            public void setBackgroundUrl(String backgroundUrl) {
+                this.backgroundUrl = backgroundUrl;
+            }
+
+            public int getAuthority() {
+                return authority;
+            }
+
+            public void setAuthority(int authority) {
+                this.authority = authority;
+            }
+
+            public boolean isMutual() {
+                return mutual;
+            }
+
+            public void setMutual(boolean mutual) {
+                this.mutual = mutual;
+            }
+
+            public Object getExpertTags() {
+                return expertTags;
+            }
+
+            public void setExpertTags(Object expertTags) {
+                this.expertTags = expertTags;
+            }
+
+            public Object getExperts() {
+                return experts;
+            }
+
+            public void setExperts(Object experts) {
+                this.experts = experts;
+            }
+
+            public int getDjStatus() {
+                return djStatus;
+            }
+
+            public void setDjStatus(int djStatus) {
+                this.djStatus = djStatus;
+            }
+
+            public int getVipType() {
+                return vipType;
+            }
+
+            public void setVipType(int vipType) {
+                this.vipType = vipType;
+            }
+
+            public Object getRemarkName() {
+                return remarkName;
+            }
+
+            public void setRemarkName(Object remarkName) {
+                this.remarkName = remarkName;
+            }
+
+            public String getBackgroundImgIdStr() {
+                return backgroundImgIdStr;
+            }
+
+            public void setBackgroundImgIdStr(String backgroundImgIdStr) {
+                this.backgroundImgIdStr = backgroundImgIdStr;
+            }
+
+            public String getAvatarImgIdStr() {
+                return avatarImgIdStr;
+            }
+
+            public void setAvatarImgIdStr(String avatarImgIdStr) {
+                this.avatarImgIdStr = avatarImgIdStr;
+            }
+
+            public String getAvatarImgId_str() {
+                return avatarImgId_str;
+            }
+
+            public void setAvatarImgId_str(String avatarImgId_str) {
+                this.avatarImgId_str = avatarImgId_str;
+            }
+        }
+
+        public static class TracksBean {
+            /**
+             * name : Childhood Memories
+             * id : 5027855
+             * pst : 0
+             * t : 0
+             * ar : [{"id":32668,"name":"Ennio Morricone","tns":[],"alias":[]}]
+             * alia : []
+             * pop : 85
+             * st : 0
+             * rt :
+             * fee : 0
+             * v : 7
+             * crbt : null
+             * cf :
+             * al : {"id":499475,"name":"Once Upon a Time In America (Original Motion Picture Soundtrack)","picUrl":"http://p2.music.126.net/w9QqiYJ3A8s0OweHMGnq0Q==/1682252790510607.jpg","tns":["美国往事"],"pic":1682252790510607}
+             * dt : 201508
+             * h : {"br":320000,"fid":0,"size":8090730,"vd":1.34884}
+             * m : {"br":160000,"fid":0,"size":4059515,"vd":1.8895}
+             * l : {"br":96000,"fid":0,"size":2447028,"vd":1.77948}
+             * a : null
+             * cd : 1
+             * no : 4
+             * rtUrl : null
+             * ftype : 0
+             * rtUrls : []
+             * djId : 0
+             * copyright : 1
+             * s_id : 0
+             * mark : 0
+             * rtype : 0
+             * rurl : null
+             * mst : 9
+             * cp : 5003
+             * mv : 0
+             * publishTime : 813859200007
+             * tns : ["黄金三镖客(主题)"]
+             */
+
+            private String name;
+            private int id;
+            private int pst;
+            private int t;
+            private int pop;
+            private int st;
+            private String rt;
+            private int fee;
+            private int v;
+            private Object crbt;
+            private String cf;
+            private AlBean al;
+            private int dt;
+            private HBean h;
+            private MBean m;
+            private LBean l;
+            private Object a;
+            private String cd;
+            private int no;
+            private Object rtUrl;
+            private int ftype;
+            private int djId;
+            private int copyright;
+            private int s_id;
+            private int mark;
+            private int rtype;
+            private Object rurl;
+            private int mst;
+            private int cp;
+            private int mv;
+            private long publishTime;
+            private List<ArBean> ar;
+            private List<?> alia;
+            private List<?> rtUrls;
+            private List<String> tns;
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int id) {
+                this.id = id;
+            }
+
+            public int getPst() {
+                return pst;
+            }
+
+            public void setPst(int pst) {
+                this.pst = pst;
+            }
+
+            public int getT() {
+                return t;
+            }
+
+            public void setT(int t) {
+                this.t = t;
+            }
+
+            public int getPop() {
+                return pop;
+            }
+
+            public void setPop(int pop) {
+                this.pop = pop;
+            }
+
+            public int getSt() {
+                return st;
+            }
+
+            public void setSt(int st) {
+                this.st = st;
+            }
+
+            public String getRt() {
+                return rt;
+            }
+
+            public void setRt(String rt) {
+                this.rt = rt;
+            }
+
+            public int getFee() {
+                return fee;
+            }
+
+            public void setFee(int fee) {
+                this.fee = fee;
+            }
+
+            public int getV() {
+                return v;
+            }
+
+            public void setV(int v) {
+                this.v = v;
+            }
+
+            public Object getCrbt() {
+                return crbt;
+            }
+
+            public void setCrbt(Object crbt) {
+                this.crbt = crbt;
+            }
+
+            public String getCf() {
+                return cf;
+            }
+
+            public void setCf(String cf) {
+                this.cf = cf;
+            }
+
+            public AlBean getAl() {
+                return al;
+            }
+
+            public void setAl(AlBean al) {
+                this.al = al;
+            }
+
+            public int getDt() {
+                return dt;
+            }
+
+            public void setDt(int dt) {
+                this.dt = dt;
+            }
+
+            public HBean getH() {
+                return h;
+            }
+
+            public void setH(HBean h) {
+                this.h = h;
+            }
+
+            public MBean getM() {
+                return m;
+            }
+
+            public void setM(MBean m) {
+                this.m = m;
+            }
+
+            public LBean getL() {
+                return l;
+            }
+
+            public void setL(LBean l) {
+                this.l = l;
+            }
+
+            public Object getA() {
+                return a;
+            }
+
+            public void setA(Object a) {
+                this.a = a;
+            }
+
+            public String getCd() {
+                return cd;
+            }
+
+            public void setCd(String cd) {
+                this.cd = cd;
+            }
+
+            public int getNo() {
+                return no;
+            }
+
+            public void setNo(int no) {
+                this.no = no;
+            }
+
+            public Object getRtUrl() {
+                return rtUrl;
+            }
+
+            public void setRtUrl(Object rtUrl) {
+                this.rtUrl = rtUrl;
+            }
+
+            public int getFtype() {
+                return ftype;
+            }
+
+            public void setFtype(int ftype) {
+                this.ftype = ftype;
+            }
+
+            public int getDjId() {
+                return djId;
+            }
+
+            public void setDjId(int djId) {
+                this.djId = djId;
+            }
+
+            public int getCopyright() {
+                return copyright;
+            }
+
+            public void setCopyright(int copyright) {
+                this.copyright = copyright;
+            }
+
+            public int getS_id() {
+                return s_id;
+            }
+
+            public void setS_id(int s_id) {
+                this.s_id = s_id;
+            }
+
+            public int getMark() {
+                return mark;
+            }
+
+            public void setMark(int mark) {
+                this.mark = mark;
+            }
+
+            public int getRtype() {
+                return rtype;
+            }
+
+            public void setRtype(int rtype) {
+                this.rtype = rtype;
+            }
+
+            public Object getRurl() {
+                return rurl;
+            }
+
+            public void setRurl(Object rurl) {
+                this.rurl = rurl;
+            }
+
+            public int getMst() {
+                return mst;
+            }
+
+            public void setMst(int mst) {
+                this.mst = mst;
+            }
+
+            public int getCp() {
+                return cp;
+            }
+
+            public void setCp(int cp) {
+                this.cp = cp;
+            }
+
+            public int getMv() {
+                return mv;
+            }
+
+            public void setMv(int mv) {
+                this.mv = mv;
+            }
+
+            public long getPublishTime() {
+                return publishTime;
+            }
+
+            public void setPublishTime(long publishTime) {
+                this.publishTime = publishTime;
+            }
+
+            public List<ArBean> getAr() {
+                return ar;
+            }
+
+            public void setAr(List<ArBean> ar) {
+                this.ar = ar;
+            }
+
+            public List<?> getAlia() {
+                return alia;
+            }
+
+            public void setAlia(List<?> alia) {
+                this.alia = alia;
+            }
+
+            public List<?> getRtUrls() {
+                return rtUrls;
+            }
+
+            public void setRtUrls(List<?> rtUrls) {
+                this.rtUrls = rtUrls;
+            }
+
+            public List<String> getTns() {
+                return tns;
+            }
+
+            public void setTns(List<String> tns) {
+                this.tns = tns;
+            }
+
+            public static class AlBean {
                 /**
-                 * payalbum : 0
-                 * payalbumprice : 0
-                 * paydownload : 0
-                 * payinfo : 0
-                 * payplay : 0
-                 * paytrackmouth : 0
-                 * paytrackprice : 0
-                 * timefree : 0
-                 */
-
-                private int payalbum;
-                private int payalbumprice;
-                private int paydownload;
-                private int payinfo;
-                private int payplay;
-                private int paytrackmouth;
-                private int paytrackprice;
-                private int timefree;
-
-                public int getPayalbum() {
-                    return payalbum;
-                }
-
-                public void setPayalbum(int payalbum) {
-                    this.payalbum = payalbum;
-                }
-
-                public int getPayalbumprice() {
-                    return payalbumprice;
-                }
-
-                public void setPayalbumprice(int payalbumprice) {
-                    this.payalbumprice = payalbumprice;
-                }
-
-                public int getPaydownload() {
-                    return paydownload;
-                }
-
-                public void setPaydownload(int paydownload) {
-                    this.paydownload = paydownload;
-                }
-
-                public int getPayinfo() {
-                    return payinfo;
-                }
-
-                public void setPayinfo(int payinfo) {
-                    this.payinfo = payinfo;
-                }
-
-                public int getPayplay() {
-                    return payplay;
-                }
-
-                public void setPayplay(int payplay) {
-                    this.payplay = payplay;
-                }
-
-                public int getPaytrackmouth() {
-                    return paytrackmouth;
-                }
-
-                public void setPaytrackmouth(int paytrackmouth) {
-                    this.paytrackmouth = paytrackmouth;
-                }
-
-                public int getPaytrackprice() {
-                    return paytrackprice;
-                }
-
-                public void setPaytrackprice(int paytrackprice) {
-                    this.paytrackprice = paytrackprice;
-                }
-
-                public int getTimefree() {
-                    return timefree;
-                }
-
-                public void setTimefree(int timefree) {
-                    this.timefree = timefree;
-                }
-            }
-
-            public static class PreviewBean {
-                /**
-                 * trybegin : 0
-                 * tryend : 0
-                 * trysize : 0
-                 */
-
-                private int trybegin;
-                private int tryend;
-                private int trysize;
-
-                public int getTrybegin() {
-                    return trybegin;
-                }
-
-                public void setTrybegin(int trybegin) {
-                    this.trybegin = trybegin;
-                }
-
-                public int getTryend() {
-                    return tryend;
-                }
-
-                public void setTryend(int tryend) {
-                    this.tryend = tryend;
-                }
-
-                public int getTrysize() {
-                    return trysize;
-                }
-
-                public void setTrysize(int trysize) {
-                    this.trysize = trysize;
-                }
-            }
-
-            public static class SingerBean {
-                /**
-                 * id : 1511644
-                 * mid : 002qrSu92q8XKu
-                 * name : 绿巨人先森
+                 * id : 499475
+                 * name : Once Upon a Time In America (Original Motion Picture Soundtrack)
+                 * picUrl : http://p2.music.126.net/w9QqiYJ3A8s0OweHMGnq0Q==/1682252790510607.jpg
+                 * tns : ["美国往事"]
+                 * pic : 1682252790510607
                  */
 
                 private int id;
-                private String mid;
                 private String name;
+                private String picUrl;
+                private long pic;
+                private List<String> tns;
 
                 public int getId() {
                     return id;
@@ -802,12 +1361,196 @@ public class RecommendedMusicBean {
                     this.id = id;
                 }
 
-                public String getMid() {
-                    return mid;
+                public String getName() {
+                    return name;
                 }
 
-                public void setMid(String mid) {
-                    this.mid = mid;
+                public void setName(String name) {
+                    this.name = name;
+                }
+
+                public String getPicUrl() {
+                    return picUrl;
+                }
+
+                public void setPicUrl(String picUrl) {
+                    this.picUrl = picUrl;
+                }
+
+                public long getPic() {
+                    return pic;
+                }
+
+                public void setPic(long pic) {
+                    this.pic = pic;
+                }
+
+                public List<String> getTns() {
+                    return tns;
+                }
+
+                public void setTns(List<String> tns) {
+                    this.tns = tns;
+                }
+            }
+
+            public static class HBean {
+                /**
+                 * br : 320000
+                 * fid : 0
+                 * size : 8090730
+                 * vd : 1.34884
+                 */
+
+                private int br;
+                private int fid;
+                private int size;
+                private double vd;
+
+                public int getBr() {
+                    return br;
+                }
+
+                public void setBr(int br) {
+                    this.br = br;
+                }
+
+                public int getFid() {
+                    return fid;
+                }
+
+                public void setFid(int fid) {
+                    this.fid = fid;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public double getVd() {
+                    return vd;
+                }
+
+                public void setVd(double vd) {
+                    this.vd = vd;
+                }
+            }
+
+            public static class MBean {
+                /**
+                 * br : 160000
+                 * fid : 0
+                 * size : 4059515
+                 * vd : 1.8895
+                 */
+
+                private int br;
+                private int fid;
+                private int size;
+                private double vd;
+
+                public int getBr() {
+                    return br;
+                }
+
+                public void setBr(int br) {
+                    this.br = br;
+                }
+
+                public int getFid() {
+                    return fid;
+                }
+
+                public void setFid(int fid) {
+                    this.fid = fid;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public double getVd() {
+                    return vd;
+                }
+
+                public void setVd(double vd) {
+                    this.vd = vd;
+                }
+            }
+
+            public static class LBean {
+                /**
+                 * br : 96000
+                 * fid : 0
+                 * size : 2447028
+                 * vd : 1.77948
+                 */
+
+                private int br;
+                private int fid;
+                private int size;
+                private double vd;
+
+                public int getBr() {
+                    return br;
+                }
+
+                public void setBr(int br) {
+                    this.br = br;
+                }
+
+                public int getFid() {
+                    return fid;
+                }
+
+                public void setFid(int fid) {
+                    this.fid = fid;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public double getVd() {
+                    return vd;
+                }
+
+                public void setVd(double vd) {
+                    this.vd = vd;
+                }
+            }
+
+            public static class ArBean {
+                /**
+                 * id : 32668
+                 * name : Ennio Morricone
+                 * tns : []
+                 * alias : []
+                 */
+
+                private int id;
+                private String name;
+                private List<?> tns;
+                private List<?> alias;
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
                 }
 
                 public String getName() {
@@ -817,7 +1560,215 @@ public class RecommendedMusicBean {
                 public void setName(String name) {
                     this.name = name;
                 }
+
+                public List<?> getTns() {
+                    return tns;
+                }
+
+                public void setTns(List<?> tns) {
+                    this.tns = tns;
+                }
+
+                public List<?> getAlias() {
+                    return alias;
+                }
+
+                public void setAlias(List<?> alias) {
+                    this.alias = alias;
+                }
             }
+        }
+
+        public static class TrackIdsBean {
+            /**
+             * id : 5027855
+             * v : 7
+             * alg : null
+             */
+
+            private int id;
+            private int v;
+            private Object alg;
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int id) {
+                this.id = id;
+            }
+
+            public int getV() {
+                return v;
+            }
+
+            public void setV(int v) {
+                this.v = v;
+            }
+
+            public Object getAlg() {
+                return alg;
+            }
+
+            public void setAlg(Object alg) {
+                this.alg = alg;
+            }
+        }
+    }
+
+    public static class PrivilegesBean {
+        /**
+         * id : 5027855
+         * fee : 0
+         * payed : 0
+         * st : 0
+         * pl : 320000
+         * dl : 320000
+         * sp : 7
+         * cp : 1
+         * subp : 1
+         * cs : false
+         * maxbr : 320000
+         * fl : 999000
+         * toast : false
+         * flag : 128
+         * preSell : false
+         */
+
+        private int id;
+        private int fee;
+        private int payed;
+        private int st;
+        private int pl;
+        private int dl;
+        private int sp;
+        private int cp;
+        private int subp;
+        private boolean cs;
+        private int maxbr;
+        private int fl;
+        private boolean toast;
+        private int flag;
+        private boolean preSell;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public int getFee() {
+            return fee;
+        }
+
+        public void setFee(int fee) {
+            this.fee = fee;
+        }
+
+        public int getPayed() {
+            return payed;
+        }
+
+        public void setPayed(int payed) {
+            this.payed = payed;
+        }
+
+        public int getSt() {
+            return st;
+        }
+
+        public void setSt(int st) {
+            this.st = st;
+        }
+
+        public int getPl() {
+            return pl;
+        }
+
+        public void setPl(int pl) {
+            this.pl = pl;
+        }
+
+        public int getDl() {
+            return dl;
+        }
+
+        public void setDl(int dl) {
+            this.dl = dl;
+        }
+
+        public int getSp() {
+            return sp;
+        }
+
+        public void setSp(int sp) {
+            this.sp = sp;
+        }
+
+        public int getCp() {
+            return cp;
+        }
+
+        public void setCp(int cp) {
+            this.cp = cp;
+        }
+
+        public int getSubp() {
+            return subp;
+        }
+
+        public void setSubp(int subp) {
+            this.subp = subp;
+        }
+
+        public boolean isCs() {
+            return cs;
+        }
+
+        public void setCs(boolean cs) {
+            this.cs = cs;
+        }
+
+        public int getMaxbr() {
+            return maxbr;
+        }
+
+        public void setMaxbr(int maxbr) {
+            this.maxbr = maxbr;
+        }
+
+        public int getFl() {
+            return fl;
+        }
+
+        public void setFl(int fl) {
+            this.fl = fl;
+        }
+
+        public boolean isToast() {
+            return toast;
+        }
+
+        public void setToast(boolean toast) {
+            this.toast = toast;
+        }
+
+        public int getFlag() {
+            return flag;
+        }
+
+        public void setFlag(int flag) {
+            this.flag = flag;
+        }
+
+        public boolean isPreSell() {
+            return preSell;
+        }
+
+        public void setPreSell(boolean preSell) {
+            this.preSell = preSell;
         }
     }
 }

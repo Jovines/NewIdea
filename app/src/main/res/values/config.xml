@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--main顶部item出现和小时的时间-->
+    <integer name="mainItemShowOrTime" tools:ignore="ResourceName">600</integer>
+
+
+</resources>

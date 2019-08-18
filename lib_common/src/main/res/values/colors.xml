@@ -3,4 +3,6 @@
     <color name="colorPrimary" tools:ignore="ResourceName">#58B1FC</color>
     <color name="colorPrimaryDark" tools:ignore="ResourceName">#798DFA</color>
     <color name="colorAccent" tools:ignore="ResourceName">#788EFA</color>
+    <color name="windowBackground" tools:ignore="ResourceName">#FFFF</color>
+
 </resources>
