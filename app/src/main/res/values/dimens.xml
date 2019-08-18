@@ -4,4 +4,6 @@
     <!--侧边栏宽度-->
     <dimen name="sidebarWidth" tools:ignore="ResourceName">200.0dp</dimen>
 
+    <dimen name="app_keyboard_top_view_seek_bar_min_width">60.0dp</dimen>
+
 </resources>

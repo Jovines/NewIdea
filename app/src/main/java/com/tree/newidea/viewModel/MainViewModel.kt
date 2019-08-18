@@ -221,6 +221,9 @@ class MainViewModel : BaseViewModel() {
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
             srv_main_sidebar.adapter = SidebarRecycleViewAdapter()
 
+            //SlidingPaneLayout阴影设置
+            dl_main.sliderFadeColor = 0x00ffffff
+
 
         }
     }
@@ -317,7 +320,6 @@ class MainViewModel : BaseViewModel() {
                 override fun onPanelClosed(arg0: View) {
                 }
             })
-            dl_main.sliderFadeColor = 0x00ffffff
 
 
             ll_no_notebook_tips.setOnClickListener {
