@@ -4,7 +4,6 @@ import android.os.Bundle
 import com.tree.common.ui.BaseViewModelActivity
 import com.tree.newidea.R
 import com.tree.newidea.viewModel.EditViewmodel
-import kotlinx.android.synthetic.main.app_activity_edit.*
 
 class EditActivity : BaseViewModelActivity<EditViewmodel>() {
     override val viewModelClass: Class<EditViewmodel>

@@ -1,27 +1,13 @@
 package com.tree.newidea.viewModel
 
-import android.animation.Animator
-import android.animation.ValueAnimator
-import android.annotation.SuppressLint
 import android.graphics.Rect
 import android.text.Editable
-import android.text.TextUtils
 import android.text.TextWatcher
-import android.view.Gravity
-import android.view.View
-import android.view.ViewGroup
 import android.view.ViewTreeObserver
-import android.widget.FrameLayout
-import android.widget.PopupWindow
-import android.widget.SeekBar
-import android.widget.TextView
 import com.tree.common.viewmodel.BaseViewModel
-import com.tree.newidea.R
 import com.tree.newidea.activity.EditActivity
 import com.tree.newidea.util.StatusBarUtil
-import com.tree.newidea.util.dip2px
 import com.tree.newidea.util.phoneHeight
-import com.tree.newidea.util.phoneWidth
 import kotlinx.android.synthetic.main.app_activity_edit.*
 import kotlin.math.abs
 
