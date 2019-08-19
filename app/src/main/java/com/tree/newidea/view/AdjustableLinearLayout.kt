@@ -27,7 +27,6 @@ class AdjustableLinearLayout : LinearLayout {
 
     fun setSelfWith(i: Int) {
         left =  mLeft - i
-        Log.d("jijij",left.toString())
 
     }
 

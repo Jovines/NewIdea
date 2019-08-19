@@ -12,6 +12,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
+        <activity android:name=".activity.MarkDownActivity"
+                android:theme="@style/app_Theme.NoBackground">
+
+        </activity>
         <activity android:name=".activity.EditActivity">
         </activity>
         <activity android:name=".activity.SplashActivity">

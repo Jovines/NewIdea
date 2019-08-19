@@ -39,6 +39,7 @@ import kotlinx.android.synthetic.main.app_main_below_layer.*
 import android.R
 import com.tree.newidea.adapter.SidebarRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_sidebar.*
+import java.text.DecimalFormat
 
 
 /**
@@ -218,6 +219,7 @@ class MainViewModel : BaseViewModel() {
             }
             rv_to_do_list.layoutManager = LinearLayoutManager(this)
             rv_to_do_list.adapter = ToDoListRecycleViewAdapter()
+
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
             srv_main_sidebar.adapter = SidebarRecycleViewAdapter()
 
@@ -308,9 +310,10 @@ class MainViewModel : BaseViewModel() {
 
                     main_content.translationX = -(phoneWidth/2 - width/2)*v
                     main_content.translationY = ((phoneHeight-size* phoneHeight)/2f)*v
-
-                    main_content.scaleX = (size-1)*v + 1
-                    main_content.scaleY =  (size-1)*v + 1
+                    val deci = DecimalFormat("#.0000")
+                    deci.format( (size-1)*v + 1)
+                    main_content.scaleX =  deci.format( (size-1)*v + 1).toFloat()
+                    main_content.scaleY =  deci.format( (size-1)*v + 1).toFloat()
 
                 }
 

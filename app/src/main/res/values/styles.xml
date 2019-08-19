@@ -13,7 +13,8 @@
 
     </style>
 
-    <style name="app_Theme.NoBackground" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="app_Theme.NoBackground" parent="AppTheme">
+
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@null</item>
     </style>

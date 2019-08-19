@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tree.newidea.R
 import com.tree.newidea.activity.EditActivity
+import com.tree.newidea.activity.MarkDownActivity
 
 /**
  * Created by Tree on 2019/8/16 22:48
@@ -23,6 +24,10 @@ class MainRecycleViewAdapter : RecyclerView.Adapter<MainRecycleViewAdapter.ViewH
         when (position) {
             0 -> holder.itemView.setOnClickListener {
                 val intent = Intent(context,EditActivity::class.java)
+                context.startActivity(intent)
+            }
+            1 -> holder.itemView.setOnClickListener {
+                val intent = Intent(context,MarkDownActivity::class.java)
                 context.startActivity(intent)
             }
         }
