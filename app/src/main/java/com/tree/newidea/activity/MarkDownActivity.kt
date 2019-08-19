@@ -25,7 +25,6 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
         //监听视图树的布局改变(弹出/隐藏软键盘会触发)
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener(viewModel.keyboardOnGlobalChangeListener)
         viewModel.listenEventSettings(this)//监听事件的设置
-
     }
 
 

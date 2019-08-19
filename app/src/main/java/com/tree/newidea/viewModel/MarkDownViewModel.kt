@@ -13,11 +13,13 @@ import android.widget.TextView
 import com.tree.common.viewmodel.BaseViewModel
 import com.tree.newidea.R
 import com.tree.newidea.activity.MarkDownActivity
+import com.tree.newidea.util.StatusBarUtil
 import com.tree.newidea.util.dip2px
 import com.tree.newidea.util.phoneHeight
 import com.tree.newidea.util.phoneWidth
 import kotlinx.android.synthetic.main.app_activity_edit.container
 import kotlinx.android.synthetic.main.app_activity_edit.edit_view
+import kotlinx.android.synthetic.main.app_activity_mark_down.*
 import kotlin.math.abs
 
 /**
@@ -168,8 +170,9 @@ class MarkDownViewModel : BaseViewModel() {
 
     fun listenEventSettings(editActivity: MarkDownActivity) {
         editActivity.apply {
-
-
+            mark_down_back.setOnClickListener {
+                finish()
+            }
 
         }
     }
@@ -177,6 +180,7 @@ class MarkDownViewModel : BaseViewModel() {
     fun initData(editActivity: MarkDownActivity) {
         editActivity.apply {
             keyboardOnGlobalChangeListener =  KeyboardOnGlobalChangeListener(editActivity)
+            StatusBarUtil.setStatusBarDarkTheme(this,true)
 
         }
     }
