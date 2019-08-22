@@ -9,7 +9,6 @@
 
     <com.yanzhenjie.recyclerview.SwipeRecyclerView
             android:id="@+id/srv_main_sidebar"
-            android:visibility="gone"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
             android:layout_width="match_parent"
@@ -19,20 +18,20 @@
     </com.yanzhenjie.recyclerview.SwipeRecyclerView>
 
 
-    <LinearLayout
-            android:id="@+id/ll_no_notebook_tips"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <TextView
-                android:text="你还没有便签呢\n点击添加一个吧"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+    <!--<LinearLayout-->
+            <!--android:id="@+id/ll_no_notebook_tips"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+        <!--<TextView-->
+                <!--android:text="你还没有便签呢\n点击添加一个吧"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"/>-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
 </FrameLayout>

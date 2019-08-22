@@ -3,24 +3,36 @@ package com.tree.newidea.adapter
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
+import com.tree.newidea.R
+import com.tree.newidea.activity.MarkDownActivity
+import kotlinx.android.synthetic.main.app_view_pager_page_markdown.view.*
+import kotlinx.android.synthetic.main.app_view_pager_page_markdown_normal.view.*
 
-class MarkdownViewPagerAdapter : PagerAdapter() {
+class MarkdownViewPagerAdapter(context:MarkDownActivity) : PagerAdapter() {
+
+    private val pageList = mutableListOf<View>()
+
+    init {
+        pageList.add(View.inflate(context, R.layout.app_view_pager_page_markdown_normal, null).apply {
+            context.editText = edit_text
+        })
+        pageList.add(View.inflate(context, R.layout.app_view_pager_page_markdown, null).apply {
+            context.markdownView = mark_down_edit_text
+        })
+    }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        return super.instantiateItem(container, position)
+        container.addView(pageList[position])
+        return  pageList[position]
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        super.destroyItem(container, position, `object`)
+        container.removeView(pageList[position])
     }
 
 
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
-    override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun isViewFromObject(view: View, `object`: Any)= view == `object`
+    override fun getCount() = pageList.size
 }

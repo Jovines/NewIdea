@@ -1,15 +1,21 @@
 package com.tree.newidea.activity
 
 import android.os.Bundle
+import android.view.View
 import com.tree.common.ui.BaseViewModelActivity
+import com.tree.newidea.adapter.SidebarRecycleViewAdapter
+import com.tree.newidea.event.MainUpDate
+import com.tree.newidea.util.note
 import com.tree.newidea.viewModel.MainViewModel
+import kotlinx.android.synthetic.main.app_activity_main.*
+import kotlinx.android.synthetic.main.app_main_sidebar.*
+import org.greenrobot.eventbus.Subscribe
 
 
 class MainActivity : BaseViewModelActivity<MainViewModel>() {
     override val isFragmentActivity: Boolean
         get() = false
     override val viewModelClass: Class<MainViewModel> = MainViewModel::class.java
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,12 +26,39 @@ class MainActivity : BaseViewModelActivity<MainViewModel>() {
         viewModel.initData(this)
         viewModel.getSongData(this)//设置获取歌曲数据，并初始化歌曲viewPager
         viewModel.listenEventSettings(this)//监听事件的设置
-        viewModel.installRecyclerView(this)//侧边的RcycleView的设置
 
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
+    }
+
+
+    @Subscribe
+    fun update(mianUpDate: MainUpDate) {
+        srv_main_sidebar.adapter?.notifyDataSetChanged()
+
+//        srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
+
     }
 
 

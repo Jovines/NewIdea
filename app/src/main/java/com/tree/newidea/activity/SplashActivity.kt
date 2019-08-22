@@ -38,18 +38,16 @@ class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.app_activity_splash)
-
         ordinaryApi = ApiGenerator.getApiService(OrdinaryApi::class.java)
+        Observable.create<Any> {
+            Thread.sleep(3000)
+                startActivity<MainActivity>()
+                finish()
+        }.subscribeOn(Schedulers.io()).subscribe()
         ordinaryApi.getSplashPicture("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN").enqueue(object : retrofit2.Callback<BingPictureBean> {
             override fun onResponse(call: Call<BingPictureBean>, response: Response<BingPictureBean>) {
                 val a = response.body()
                 response.body()?.let {
-//                    loadImage(
-//                        iv_splash_backgroup,
-//                        "$BING_BASE_URI${it.images?.get(0)?.url?.substringBefore("&")}",
-//                        null
-
-//                    )
                     Glide.with(this@SplashActivity).load("$BING_BASE_URI${it.images?.get(0)?.url?.substringBefore("&")}")
                         .listener(
                         object : RequestListener<Drawable> {
@@ -101,5 +99,7 @@ class SplashActivity : BaseActivity() {
 
     override fun finish() {
         super.finish()
+        overridePendingTransition(0, R.anim.app_no_anim)
+
     }
 }

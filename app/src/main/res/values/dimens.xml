@@ -2,11 +2,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--侧边栏宽度-->
-    <dimen name="sidebarWidth" tools:ignore="ResourceName">200.0dp</dimen>
+    <dimen name="sidebarWidth" tools:ignore="ResourceName">300.0dp</dimen>
+
+    <dimen name="mainToolBarHeight" tools:ignore="ResourceName">60.0dp</dimen>
 
     <dimen name="keyboard_top_view_seek_bar_min_width" tools:ignore="ResourceName">60.0dp</dimen>
 
     <dimen name="keyboard_top_view_tip_container_height" tools:ignore="ResourceName">40.0dp</dimen>
+
+    <!--这个值是上面的值的一半如果更改上面的下面一起更改-->
+    <dimen name="keyboard_top_view_tip_container_height_part" tools:ignore="ResourceName">20.0dp</dimen>
 
 
 

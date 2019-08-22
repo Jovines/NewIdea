@@ -7,27 +7,22 @@
         android:paddingStart="3dp"
         android:paddingEnd="3dp"
         android:paddingBottom="10dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    <View
-            android:layout_marginStart="300dp"
-            android:layout_marginEnd="300dp"
-            android:layout_width="1dp"
-            android:layout_height="1dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:orientation="horizontal"
             android:gravity="center"
             android:background="@drawable/app_shape_recycle_item_to_do_item"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
 
         <ImageView
                 android:src="@drawable/mood_tooth_decay"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -37,13 +32,12 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/app_imageview"
-                app:layout_constraintHorizontal_bias="0.047"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintVertical_bias="0.0"/>
 
 
         <TextView
-                android:text="代办事项"
-                android:maxLines="1"
+                android:text="代\n办\n事\n项"
                 android:textSize="14sp"
                 android:textColor="@color/mainTextColor"
                 android:layout_width="wrap_content"
@@ -51,13 +45,12 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintStart_toEndOf="@+id/app_imageview"
-                android:layout_marginStart="8dp"
-                app:layout_constraintHorizontal_bias="0.019"
-                />
+                app:layout_constraintEnd_toEndOf="@+id/app_imageview"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintTop_toBottomOf="@+id/app_imageview"
+                app:layout_constraintStart_toStartOf="@+id/app_imageview"
+                app:layout_constraintVertical_bias="0.0"
+                android:id="@+id/app_textview2"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

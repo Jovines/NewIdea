@@ -9,12 +9,11 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowBackground">@color/editorBackground</item>
 
     </style>
 
     <style name="app_Theme.NoBackground" parent="AppTheme">
-
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@null</item>
     </style>

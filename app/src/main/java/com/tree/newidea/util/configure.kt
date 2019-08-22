@@ -1,5 +1,7 @@
 package com.tree.newidea.util
 
+import com.tree.newidea.bean.NotepadBean
+
 /**
  * Created by Tree on 2019/8/16 2:49
  */
@@ -8,6 +10,13 @@ package com.tree.newidea.util
  * 闪屏页到Mian的时间
  */
 const val activityStartTime = 1500.toLong()
+
+
+/**
+ * 本地记事本数据
+ */
+
+val note = NotepadBean()
 
 
 /**

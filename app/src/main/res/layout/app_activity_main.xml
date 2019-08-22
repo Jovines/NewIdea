@@ -14,8 +14,8 @@
             android:id="@+id/main_menu"
             layout="@layout/app_main_sidebar"/>
 
-    <FrameLayout
-            android:background="#00ff00"
+
+     <FrameLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -33,7 +33,7 @@
 
 
             <FrameLayout
-                    android:paddingTop="60dp"
+                    android:paddingTop="@dimen/mainToolBarHeight"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -83,7 +83,6 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                        android:visibility="gone"
                         android:id="@+id/ll_bar"
                         android:orientation="horizontal"
                         android:background="#ffffff"
@@ -112,13 +111,15 @@
                             app:layout_constraintVertical_bias="1"/>
 
 
-                    <ImageView
+                    <com.airbnb.lottie.LottieAnimationView
                             android:id="@+id/iv_put_away_down"
-                            android:src="@drawable/ic_menu_black"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
                             android:layout_marginBottom="15dp"
                             android:layout_marginEnd="15dp"
+                            app:lottie_loop="true"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/animation_notice_board"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -134,6 +135,16 @@
 
 
         </FrameLayout>
+
+
+        <com.tree.newidea.view.MaskFrameLayout
+                android:id="@+id/mask_main"
+                android:visibility="gone"
+                android:background="@color/main_add_backgroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        </com.tree.newidea.view.MaskFrameLayout>
 
     </FrameLayout>
 

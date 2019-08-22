@@ -37,8 +37,13 @@ import com.tree.common.utils.LogUtils
 import com.tree.newidea.adapter.ToDoListRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_below_layer.*
 import android.R
+import android.content.Intent
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.tree.newidea.activity.EditActivity
+import com.tree.newidea.activity.MarkDownActivity
 import com.tree.newidea.adapter.SidebarRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_sidebar.*
+import org.greenrobot.eventbus.EventBus
 import java.text.DecimalFormat
 
 
@@ -46,8 +51,6 @@ import java.text.DecimalFormat
  * Created by Tree on 2019/8/15 19:38
  */
 class MainViewModel : BaseViewModel() {
-
-
 
 
     /**
@@ -61,7 +64,7 @@ class MainViewModel : BaseViewModel() {
         activity.apply {
 
             //收缩 动画
-            val anim =headExpansionAnimation(false)
+            val anim = headExpansionAnimation(false)
 
             //bar出现动画
             val barShowAnim = AnimationUtils.loadAnimation(this, com.tree.newidea.R.anim.app_bar_show)
@@ -169,41 +172,41 @@ class MainViewModel : BaseViewModel() {
 
     }
 
-    private fun MainActivity.headColorReduction(isReduction:Boolean=true): ObjectAnimator? {
+    private fun MainActivity.headColorReduction(isReduction: Boolean = true): ObjectAnimator? {
         //透明度变化动画
         val argbAnim = ObjectAnimator.ofInt(
             cl_interactive,
             "backgroud",
-            if (isReduction)resources.getColor(com.tree.newidea.R.color.windowBackground, null)else resources.getColor(
-                com.tree.newidea.R.color.homeHeadColor, null),
-            if (isReduction)resources.getColor(com.tree.newidea.R.color.homeHeadColor, null)else resources.getColor(com.tree.newidea.R.color.windowBackground, null)
+            if (isReduction) resources.getColor(
+                com.tree.newidea.R.color.windowBackground,
+                null
+            ) else resources.getColor(
+                com.tree.newidea.R.color.homeHeadColor, null
+            ),
+            if (isReduction) resources.getColor(com.tree.newidea.R.color.homeHeadColor, null) else resources.getColor(
+                com.tree.newidea.R.color.windowBackground,
+                null
+            )
         )//对背景色颜色进行改变，操作的属性为"backgroundColor",此处必须这样写，不能全小写,后面的颜色为在对应颜色间进行渐变
         argbAnim.setEvaluator(ArgbEvaluator())//如果要颜色渐变必须要ArgbEvaluator，来实现颜色之间的平滑变化，否则会出现颜色不规则跳动
         argbAnim.duration = headTransparencyChangeTime
         return argbAnim
     }
 
-    private fun MainActivity.headExpansionAnimation(isOPen:Boolean = true): ObjectAnimator? {
+    private fun MainActivity.headExpansionAnimation(isOPen: Boolean = true): ObjectAnimator? {
         //展开 动画
         val anim =
             ObjectAnimator.ofInt(
                 cl_interactive,
                 "heightTransform",
-                if (isOPen)dip2px(60f) + statusBarHeight else dip2px(300f),
-                if (isOPen)dip2px(300f) else dip2px(60f) + statusBarHeight
+                if (isOPen) dip2px(60f) + statusBarHeight else dip2px(300f),
+                if (isOPen) dip2px(300f) else dip2px(60f) + statusBarHeight
             )
         anim.interpolator = AccelerateDecelerateInterpolator()
         anim.duration = headExpansionAnimationTime
         return anim
     }
 
-    fun installRecyclerView(activity: MainActivity) {
-        activity.apply {
-            srv_main.layoutManager = LinearLayoutManager(activity)
-            srv_main.adapter = MainRecycleViewAdapter()
-            srv_main.isLongPressDragEnabled = true
-        }
-    }
 
     fun initData(activity: MainActivity) {
         activity.apply {
@@ -212,16 +215,19 @@ class MainViewModel : BaseViewModel() {
                 val headAnim = headExpansionAnimation(true)
                 headAnim?.start()
                 StatusBarUtil.setStatusBarDarkTheme(activity, false)
-                StatusBarUtil.setStatusBarColor(activity,activity.resources.getColor(com.tree.newidea.R.color.homeHeadColor,null))
-            }else{
+                StatusBarUtil.setStatusBarColor(
+                    activity,
+                    activity.resources.getColor(com.tree.newidea.R.color.homeHeadColor, null)
+                )
+            } else {
                 ll_bar.visibility = View.VISIBLE
                 StatusBarUtil.setStatusBarDarkTheme(activity, true)
             }
-            rv_to_do_list.layoutManager = LinearLayoutManager(this)
+            rv_to_do_list.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             rv_to_do_list.adapter = ToDoListRecycleViewAdapter()
 
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
-            srv_main_sidebar.adapter = SidebarRecycleViewAdapter()
+            srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
 
             //SlidingPaneLayout阴影设置
             dl_main.sliderFadeColor = 0x00ffffff
@@ -229,7 +235,6 @@ class MainViewModel : BaseViewModel() {
 
         }
     }
-
 
 
     fun getSongData(activity: MainActivity) {
@@ -274,6 +279,42 @@ class MainViewModel : BaseViewModel() {
     fun listenEventSettings(activity: MainActivity) {
         activity.apply {
 
+            fl_button_add_main_normal.setOnClickListener {
+                mask_main.setLocation(
+                    it.left.toFloat(),
+                    it.right.toFloat(),
+                    it.top.toFloat() + resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    it.bottom.toFloat()+ resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    dl_main.bottom.toFloat(),
+                    dl_main.right.toFloat(),
+                    400
+                )
+                mask_main.animStart {
+                    EventBus.getDefault().postSticky(mask_main)
+                    val intent = Intent(this, EditActivity::class.java)
+                    startActivity(intent)
+                }
+
+
+            }
+
+
+            fl_button_add_main_m.setOnClickListener {
+                mask_main.setLocation(
+                    it.left.toFloat(),
+                    it.right.toFloat(),
+                    it.top.toFloat() + resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    it.bottom.toFloat()+ resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    dl_main.bottom.toFloat(),
+                    dl_main.right.toFloat(),
+                    400
+                )
+                mask_main.animStart {
+                    EventBus.getDefault().postSticky(mask_main)
+                    val intent = Intent(this, MarkDownActivity::class.java)
+                    startActivity(intent)
+                }
+            }
             iv_put_away_down.setOnClickListener {
                 if (!isShrinking) {
                     if (isTopOpen) {
@@ -292,7 +333,6 @@ class MainViewModel : BaseViewModel() {
                 }
             }
 
-            //仿MIUI的弹性拉伸效果：
             //侧滑时表现为弹性拉伸效果，结束后自动恢复
             SmartSwipe.wrap(dl_main)
                 .addConsumer(StretchConsumer())
@@ -303,31 +343,45 @@ class MainViewModel : BaseViewModel() {
 
                 override fun onPanelSlide(arg0: View, v: Float) {
                     LogUtils.d(msg = v.toString())
-                    val  a = resources.getDimension(com.tree.newidea.R.dimen.sidebarWidth
-                    )//这个a是dp计算时一定要转换
-                    val width = phoneWidth-a
-                    var size = width/ phoneWidth
+                    val a = resources.getDimension(
+                        com.tree.newidea.R.dimen.sidebarWidth
+                    )//这个a是dp,但是取出来直接变成px
 
-                    main_content.translationX = -(phoneWidth/2 - width/2)*v
-                    main_content.translationY = ((phoneHeight-size* phoneHeight)/2f)*v
+                    //剩下的那部分宽
+                    val width = phoneWidth - a
+                    var size = width / phoneWidth
+
+                    //占位效果
+//                    main_content.translationX = -(phoneWidth/2 - width/2)*v
+//                    main_content.translationY = ((dl_main.bottom-size* dl_main.bottom)/2f)*v
+//                    val deci = DecimalFormat("#.0000")
+//                    deci.format( (size-1)*v + 1)
+//                    main_content.scaleX =  deci.format( (size-1)*v + 1).toFloat()
+//                    main_content.scaleY =  deci.format( (size-1)*v + 1).toFloat()
+
+                    //消失效果
+                    main_content.translationX = -(phoneWidth / 2 - width / 2) * v
+                    main_content.translationY =
+                        ((dl_main.bottom - size * dl_main.bottom) / 2f + size * dl_main.bottom) * v
                     val deci = DecimalFormat("#.0000")
-                    deci.format( (size-1)*v + 1)
-                    main_content.scaleX =  deci.format( (size-1)*v + 1).toFloat()
-                    main_content.scaleY =  deci.format( (size-1)*v + 1).toFloat()
-
+                    deci.format((size - 1) * v + 1)
+                    main_content.scaleX = deci.format((size - 1) * v + 1).toFloat()
+                    main_content.scaleY = deci.format((size - 1) * v + 1).toFloat()
                 }
 
                 override fun onPanelOpened(arg0: View) {
+                    iv_put_away_down.pauseAnimation()
                 }
 
                 override fun onPanelClosed(arg0: View) {
+                    iv_put_away_down.playAnimation()
                 }
             })
 
 
-            ll_no_notebook_tips.setOnClickListener {
-
-            }
+//            ll_no_notebook_tips.setOnClickListener {
+//
+//            }
         }
     }
 }

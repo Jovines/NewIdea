@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_common" />
+            <option value="$PROJECT_DIR$/markdownview" />
+            <option value="$PROJECT_DIR$/markdownvieww" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

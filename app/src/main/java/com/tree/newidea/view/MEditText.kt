@@ -1,8 +1,8 @@
-package com.tree.newidea.view;
+package com.tree.newidea.view
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.EditText;
+import android.content.Context
+import android.util.AttributeSet
+import android.widget.EditText
 
 /**
  * Created by Tree on 2019/8/19 15:24

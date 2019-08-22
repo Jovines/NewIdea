@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="3dp"
+              android:gravity="start"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <Space
+            android:layout_marginStart="300dp"
+            android:layout_marginEnd="300dp"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+
+    <TextView
+            android:id="@+id/tv_note_date"
+            android:textColor="@color/whiteTextColor"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
