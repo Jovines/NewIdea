@@ -7,4 +7,34 @@
         android:layout_height="match_parent"
         tools:context=".activity.UndoneActivity">
 
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.171"
+            android:id="@+id/app_recyclerview2"/>
+
+    <EditText
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_textview"
+            app:layout_constraintStart_toEndOf="@+id/app_recyclerview2"
+            android:layout_marginStart="8dp"
+            tools:text="代办事项"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.004"
+            />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

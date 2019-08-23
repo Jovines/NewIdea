@@ -227,8 +227,9 @@ class MainViewModel : BaseViewModel() {
             rv_to_do_list.adapter = ToDoListRecycleViewAdapter()
 
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
-            srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
-
+            note?.let {
+                srv_main_sidebar.adapter = SidebarRecycleViewAdapter(it)
+            }
             //SlidingPaneLayout阴影设置
             dl_main.sliderFadeColor = 0x00ffffff
 

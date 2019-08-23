@@ -16,7 +16,7 @@ const val activityStartTime = 1500.toLong()
  * 本地记事本数据
  */
 
-val note = NotepadBean()
+var note:NotepadBean? = null
 
 
 /**
