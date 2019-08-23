@@ -23,6 +23,7 @@ class SidebarRecycleViewAdapter(private val noteBean: NotepadBean) :
     }
 
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             TYPE.TILTE.ordinal -> TiltedViewHolder(
@@ -43,22 +44,25 @@ class SidebarRecycleViewAdapter(private val noteBean: NotepadBean) :
 
 
     override fun getItemViewType(position: Int): Int {
-        var sum = -1
-        for (i in noteBean.dates.size - 1 downTo 0) {
 
+        var mPosition = position + 1
+        var sum = 0
+        for (i in noteBean.dates.size - 1 downTo 0) {
+            val lastSum = sum
             if (noteBean.dates[i].texts.size != 0) {
                 sum++
-                if (position == sum) {
+                if (mPosition == sum) {
                     return TYPE.TILTE.ordinal
                 }
                 val a = sum
                 sum += noteBean.dates[i].texts.size
-                if (position in (a + 1) until sum) {
+                if (mPosition in a..sum) {
                     return TYPE.CONTENT.ordinal
                 }
             }
-
         }
+
+
         return TYPE.BLANK.ordinal
     }
 
@@ -75,18 +79,19 @@ class SidebarRecycleViewAdapter(private val noteBean: NotepadBean) :
 
 
     private fun findStr(position: Int): String {
-        var sum = -1
+        var mPosition = position + 1
+        var sum = 0
         for (i in noteBean.dates.size - 1 downTo 0) {
             val lastSum = sum
             if (noteBean.dates[i].texts.size != 0) {
                 sum++
-                if (position == sum) {
+                if (mPosition == sum) {
                     return noteBean.dates[i].date
                 }
                 val a = sum
                 sum += noteBean.dates[i].texts.size
-                if (position in (a + 1) until sum) {
-                    return noteBean.dates[i].texts[position - lastSum - 1].title
+                if (mPosition in a..sum) {
+                    return noteBean.dates[i].texts[position-lastSum-1].title
                 }
             }
         }

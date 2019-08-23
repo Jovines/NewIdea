@@ -23,8 +23,6 @@ import com.tree.newidea.adapter.MarkdownViewPagerAdapter
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.app_activity_edit.mark_container
-import kotlinx.android.synthetic.main.app_activity_mark_down.*
 import java.lang.Exception
 import java.util.regex.Pattern
 import kotlin.math.abs
@@ -37,6 +35,8 @@ import com.billy.android.swipe.listener.SimpleSwipeListener
 import com.tree.newidea.adapter.SkidTopAdapter
 import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.util.*
+import kotlinx.android.synthetic.main.app_activity_mark_down.*
+import kotlinx.android.synthetic.main.app_activity_mark_down.view.*
 import kotlinx.android.synthetic.main.app_skid_edit_top.view.*
 import kotlinx.android.synthetic.main.app_soft_keyboard_top_tool_view.view.*
 import java.text.SimpleDateFormat
@@ -412,7 +412,16 @@ class MarkDownViewModel : BaseViewModel() {
             }
 
 
-            val searchNoteList = mutableListOf<NotepadBean.DatesBean.TextsBean>()
+
+
+        }
+    }
+
+
+    fun setUpSkidTop(activity: MarkDownActivity) {
+        activity.apply activity@{
+
+                        val searchNoteList = mutableListOf<NotepadBean.DatesBean.TextsBean>()
             var view: View? = null
             var isOpenKey = true
             SmartSwipe.wrap(this.mark_container)
@@ -516,9 +525,8 @@ class MarkDownViewModel : BaseViewModel() {
 
                     }
                 })
-
-
         }
+
     }
 
 

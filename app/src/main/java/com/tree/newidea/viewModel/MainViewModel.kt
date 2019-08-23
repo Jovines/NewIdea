@@ -1,13 +1,9 @@
 package com.tree.newidea.viewModel
 
-import android.os.Bundle
 import android.view.View
-import com.tree.common.ui.BaseViewModelActivity
-import com.tree.common.utils.extensions.dp2px
 import com.tree.newidea.adapter.MusicViewPagerAdapter
 import com.tree.newidea.api.RECOMMENDED_MUSIC_URI
 import com.tree.newidea.bean.RecommendedMusicBean
-import com.tree.newidea.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.app_activity_main.*
 import retrofit2.Call
 import retrofit2.Response
@@ -16,27 +12,15 @@ import android.view.animation.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tree.common.viewmodel.BaseViewModel
 import com.tree.newidea.activity.MainActivity
-import com.tree.newidea.adapter.MainRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_activity_content.*
-import android.opengl.ETC1.getHeight
-import android.opengl.ETC1.getWidth
-import android.content.Context.WINDOW_SERVICE
-import androidx.core.content.ContextCompat.getSystemService
-import android.view.WindowManager
-import android.content.Context
 import android.util.DisplayMetrics
-import androidx.customview.widget.ViewDragHelper
-import androidx.drawerlayout.widget.DrawerLayout
 import com.tree.newidea.util.*
-import java.lang.reflect.Field
 import androidx.slidingpanelayout.widget.SlidingPaneLayout
-import com.billy.android.swipe.consumer.SpaceConsumer
 import com.billy.android.swipe.SmartSwipe
 import com.billy.android.swipe.consumer.StretchConsumer
 import com.tree.common.utils.LogUtils
 import com.tree.newidea.adapter.ToDoListRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_below_layer.*
-import android.R
 import android.content.Intent
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tree.newidea.activity.EditActivity
@@ -211,7 +195,7 @@ class MainViewModel : BaseViewModel() {
     fun initData(activity: MainActivity) {
         activity.apply {
             if (isTopOpen) {
-                ll_bar.visibility = View.GONE
+                activity.ll_bar.visibility = View.GONE
                 val headAnim = headExpansionAnimation(true)
                 headAnim?.start()
                 StatusBarUtil.setStatusBarDarkTheme(activity, false)
@@ -220,7 +204,7 @@ class MainViewModel : BaseViewModel() {
                     activity.resources.getColor(com.tree.newidea.R.color.homeHeadColor, null)
                 )
             } else {
-                ll_bar.visibility = View.VISIBLE
+                activity.ll_bar.visibility = View.VISIBLE
                 StatusBarUtil.setStatusBarDarkTheme(activity, true)
             }
             rv_to_do_list.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)

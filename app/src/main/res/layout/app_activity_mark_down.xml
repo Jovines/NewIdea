@@ -9,6 +9,13 @@
         tools:context=".activity.MarkDownActivity">
 
 
+    <com.billy.android.swipe.SmartSwipeWrapper
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </com.billy.android.swipe.SmartSwipeWrapper>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mark_container"
             android:background="@color/windowBackground"

@@ -1,13 +1,9 @@
 package com.tree.newidea.activity
 
 import android.os.Bundle
-import android.view.View
 import com.tree.common.ui.BaseViewModelActivity
-import com.tree.newidea.adapter.SidebarRecycleViewAdapter
 import com.tree.newidea.event.MainUpDate
-import com.tree.newidea.util.note
 import com.tree.newidea.viewModel.MainViewModel
-import kotlinx.android.synthetic.main.app_activity_main.*
 import kotlinx.android.synthetic.main.app_main_sidebar.*
 import org.greenrobot.eventbus.Subscribe
 

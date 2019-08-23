@@ -10,7 +10,6 @@ import com.tree.newidea.R
 import com.tree.newidea.view.MaskFrameLayout
 import com.tree.newidea.viewModel.EditViewmodel
 import kotlinx.android.synthetic.main.app_activity_edit.*
-import kotlinx.android.synthetic.main.app_activity_mark_down.*
 import org.greenrobot.eventbus.Subscribe
 
 class EditActivity : BaseViewModelActivity<EditViewmodel>() {
@@ -19,7 +18,7 @@ class EditActivity : BaseViewModelActivity<EditViewmodel>() {
     override val isFragmentActivity: Boolean
         get() = false
 
-    lateinit var maskFrameLayout: MaskFrameLayout
+    private lateinit var maskFrameLayout: MaskFrameLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

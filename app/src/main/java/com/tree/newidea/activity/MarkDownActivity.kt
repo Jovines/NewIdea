@@ -7,7 +7,6 @@ import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.DecelerateInterpolator
-import android.view.animation.Interpolator
 import android.widget.EditText
 import com.mukesh.MarkdownView
 import com.tree.common.ui.BaseViewModelActivity
@@ -34,12 +33,12 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
         overridePendingTransition(R.anim.app_no_anim, 0)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.app_activity_mark_down)
+        closeMarkMask()
         viewModel.initData(this)//这一步必须在所有初始化操作之前
         editText.addTextChangedListener(this)
         //监听视图树的布局改变(弹出/隐藏软键盘会触发)
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener(viewModel.keyboardOnGlobalChangeListener)
         viewModel.listenEventSettings(this)//监听事件的设置
-        closeMarkMask()
 
     }
 
@@ -47,7 +46,7 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
         val anim = AnimationUtils.loadAnimation(this, R.anim.app_mask_hide)
         mask_mark.animation = anim
         mask_mark.visibility = View.VISIBLE
-        anim.interpolator = DecelerateInterpolator() as Interpolator?
+        anim.interpolator = DecelerateInterpolator()
         anim.start()
         anim.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationRepeat(p0: Animation?) {
@@ -56,6 +55,7 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
 
             override fun onAnimationEnd(p0: Animation?) {
                 mask_mark.visibility = View.GONE
+                viewModel.setUpSkidTop(this@MarkDownActivity)
             }
 
             override fun onAnimationStart(p0: Animation?) {
