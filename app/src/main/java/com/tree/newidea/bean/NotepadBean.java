@@ -1,9 +1,10 @@
 package com.tree.newidea.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotepadBean {
+public class NotepadBean implements Serializable {
 
     private List<DatesBean> dates = new ArrayList();
 
@@ -15,7 +16,7 @@ public class NotepadBean {
         this.dates = dates;
     }
 
-    public static class DatesBean {
+    public static class DatesBean implements Serializable{
         /**
          * date : 1999-06-13
          * texts : [{"title":"lalala ","text":"heiheiheih","isMardown":false}]
@@ -45,7 +46,7 @@ public class NotepadBean {
             this.texts = texts;
         }
 
-        public static class TextsBean {
+        public static class TextsBean implements Serializable{
             /**
              * title : lalala
              * text : heiheiheih

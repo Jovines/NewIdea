@@ -40,7 +40,6 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
         window.decorView.viewTreeObserver.addOnGlobalLayoutListener(viewModel.keyboardOnGlobalChangeListener)
         viewModel.listenEventSettings(this)//监听事件的设置
         closeMarkMask()
-
     }
 
     private fun closeMarkMask() {
