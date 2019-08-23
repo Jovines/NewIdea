@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/skid_top_container"
         android:orientation="vertical"
+        android:paddingTop="20dp"
         android:background="@color/main_add_backgroup"
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"

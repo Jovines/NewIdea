@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
+import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.tree.newidea.R
 import com.tree.newidea.bean.NotepadBean
+import com.tree.newidea.util.closeKeybord
 import com.tree.newidea.view.MyMarkdownView
 import kotlinx.android.synthetic.main.app_recycle_item_notebook.view.*
 import kotlinx.android.synthetic.main.app_skid_edit_top.view.*
@@ -19,7 +21,8 @@ class SkidTopAdapter(
     private val constraintLayout: ConstraintLayout,
     private val markdownView: MyMarkdownView,
     private val recyclerView: RecyclerView,
-    private val container: ViewGroup
+    private val container: ViewGroup,
+    private val editText: EditText
 ) : RecyclerView.Adapter<SkidTopAdapter.ViewHolder>() {
 
     val anim: ValueAnimator = ValueAnimator.ofFloat(0f, 1000f)
@@ -58,7 +61,8 @@ class SkidTopAdapter(
     }
 
     //传入相对于屏幕的l,r,t,b
-    fun startAnim(viewItem: View, showView: View, duration: Long) {
+    private fun startAnim(viewItem: View, showView: View, duration: Long) {
+        closeKeybord(editText,recyclerView.context)
         viewItem.apply {
             val sizeH = (bottom - top) / (container.bottom - container.top)
             val sizeW = (right - left) / (container.right - container.left)
@@ -78,6 +82,17 @@ class SkidTopAdapter(
             }
             showView.visibility = View.VISIBLE
             anim.start()
+            val animBack: ValueAnimator = ValueAnimator.ofFloat(1000f, 0f)
+            animBack.addUpdateListener {
+                val i = it.animatedValue as Float
+                showView.apply {
+                    scaleX = (i / 1000) * (1 - mSize) + mSize
+                    scaleY = (i / 1000) * (1 - mSize) + mSize
+                    translationX = (1 - i / 1000) * startTranslateX
+                    translationY = (1 - i / 1000) * startTranslateY
+                }
+            }
+            showView.tag = animBack
         }
     }
 

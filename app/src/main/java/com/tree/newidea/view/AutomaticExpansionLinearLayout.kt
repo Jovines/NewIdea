@@ -222,11 +222,6 @@ class AutomaticExpansionLinearLayout : LinearLayout {
             onUp(event)
         }
         return true
-//
-//        if (detectedUp) {
-//            onUp(event)
-//        }
-//        return GestureDetector(context, MyOnGestureListener()).onTouchEvent(event)
     }
 
 
@@ -248,7 +243,18 @@ class AutomaticExpansionLinearLayout : LinearLayout {
 
         @SuppressLint("CheckResult")
         override fun onDown(p0: MotionEvent?): Boolean {
-            textView = getChildAt(childCount-1) as TextView?
+            for (i in 0 until childCount) {
+                p0?.let {
+                    if (isTouchPointInView(getChildAt(i), p0.x.toInt(), p0.y.toInt())) {
+                        if (textView !== getChildAt(i)) {
+                            textView = getChildAt(i) as TextView?
+                        }
+
+                    }
+                }
+
+            }
+            textView?.tag = false
             selected?.invoke(textView!!)
             textView?.animation = anim
             anim.start()
@@ -265,7 +271,6 @@ class AutomaticExpansionLinearLayout : LinearLayout {
             }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
                 it.visibility = View.VISIBLE
             }
-            Log.d("onShowPress","onDown")
 
             return true
         }
@@ -281,6 +286,7 @@ class AutomaticExpansionLinearLayout : LinearLayout {
                         if (textView !== getChildAt(i)) {
                             textView?.clearAnimation()
                             textView = getChildAt(i) as TextView?
+                            textView?.tag = false
                             selected?.invoke(textView!!)
                             textView?.animation = anim
                             anim.start()
@@ -290,14 +296,12 @@ class AutomaticExpansionLinearLayout : LinearLayout {
                 }
 
             }
-            Log.d("onShowPress","onScroll")
 
             return true
 
         }
 
         override fun onLongPress(p0: MotionEvent?) {
-            Log.d("onShowPress","onLongPress")
 
         }
 
@@ -305,8 +309,8 @@ class AutomaticExpansionLinearLayout : LinearLayout {
 
     @SuppressLint("CheckResult")
     private fun onUp(event: MotionEvent?) {
-        Log.d("onShowPress","onUp")
         textView?.let {
+            it.tag = true
             slidingPositionMonitoring?.invoke(it)
             it.clearAnimation()
         }

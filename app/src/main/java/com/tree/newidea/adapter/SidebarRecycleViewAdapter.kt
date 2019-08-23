@@ -43,22 +43,23 @@ class SidebarRecycleViewAdapter(private val noteBean: NotepadBean) :
 
 
     override fun getItemViewType(position: Int): Int {
-        var sum = -1
+        var sum = 0
         for (i in noteBean.dates.size - 1 downTo 0) {
-
+            val lastSum = sum
             if (noteBean.dates[i].texts.size != 0) {
                 sum++
-                if (position == sum) {
+                if (position + 1 == sum) {
                     return TYPE.TILTE.ordinal
                 }
                 val a = sum
                 sum += noteBean.dates[i].texts.size
-                if (position in (a + 1) until sum) {
+                if (position + 1 in a..sum) {
                     return TYPE.CONTENT.ordinal
                 }
             }
-
         }
+
+
         return TYPE.BLANK.ordinal
     }
 
@@ -69,24 +70,27 @@ class SidebarRecycleViewAdapter(private val noteBean: NotepadBean) :
             }
             is ViewHolder -> holder.itemView.apply {
                 tv_note_tilte.text = findStr(position)
+                setOnClickListener {
+
+                }
             }
         }
     }
 
 
     private fun findStr(position: Int): String {
-        var sum = -1
+        var sum = 0
         for (i in noteBean.dates.size - 1 downTo 0) {
             val lastSum = sum
             if (noteBean.dates[i].texts.size != 0) {
                 sum++
-                if (position == sum) {
+                if (position + 1 == sum) {
                     return noteBean.dates[i].date
                 }
                 val a = sum
                 sum += noteBean.dates[i].texts.size
-                if (position in (a + 1) until sum) {
-                    return noteBean.dates[i].texts[position - lastSum - 1].title
+                if (position + 1 in a..sum) {
+                    return noteBean.dates[i].texts[position-lastSum-1].title
                 }
             }
         }

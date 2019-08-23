@@ -1,5 +1,8 @@
 package com.tree.newidea.activity
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.ValueAnimator
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,6 +19,7 @@ import com.tree.newidea.event.MainUpDate
 import com.tree.newidea.view.MaskFrameLayout
 import com.tree.newidea.viewModel.MarkDownViewModel
 import kotlinx.android.synthetic.main.app_activity_mark_down.*
+import kotlinx.android.synthetic.main.app_skid_edit_top.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 
@@ -56,6 +60,7 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
 
             override fun onAnimationEnd(p0: Animation?) {
                 mask_mark.visibility = View.GONE
+                viewModel.setSkipTop(this@MarkDownActivity)
             }
 
             override fun onAnimationStart(p0: Animation?) {
@@ -71,6 +76,7 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
 
     override fun onDestroy() {
         super.onDestroy()
+        viewModel.isExitLoopPrompt = true
         window.decorView.viewTreeObserver.removeOnGlobalLayoutListener(viewModel.keyboardOnGlobalChangeListener)
         EventBus.getDefault().post(MainUpDate())
     }
@@ -81,8 +87,28 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
     }
 
     override fun onBackPressed() {
-        maskFrameLayout.visibility = View.GONE
-        super.onBackPressed()
+        if (viewModel.isSkidTopOpen) {
+            smart_swipe_mark.apply {
+                (mark_activity_top_search_normal.tag as? ValueAnimator)?.apply {
+                    addListener(object : AnimatorListenerAdapter(){
+                        override fun onAnimationEnd(animation: Animator?) {
+                            mark_activity_top_search_normal.visibility = View.GONE
+                        }
+                    })
+                }?.start()
+                (mark_activity_top_search_m.tag as? ValueAnimator)?.apply {
+                    addListener(object : AnimatorListenerAdapter(){
+                        override fun onAnimationEnd(animation: Animator?) {
+                            mark_activity_top_search_m.visibility = View.GONE
+                        }
+                    })
+                }?.start()
+            }
+        }else{
+            maskFrameLayout.visibility = View.GONE
+            super.onBackPressed()
+        }
+
     }
 
 
@@ -104,15 +130,4 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
        maskFrameLayout = m
     }
 
-
-    companion object {
-        const val KEYBOARD_TOP_VIEW_FIRST_TIP_NULL = "# "
-        const val KEYBOARD_TOP_VIEW_SECOND_TIP_NULL = "* "
-        const val KEYBOARD_TOP_VIEW_THIRD_TIP_NULL = "> "
-        const val KEYBOARD_TOP_VIEW_FOURTH_TIP_NULL = "1. "
-        const val KEYBOARD_TOP_VIEW_FIRST_TIP = "."
-        const val KEYBOARD_TOP_VIEW_SECOND_TIP = "/"
-        const val KEYBOARD_TOP_VIEW_THIRD_TIP = ".com"
-        const val KEYBOARD_TOP_VIEW_FOURTH_TIP = ".cn"
-    }
 }

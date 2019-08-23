@@ -23,13 +23,11 @@ import com.tree.newidea.adapter.MarkdownViewPagerAdapter
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.app_activity_edit.mark_container
 import kotlinx.android.synthetic.main.app_activity_mark_down.*
 import java.lang.Exception
 import java.util.regex.Pattern
 import kotlin.math.abs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.billy.android.swipe.SmartSwipe
 import com.billy.android.swipe.SmartSwipeWrapper
 import com.billy.android.swipe.SwipeConsumer
 import com.billy.android.swipe.consumer.SlidingConsumer
@@ -37,6 +35,7 @@ import com.billy.android.swipe.listener.SimpleSwipeListener
 import com.tree.newidea.adapter.SkidTopAdapter
 import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.util.*
+import kotlinx.android.synthetic.main.app_skid_edit_top.*
 import kotlinx.android.synthetic.main.app_skid_edit_top.view.*
 import kotlinx.android.synthetic.main.app_soft_keyboard_top_tool_view.view.*
 import java.text.SimpleDateFormat
@@ -57,10 +56,18 @@ class MarkDownViewModel : BaseViewModel() {
     private var mSoftKeyboardTopPopupWindow: PopupWindow? = null
     private var mIsSoftKeyBoardShowing = false
 
+
+    //上面的快捷搜索栏是否打开
     var isSkidTopOpen: Boolean = false
 
+    //是否退出，toolbar上的循环提示
+    var isExitLoopPrompt = false
 
-    var savaText: String = "编辑"
+    //同上，是否暂停
+    var isTipsPause = false
+
+
+    var saveText: String = "编\n辑"
 
     private fun onClick(activity: MarkDownActivity, v: TextView) {
         val txt = v.text.toString()
@@ -81,7 +88,6 @@ class MarkDownViewModel : BaseViewModel() {
     }
 
 
-    //关闭popupWindow
     private fun closeUtilBar(activity: MarkDownActivity, keyboardHeight: Int, view: View?) {
         activity.apply {
             val anim = ValueAnimator.ofFloat(keyboardHeight.toFloat(), 0f)
@@ -104,6 +110,19 @@ class MarkDownViewModel : BaseViewModel() {
         activity.apply {
             if (TextUtils.isEmpty(text)) return
             editText.apply {
+                try {
+                    if (textLength < text.length) {
+                        if (text.substring(selectionEnd-30, selectionEnd) == "------------------------------") {
+                            if (text.substring(selectionStart-31, selectionStart)[0].toString() == "\n"){
+                                editableText.replace(selectionEnd,selectionEnd,"\n")
+                            }else{
+                                editableText.replace(selectionStart - 30, selectionEnd, "\n------------------------------\n")
+                            }
+                            return@apply
+                        }
+                    }
+                } catch (e: Exception) {
+                }
                 if (selectionStart != 0 && text[selectionStart - 1].toString() == "\n") {
                     try {
                         if (text.substring(selectionStart, selectionStart + 3) == "***") {
@@ -175,6 +194,7 @@ class MarkDownViewModel : BaseViewModel() {
                         }
                     } catch (e: Exception) {
                     }
+
                     try {
                         if (textLength < text.length) {
                             val mText =
@@ -212,16 +232,17 @@ class MarkDownViewModel : BaseViewModel() {
                     } catch (e: Exception) {
                     }
 
+
                 }
             }
         }
         textLength = text.length
         if (textLength != 0) {
-            savaText = "保\n存"
-            activity.tv_save.text = savaText
+            saveText = "保\n存"
+            activity.tv_save.text = saveText
         } else {
-            savaText = "编\n辑"
-            activity.tv_save.text = savaText
+            saveText = "编\n辑"
+            activity.tv_save.text = saveText
         }
 //        updateKeyboardTopViewTips(activity, TextUtils.isEmpty(text))
     }
@@ -267,7 +288,7 @@ class MarkDownViewModel : BaseViewModel() {
             } else {
                 editable.replace(start, end, txt)//光标所在位置插入文字
             }
-            when (txt) {
+            when (txt) {//移动光标
                 "****" -> editText.setSelection(editText.selectionStart - 2, editText.selectionEnd - 2)
                 "**" -> editText.setSelection(editText.selectionStart - 1, editText.selectionEnd - 1)
                 "******" -> editText.setSelection(editText.selectionStart - 3, editText.selectionEnd - 3)
@@ -335,12 +356,13 @@ class MarkDownViewModel : BaseViewModel() {
 
 
             tv_save.setOnClickListener {
-                if (savaText != "编\n辑") {
+                if (saveText != "编\n辑") {
                     val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")// HH:mm:ss
                     //获取当前时间
                     val date = Date(System.currentTimeMillis())
                     //初始化一个textBean
                     val text = NotepadBean.DatesBean.TextsBean().apply {
+                        isIsMardown = true
                         val str = editText.editableText.toString()
                         val ma = Pattern.compile(" *#+ \\w+.*").matcher(str)
                         if (ma.lookingAt()) {
@@ -396,12 +418,14 @@ class MarkDownViewModel : BaseViewModel() {
                     if (isTips) {
                         it.onNext(i)
                     }
-
+                    if (isExitLoopPrompt){
+                        break
+                    }
                 }
             }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
                 when (it % 2) {
                     0 -> {
-                        if (editText.editableText.isNotEmpty()) {
+                        if (editText.editableText.isNotEmpty()&&!isTipsPause) {
                             tv_mark_title.text = "左滑可以预览哦"
                         }
                     }
@@ -412,11 +436,17 @@ class MarkDownViewModel : BaseViewModel() {
             }
 
 
+
+
+        }
+    }
+
+    fun setSkipTop(activity: MarkDownActivity) {
+        activity.apply activity@{
             val searchNoteList = mutableListOf<NotepadBean.DatesBean.TextsBean>()
             var view: View? = null
             var isOpenKey = true
-            SmartSwipe.wrap(this.mark_container)
-                .addConsumer(SlidingConsumer())
+            smart_swipe_mark.addConsumer(SlidingConsumer())
                 .setTopDrawerView(View.inflate(this, R.layout.app_skid_edit_top, null).apply View@{
                     view = this
                     vp_skid_edit_top.layoutManager = LinearLayoutManager(this@activity)
@@ -425,11 +455,14 @@ class MarkDownViewModel : BaseViewModel() {
                         mark_activity_top_search_normal,
                         mark_activity_top_search_m,
                         vp_skid_edit_top,
-                        skid_top_container
+                        skid_top_container,
+                        et_search_mark
                     )
                     et_search_mark.setOnEditorActionListener { v, actionId, _ ->
+                        editText.visibility  = View.GONE
                         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                             searchNoteList.clear()
+                            vp_skid_edit_top.visibility = View.INVISIBLE
                             lottie_mark_loading.visibility = View.VISIBLE
                             lottie_mark_loading.playAnimation()
                             lottie_no_find.visibility = View.GONE
@@ -456,13 +489,15 @@ class MarkDownViewModel : BaseViewModel() {
                                 }
                             }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
                                 (vp_skid_edit_top.adapter as SkidTopAdapter).notifyDataSetChanged()
+                                editText.visibility  = View.VISIBLE
+                                vp_skid_edit_top.visibility = View.VISIBLE
                                 lottie_mark_loading.pauseAnimation()
                                 lottie_mark_loading.visibility = View.GONE
                                 if (searchNoteList.size == 0) {
                                     lottie_no_find.visibility = View.VISIBLE
                                     lottie_no_find.playAnimation()
+                                    openKeybord(et_search_mark, this@activity)
                                 }
-                                openKeybord(et_search_mark, this@activity)
                             }
                         }
                         false
@@ -491,7 +526,9 @@ class MarkDownViewModel : BaseViewModel() {
                         if (isOpenKey) {
                             isOpenKey = false
                             view?.let {
-                                openKeybord(it.et_search_mark, this@activity)
+                                if (mark_activity_top_search_normal.visibility == View.GONE && mark_activity_top_search_m.visibility == View.GONE) {
+                                    openKeybord(it.et_search_mark, this@activity)
+                                }
                             }
                         }
                     }
@@ -505,8 +542,8 @@ class MarkDownViewModel : BaseViewModel() {
                     ) {
                         isSkidTopOpen = true
                         view?.let {
-                            closeKeybord(it.et_search_mark, this@activity)
-                            closeKeybord(editText, this@activity)
+                                closeKeybord(it.et_search_mark, this@activity)
+                                closeKeybord(editText, this@activity)
                         }
                     }
 
@@ -516,14 +553,14 @@ class MarkDownViewModel : BaseViewModel() {
 
                     }
                 })
-
-
         }
+
     }
 
 
     inner class KeyboardOnGlobalChangeListener(val activity: MarkDownActivity) :
         ViewTreeObserver.OnGlobalLayoutListener {
+
 
         lateinit var view: View
         var isFirst = true
@@ -550,23 +587,30 @@ class MarkDownViewModel : BaseViewModel() {
                                 tv_mark_title.text = "MarkDown"
                             }
 
-                            keyboard_top_view_first_txt.slidingPositionMonitoring = { sliding(it) }
-                            keyboard_top_view_second_txt.slidingPositionMonitoring = { sliding(it) }
-                            keyboard_top_view_third_txt.slidingPositionMonitoring = { sliding(it) }
-                            keyboard_top_view_fourth_txt.slidingPositionMonitoring = { sliding(it) }
+                            keyboard_top_view_first_txt.slidingPositionMonitoring = { sliding(it)
+                                isTipsPause = it.tag as Boolean
+                            }
+                            keyboard_top_view_second_txt.slidingPositionMonitoring = { sliding(it)
+                                isTipsPause = it.tag as Boolean }
+                            keyboard_top_view_third_txt.slidingPositionMonitoring = { sliding(it)
+                                isTipsPause = it.tag as Boolean}
+                            keyboard_top_view_fourth_txt.slidingPositionMonitoring = { sliding(it)
+                                isTipsPause = it.tag as Boolean}
 
                             keyboard_top_view_first_txt.selected = {
+                                isTipsPause = it.tag as Boolean
+
                                 when (it) {
                                     keyboard_top_view_first_txt1 -> tv_mark_title.text = "一级标题"
                                     keyboard_top_view_first_txt2 -> tv_mark_title.text = "二级标题"
                                     keyboard_top_view_first_txt3 -> tv_mark_title.text = "三级标题"
-                                    keyboard_top_view_first_txt4 ->
-                                        tv_mark_title.text = "四级标题"
+                                    keyboard_top_view_first_txt4 -> tv_mark_title.text = "四级标题"
                                     keyboard_top_view_first_txt5 -> tv_mark_title.text = "五级标题"
                                     keyboard_top_view_first_txt6 -> tv_mark_title.text = "六级标题"
                                 }
                             }
                             keyboard_top_view_second_txt.selected = {
+                                isTipsPause = it.tag as Boolean
                                 when (it) {
                                     keyboard_top_view_second_txt1 -> tv_mark_title.text = "一级引用"
                                     keyboard_top_view_second_txt2 -> tv_mark_title.text = "二级引用"
@@ -578,15 +622,18 @@ class MarkDownViewModel : BaseViewModel() {
                             }
 
                             keyboard_top_view_third_txt.selected = {
+                                isTipsPause = it.tag as Boolean
                                 when (it) {
                                     keyboard_top_view_third_txt1 -> tv_mark_title.text = "粗体字"
                                     keyboard_top_view_third_txt2 -> tv_mark_title.text = "斜体字"
                                     keyboard_top_view_third_txt3 -> tv_mark_title.text = "斜体加粗"
                                     keyboard_top_view_third_txt4 -> tv_mark_title.text = "删除线"
                                     keyboard_top_view_third_txt5 -> tv_mark_title.text = "无序列表"
+                                    keyboard_top_view_third_txt6 -> tv_mark_title.text = "下划线"
                                 }
                             }
                             keyboard_top_view_fourth_txt.selected = {
+                                isTipsPause = it.tag as Boolean
                                 when (it) {
                                     keyboard_top_view_fourth_txt1 -> tv_mark_title.text = "插入链接"
                                     keyboard_top_view_fourth_txt2 -> tv_mark_title.text = "插入有标题的链接"
@@ -599,7 +646,6 @@ class MarkDownViewModel : BaseViewModel() {
                         fl_mark_container.addView(view)
                         isFirst = false
                     }
-
                     if (!isSkidTopOpen) {
                         showUtilBar(activity, phoneWidth / 2, keyboardHeight, view)
                     }

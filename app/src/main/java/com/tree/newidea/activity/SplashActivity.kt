@@ -23,6 +23,7 @@ import com.umeng.commonsdk.stateless.UMSLEnvelopeBuild.mContext
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.app_activity_splash.*
+import org.greenrobot.eventbus.EventBus
 import retrofit2.Call
 import retrofit2.Response
 
@@ -41,8 +42,9 @@ class SplashActivity : BaseActivity() {
         Observable.create<Any> {
             note =  (getObject(this,"note") as NotepadBean?) ?: NotepadBean()
             Thread.sleep(1500)
+            EventBus.getDefault().postSticky(this)
                 startActivity<MainActivity>()
-                finish()
+            finish()
         }.subscribeOn(Schedulers.io()).subscribe()
 //        ordinaryApi.getSplashPicture("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN").enqueue(object : retrofit2.Callback<BingPictureBean> {
 //            override fun onResponse(call: Call<BingPictureBean>, response: Response<BingPictureBean>) {
