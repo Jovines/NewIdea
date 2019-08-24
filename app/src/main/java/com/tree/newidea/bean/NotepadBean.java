@@ -19,7 +19,7 @@ public class NotepadBean implements Serializable {
     public static class DatesBean implements Serializable{
         /**
          * date : 1999-06-13
-         * texts : [{"title":"lalala ","text":"heiheiheih","isMardown":false}]
+         * texts : [{"title":"lalala ","text":"heiheiheih","isMarkdown":false}]
          */
 
 
@@ -50,13 +50,17 @@ public class NotepadBean implements Serializable {
             /**
              * title : lalala
              * text : heiheiheih
-             * isMardown : false
+             * isMarkdown : false
+             * isUndo : false
+             * date :djkdjkj
              */
 
             private String title;
             private String text;
             private String date;
-            private boolean isMardown = false;
+            private boolean isUndo = false;
+            private boolean isMarkdown = false;
+
 
             public String getTitle() {
                 return title;
@@ -83,12 +87,22 @@ public class NotepadBean implements Serializable {
             }
 
             public boolean isIsMardown() {
-                return isMardown;
+                return isMarkdown;
             }
 
             public void setIsMardown(boolean isMardown) {
-                this.isMardown = isMardown;
+                this.isMarkdown = isMardown;
             }
+
+            public Boolean getIsUndo() {
+                return isUndo;
+            }
+
+            public void setUndo(boolean undo) {
+                isUndo = undo;
+            }
+
+
         }
     }
 }

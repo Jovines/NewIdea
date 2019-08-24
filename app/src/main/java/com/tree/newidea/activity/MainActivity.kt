@@ -4,15 +4,18 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import com.tree.common.ui.BaseViewModelActivity
+import com.tree.newidea.adapter.MainRecycleViewAdapter
 import com.tree.newidea.adapter.SidebarRecycleViewAdapter
 import com.tree.newidea.event.MainUpDate
 import com.tree.newidea.util.note
+import com.tree.newidea.util.timelineList
 import com.tree.newidea.viewModel.MainViewModel
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.app_activity_main.*
+import kotlinx.android.synthetic.main.app_main_activity_content.*
 import kotlinx.android.synthetic.main.app_main_sidebar.*
 import org.greenrobot.eventbus.Subscribe
 
@@ -62,14 +65,9 @@ class MainActivity : BaseViewModelActivity<MainViewModel>() {
     @Subscribe
     fun update(mianUpDate: MainUpDate) {
         srv_main_sidebar.adapter?.notifyDataSetChanged()
-
+        rc_main.adapter?.notifyDataSetChanged()
 //        srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
 
-    }
-
-    @Subscribe(sticky = true)
-    fun receiveSplash(acticity:SplashActivity) {
-        splashActivity = acticity
     }
 
 

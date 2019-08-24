@@ -8,11 +8,11 @@
         tools:context=".activity.PreviewActivity">
 
     <FrameLayout
-            android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+                android:fitsSystemWindows="true"
                 android:visibility="gone"
                 android:id="@+id/preview_activity_top_search_normal"
                 android:layout_width="match_parent"
@@ -103,15 +103,16 @@
 
 
     <com.tree.newidea.view.MyMarkdownView
+            android:fitsSystemWindows="true"
             android:visibility="gone"
             android:id="@+id/preview_activity_top_search_m"
             android:background="@color/main_add_backgroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
 
 
     </com.tree.newidea.view.MyMarkdownView>
@@ -123,7 +124,6 @@
             android:id="@+id/preview_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/main_add_backgroup"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="24dp"

@@ -3,7 +3,8 @@
     <color name="colorPrimary" tools:ignore="ResourceName">#008577</color>
     <color name="colorPrimaryDark" tools:ignore="ResourceName">#00574B</color>
     <color name="colorAccent" tools:ignore="ResourceName">#383B48</color>
-    <color name="windowBackground" tools:ignore="ResourceName">#FFFF</color>
+    <color name="windowBackground" tools:ignore="ResourceName">#ffff</color>
+    <color name="mainBackground" tools:ignore="ResourceName">#018888</color>
     <color name="homeHeadColor" tools:ignore="ResourceName">#FFAE33</color>
     <color name="sidebarColor" tools:ignore="ResourceName">#FFAE33</color>
     <color name="mainTextColor" tools:ignore="ResourceName">#383B48</color>
@@ -11,5 +12,6 @@
     <color name="editorBackground" tools:ignore="ResourceName">#E8E8E8</color>
     <color name="fullyTransparent" tools:ignore="ResourceName">#00ffffff</color>
     <color name="main_add_backgroup" tools:ignore="ResourceName">#00ABAB</color>
+    <color name="black" tools:ignore="ResourceName">#000000</color>
 
 </resources>

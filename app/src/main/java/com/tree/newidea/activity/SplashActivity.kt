@@ -21,6 +21,7 @@ import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.util.*
 import com.umeng.commonsdk.stateless.UMSLEnvelopeBuild.mContext
 import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.app_activity_splash.*
 import org.greenrobot.eventbus.EventBus
@@ -42,10 +43,12 @@ class SplashActivity : BaseActivity() {
         Observable.create<Any> {
             note =  (getObject(this,"note") as NotepadBean?) ?: NotepadBean()
             Thread.sleep(1500)
-            EventBus.getDefault().postSticky(this)
                 startActivity<MainActivity>()
             finish()
-        }.subscribeOn(Schedulers.io()).subscribe()
+            it.onNext(0)
+        }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe{
+            val   a= 0
+        }
 //        ordinaryApi.getSplashPicture("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN").enqueue(object : retrofit2.Callback<BingPictureBean> {
 //            override fun onResponse(call: Call<BingPictureBean>, response: Response<BingPictureBean>) {
 //                val a = response.body()

@@ -42,6 +42,11 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tree.newidea.activity.EditActivity
 import com.tree.newidea.activity.MarkDownActivity
 import com.tree.newidea.adapter.SidebarRecycleViewAdapter
+import com.tree.newidea.bean.NotepadBean
+import io.reactivex.Observable
+import io.reactivex.Scheduler
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.app_main_sidebar.*
 import org.greenrobot.eventbus.EventBus
 import java.text.DecimalFormat
@@ -58,6 +63,7 @@ class MainViewModel : BaseViewModel() {
      */
 
     var isShrinking = false
+
 
 
     fun hide(activity: MainActivity) {
@@ -228,11 +234,21 @@ class MainViewModel : BaseViewModel() {
 
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
             note?.let {
-                srv_main_sidebar.adapter = SidebarRecycleViewAdapter(it)
+                srv_main_sidebar.adapter = SidebarRecycleViewAdapter(this,it)
             }
             //SlidingPaneLayout阴影设置
             dl_main.sliderFadeColor = 0x00ffffff
+            rc_main.layoutManager = LinearLayoutManager(this)
 
+            Observable.create<MutableList<NotepadBean.DatesBean.TextsBean>?> {
+                timelineList = getObject(this,"timelineList") as MutableList<NotepadBean.DatesBean.TextsBean>?
+                if (timelineList == null) {
+                    timelineList = mutableListOf()
+                }
+                it.onNext(timelineList!!)
+            }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
+                rc_main.adapter = MainRecycleViewAdapter(timelineList,lottie_main)
+            }
 
         }
     }
@@ -378,11 +394,6 @@ class MainViewModel : BaseViewModel() {
                     iv_put_away_down.playAnimation()
                 }
             })
-
-
-//            ll_no_notebook_tips.setOnClickListener {
-//
-//            }
         }
     }
 }

@@ -60,32 +60,49 @@
             android:id="@+id/app_view2"/>
 
     <androidx.constraintlayout.widget.Guideline
-            android:orientation="horizontal"
+            android:id="@+id/app_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/app_guideline"
-            app:layout_constraintGuide_percent="0.17"/>
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
 
     <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/app_guideline"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0"
-            android:id="@+id/app_recyclerview"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/app_guideline"
+            app:layout_constraintVertical_bias="0.0" />
 
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_main"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:lottie_rawRes="@raw/animation_main"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:layout_constraintBottom_toBottomOf="@+id/rc_main"
+            app:layout_constraintEnd_toEndOf="@+id/rc_main"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rc_main"
+            app:layout_constraintVertical_bias="0.144" />
 
     <FrameLayout
             android:background="@drawable/app_shape_main_add_normal"
             android:layout_width="45dp"
             android:layout_height="0dp"
+            android:elevation="10dp"
             android:paddingTop="8dp"
             android:id="@+id/fl_button_add_main_normal"
             android:orientation="vertical"
@@ -101,15 +118,9 @@
         <com.airbnb.lottie.LottieAnimationView
                 app:lottie_loop="true"
                 app:lottie_autoPlay="true"
-                app:lottie_rawRes="@raw/animation_add_normal"
+                app:lottie_rawRes="@raw/animation_add_normal_edit"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"/>
-
-        <!--<ImageView-->
-        <!--android:src="@drawable/ic_main_add_normal_white"-->
-        <!--android:adjustViewBounds="true"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"/>-->
 
 
     </FrameLayout>
@@ -118,6 +129,7 @@
             android:background="@drawable/app_shape_main_add_normal"
             android:layout_width="45dp"
             android:layout_height="90dp"
+            android:elevation="10dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:paddingTop="15dp"
@@ -145,6 +157,7 @@
             android:background="@drawable/app_shape_main_add_normal"
             android:layout_width="45dp"
             android:layout_height="90dp"
+            android:elevation="10dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:paddingTop="15dp"
@@ -160,7 +173,7 @@
             android:orientation="vertical">
 
         <ImageView
-                android:src="@drawable/ic_main_add_charge_d_affaires"
+                android:src="@drawable/ic_main_add_charge_d_affaires_white"
                 android:adjustViewBounds="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

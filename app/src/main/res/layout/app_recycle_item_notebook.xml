@@ -13,6 +13,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sidebar_item"
             android:orientation="horizontal"
             android:gravity="center"
             android:background="@drawable/app_shape_recycle_item_notepad"

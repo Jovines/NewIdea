@@ -34,6 +34,7 @@ class EditActivity : BaseViewModelActivity<EditViewmodel>() {
     override fun finish() {
         super.finish()
         overridePendingTransition(0, R.anim.app_mark_down_activity_exit)
+
     }
 
 

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <Space
+            android:id="@+id/app_space2"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginEnd="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+            android:id="@+id/top_line"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/app_framelayout"
+            app:layout_constraintEnd_toEndOf="@+id/app_framelayout"
+            app:layout_constraintStart_toStartOf="@+id/app_framelayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+            android:id="@+id/bottom_line"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/app_framelayout"
+            app:layout_constraintStart_toStartOf="@+id/app_framelayout"
+            app:layout_constraintTop_toTopOf="@+id/app_framelayout" />
+
+
+    <View
+            android:id="@+id/app_framelayout"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/app_shape_main_history"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/app_linearlayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/app_linearlayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/app_shape_main_recycle_item_backgroup"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/app_framelayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+
+        <TextView
+                android:id="@+id/tv_main_recycle_tilte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/mainTextColor"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_main_recycle_date"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="标题" />
+
+        <TextView
+                android:id="@+id/tv_main_recycle_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/mainTextColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="日期" />
+
+        <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_icon_m"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_main_add_m"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_main_recycle_date"
+                app:layout_constraintEnd_toEndOf="@+id/tv_main_recycle_tilte"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_main_recycle_date"
+                app:layout_constraintTop_toTopOf="@+id/tv_main_recycle_date"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_icon_undo"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_main_add_charge_d_affaires"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_main_recycle_date"
+                app:layout_constraintEnd_toEndOf="@+id/tv_main_recycle_tilte"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_main_recycle_date"
+                app:layout_constraintTop_toTopOf="@+id/tv_main_recycle_date"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:visibility="gone"
+                android:id="@+id/iv_icon_normal"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_main_recycle_date"
+                app:layout_constraintEnd_toEndOf="@+id/tv_main_recycle_tilte"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_main_recycle_date"
+                app:layout_constraintTop_toTopOf="@+id/tv_main_recycle_date"
+                app:layout_constraintVertical_bias="0.0"
+                app:lottie_rawRes="@raw/animation_add_normal_edit_black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

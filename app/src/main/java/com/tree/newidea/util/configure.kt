@@ -18,6 +18,11 @@ const val activityStartTime = 1500.toLong()
 
 var note:NotepadBean? = null
 
+/**
+ *时间轴
+ */
+var timelineList: MutableList<NotepadBean.DatesBean.TextsBean>? = null
+
 
 /**
  * 手机屏幕的高度和宽度，单位是px

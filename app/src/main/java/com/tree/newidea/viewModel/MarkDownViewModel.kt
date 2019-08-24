@@ -1,5 +1,7 @@
 package com.tree.newidea.viewModel
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.graphics.Rect
@@ -380,7 +382,10 @@ class MarkDownViewModel : BaseViewModel() {
                         this.date = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(Date(System.currentTimeMillis()))
                     }
 
-
+                    timelineList?.add(text)
+                    timelineList?.let {
+                        asynSaveSerializationObject(this, "timelineList", it)
+                    }
                     var isFind = false
                     note?.let { notepadBean ->
                         notepadBean.dates.forEach note@{
@@ -398,8 +403,15 @@ class MarkDownViewModel : BaseViewModel() {
                     }
 
                 }
-                maskFrameLayout.visibility = View.GONE
-                finish()
+                lottie_mark_yes.addAnimatorListener(object : AnimatorListenerAdapter(){
+                    override fun onAnimationEnd(animation: Animator?) {
+                        maskFrameLayout.visibility = View.GONE
+                        activity.finish()
+                    }
+                })
+                lottie_mark_yes.visibility = View.VISIBLE
+                lottie_mark_yes.speed = 1.5f
+                lottie_mark_yes.playAnimation()
             }
 
         }

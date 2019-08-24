@@ -27,6 +27,7 @@
 
 
             <RelativeLayout
+                    android:id="@+id/app_relativelayout"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginTop="16dp"
@@ -46,6 +47,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginBottom="0dp"
+                        android:elevation="5dp"
                         android:src="@drawable/ic_back" />
 
 
@@ -63,6 +65,13 @@
                         android:textSize="18sp" />
 
             </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/mainTextColor"
+                    app:layout_constraintBottom_toTopOf="@+id/vp_mark_down"
+                    app:layout_constraintTop_toBottomOf="@+id/app_relativelayout" />
 
 
             <androidx.viewpager.widget.ViewPager
@@ -92,6 +101,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/app_shape_save"
+                    android:elevation="10dp"
                     android:gravity="bottom|center_horizontal"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -119,11 +129,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.08" />
+                    app:layout_constraintGuide_percent="0.1" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.billy.android.swipe.SmartSwipeWrapper>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_mark_yes"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="140dp"
+            app:lottie_rawRes="@raw/animation_yes"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginBottom="500dp" />
 
 
     <FrameLayout
