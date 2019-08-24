@@ -77,6 +77,10 @@ class PreviewActivity : BaseActivity() {
                     }
 
                 })
+                preview_fab.setOnClickListener {
+                    EventBus.getDefault().postSticky(this)
+                    startActivity<EditActivity>()
+                }
                 anim.start()
             }
         }
