@@ -128,19 +128,19 @@
                 app:layout_constraintStart_toEndOf="@+id/tv_main_recycle_date"
                 app:layout_constraintTop_toTopOf="@+id/tv_main_recycle_date"
                 app:layout_constraintVertical_bias="0.0" />
-
-        <com.airbnb.lottie.LottieAnimationView
+        <ImageView
                 android:visibility="gone"
                 android:id="@+id/iv_icon_normal"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_main_add_normal"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_main_recycle_date"
                 app:layout_constraintEnd_toEndOf="@+id/tv_main_recycle_tilte"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_main_recycle_date"
                 app:layout_constraintTop_toTopOf="@+id/tv_main_recycle_date"
-                app:layout_constraintVertical_bias="0.0"
-                app:lottie_rawRes="@raw/animation_add_normal_edit_black" />
+                app:layout_constraintVertical_bias="0.0" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

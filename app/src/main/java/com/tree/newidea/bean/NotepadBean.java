@@ -98,7 +98,7 @@ public class NotepadBean implements Serializable {
                 return isUndo;
             }
 
-            public void setUndo(boolean undo) {
+            public void setIsUndo(boolean undo) {
                 isUndo = undo;
             }
 

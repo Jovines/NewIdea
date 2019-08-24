@@ -15,7 +15,9 @@ import android.widget.EditText
 import com.mukesh.MarkdownView
 import com.tree.common.ui.BaseViewModelActivity
 import com.tree.newidea.R
+import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.event.MainUpDate
+import com.tree.newidea.util.note
 import com.tree.newidea.view.MaskFrameLayout
 import com.tree.newidea.viewModel.MarkDownViewModel
 import kotlinx.android.synthetic.main.app_activity_mark_down.*
@@ -32,7 +34,9 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
     lateinit var editText: EditText
     lateinit var markdownView: MarkdownView
 
-    lateinit var maskFrameLayout: MaskFrameLayout
+    var maskFrameLayout: MaskFrameLayout? = null
+
+    var bean:NotepadBean.DatesBean.TextsBean? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         overridePendingTransition(R.anim.app_no_anim, 0)
@@ -73,8 +77,21 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
         super.onStart()
     }
 
+    @Subscribe(sticky = true)
+    fun reTextBean(bean:NotepadBean.DatesBean.TextsBean) {
+        note?.dates?.forEach {
+            it?.texts?.forEach {
+                if (bean.text == it.text && bean.title == it.title || bean == it) {
+                    this.bean = it
+                    markdownView.setMarkDownText(it.text)
+                    editText.setText(it.text)
+                }
+            }
+        }
+    }
 
     override fun onDestroy() {
+
         super.onDestroy()
         viewModel.isExitLoopPrompt = true
         window.decorView.viewTreeObserver.removeOnGlobalLayoutListener(viewModel.keyboardOnGlobalChangeListener)
@@ -105,7 +122,7 @@ class MarkDownActivity : BaseViewModelActivity<MarkDownViewModel>(), TextWatcher
                 }?.start()
             }
         }else{
-            maskFrameLayout.visibility = View.GONE
+            maskFrameLayout?.visibility = View.GONE
             super.onBackPressed()
         }
 

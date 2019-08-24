@@ -18,7 +18,9 @@
                 android:name=".activity.MarkDownActivity"
                 android:theme="@style/app_Theme.NoBackground"
                 android:windowSoftInputMode="adjustPan"></activity>
-        <activity android:name=".activity.EditActivity"></activity>
+        <activity android:name=".activity.EditActivity"
+                android:theme="@style/app_Theme.NoBackground"
+                android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

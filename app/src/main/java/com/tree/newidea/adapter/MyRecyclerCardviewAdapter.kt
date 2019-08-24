@@ -23,13 +23,13 @@
 //
 //        if (viewType == ITEM_TYPE.ITEM_TYPE_Theme.ordinal) {
 //
-//            val view = LayoutInflater.from(parent.context).inflate(R.layout.videothemelist, parent, false)
+//            val view = LayoutInflater.from(parent.mainActivity).inflate(R.layout.videothemelist, parent, false)
 //
 //            return ThemeVideoHolder(view)
 //
 //        } else if (viewType == ITEM_TYPE.ITEM_TYPE_Video.ordinal) {
 //
-//            val view = LayoutInflater.from(parent.context).inflate(R.layout.videocardview, parent, false)
+//            val view = LayoutInflater.from(parent.mainActivity).inflate(R.layout.videocardview, parent, false)
 //            return VideoViewHolder(view)
 //
 //        }

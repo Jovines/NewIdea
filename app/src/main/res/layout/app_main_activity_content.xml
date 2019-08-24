@@ -11,6 +11,7 @@
 
     <LinearLayout
             android:gravity="center"
+            android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +48,7 @@
     <View
             android:background="#9E9E9E"
             android:layout_width="0dp"
+            android:visibility="gone"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:layout_marginTop="16dp"
@@ -64,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.1" />
+            app:layout_constraintGuide_percent="0.0" />
 
 
     <androidx.recyclerview.widget.RecyclerView

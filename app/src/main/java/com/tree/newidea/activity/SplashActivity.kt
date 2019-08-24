@@ -11,6 +11,7 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.target.Target
+import com.google.gson.Gson
 import com.tree.common.ui.BaseActivity
 import com.tree.newidea.R
 import com.tree.newidea.api.BING_BASE_URI
@@ -42,6 +43,8 @@ class SplashActivity : BaseActivity() {
         ordinaryApi = ApiGenerator.getApiService(OrdinaryApi::class.java)
         Observable.create<Any> {
             note =  (getObject(this,"note") as NotepadBean?) ?: NotepadBean()
+            val a = Gson().toJson(note)
+            val b = 0
             Thread.sleep(1500)
                 startActivity<MainActivity>()
             finish()

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -16,6 +16,11 @@
     <style name="app_Theme.NoBackground" parent="AppTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light" tools:ignore="ResourceName">
+        <item name="colorControlNormal">@color/windowBackground</item>
+        <item name="colorControlActivated">@color/windowBackground</item>
     </style>
 
 </resources>

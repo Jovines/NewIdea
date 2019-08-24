@@ -37,6 +37,7 @@ import com.billy.android.swipe.listener.SimpleSwipeListener
 import com.tree.newidea.adapter.SkidTopAdapter
 import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.util.*
+import kotlinx.android.synthetic.main.app_activity_undone.*
 import kotlinx.android.synthetic.main.app_skid_edit_top.*
 import kotlinx.android.synthetic.main.app_skid_edit_top.view.*
 import kotlinx.android.synthetic.main.app_soft_keyboard_top_tool_view.view.*
@@ -114,11 +115,23 @@ class MarkDownViewModel : BaseViewModel() {
             editText.apply {
                 try {
                     if (textLength < text.length) {
-                        if (text.substring(selectionEnd-30, selectionEnd) == "------------------------------") {
-                            if (text.substring(selectionStart-31, selectionStart)[0].toString() == "\n"){
-                                editableText.replace(selectionEnd,selectionEnd,"\n")
-                            }else{
-                                editableText.replace(selectionStart - 30, selectionEnd, "\n------------------------------\n")
+                        if (text.substring(
+                                selectionEnd - 30,
+                                selectionEnd
+                            ) == "------------------------------"
+                        ) {
+                            if (text.substring(
+                                    selectionStart - 31,
+                                    selectionStart
+                                )[0].toString() == "\n"
+                            ) {
+                                editableText.replace(selectionEnd, selectionEnd, "\n")
+                            } else {
+                                editableText.replace(
+                                    selectionStart - 30,
+                                    selectionEnd,
+                                    "\n------------------------------\n"
+                                )
                             }
                             return@apply
                         }
@@ -200,11 +213,16 @@ class MarkDownViewModel : BaseViewModel() {
                     try {
                         if (textLength < text.length) {
                             val mText =
-                                text.substring(0, selectionStart).substringBeforeLast("\n").substringAfterLast("\n")
+                                text.substring(0, selectionStart).substringBeforeLast("\n")
+                                    .substringAfterLast("\n")
                             if (Pattern.matches(">+ .+", mText)) {
                                 val matcher = Pattern.compile(">+").matcher(mText)
                                 matcher.lookingAt()
-                                editableText.replace(selectionStart, selectionEnd, """${matcher.group()} """)
+                                editableText.replace(
+                                    selectionStart,
+                                    selectionEnd,
+                                    """${matcher.group()} """
+                                )
                                 return@apply
                             } else if (Pattern.matches(">+\\s*", mText)) {
                                 val matcher = Pattern.compile(">+\\s*").matcher(mText)
@@ -219,7 +237,8 @@ class MarkDownViewModel : BaseViewModel() {
                     try {
                         if (textLength < text.length) {
                             val mText =
-                                text.substring(0, selectionStart).substringBeforeLast("\n").substringAfterLast("\n")
+                                text.substring(0, selectionStart).substringBeforeLast("\n")
+                                    .substringAfterLast("\n")
                             if (Pattern.matches("\\s*\\* .+", mText)) {
                                 val ma = Pattern.compile("\\s*\\*").matcher(mText)
                                 ma.lookingAt()
@@ -291,14 +310,38 @@ class MarkDownViewModel : BaseViewModel() {
                 editable.replace(start, end, txt)//光标所在位置插入文字
             }
             when (txt) {//移动光标
-                "****" -> editText.setSelection(editText.selectionStart - 2, editText.selectionEnd - 2)
-                "**" -> editText.setSelection(editText.selectionStart - 1, editText.selectionEnd - 1)
-                "******" -> editText.setSelection(editText.selectionStart - 3, editText.selectionEnd - 3)
-                "~~~~" -> editText.setSelection(editText.selectionStart - 2, editText.selectionEnd - 2)
-                """![]("")""" -> editText.setSelection(editText.selectionStart - 5, editText.selectionEnd - 5)
-                """[]("")""" -> editText.setSelection(editText.selectionStart - 5, editText.selectionEnd - 5)
-                "[]()" -> editText.setSelection(editText.selectionStart - 3, editText.selectionEnd - 3)
-                "![]()" -> editText.setSelection(editText.selectionStart - 3, editText.selectionEnd - 3)
+                "****" -> editText.setSelection(
+                    editText.selectionStart - 2,
+                    editText.selectionEnd - 2
+                )
+                "**" -> editText.setSelection(
+                    editText.selectionStart - 1,
+                    editText.selectionEnd - 1
+                )
+                "******" -> editText.setSelection(
+                    editText.selectionStart - 3,
+                    editText.selectionEnd - 3
+                )
+                "~~~~" -> editText.setSelection(
+                    editText.selectionStart - 2,
+                    editText.selectionEnd - 2
+                )
+                """![]("")""" -> editText.setSelection(
+                    editText.selectionStart - 5,
+                    editText.selectionEnd - 5
+                )
+                """[]("")""" -> editText.setSelection(
+                    editText.selectionStart - 5,
+                    editText.selectionEnd - 5
+                )
+                "[]()" -> editText.setSelection(
+                    editText.selectionStart - 3,
+                    editText.selectionEnd - 3
+                )
+                "![]()" -> editText.setSelection(
+                    editText.selectionStart - 3,
+                    editText.selectionEnd - 3
+                )
             }
         }
     }
@@ -307,7 +350,7 @@ class MarkDownViewModel : BaseViewModel() {
     fun listenEventSettings(activity: MarkDownActivity) {
         activity.apply {
             mark_down_back.setOnClickListener {
-                maskFrameLayout.visibility = View.GONE
+                maskFrameLayout?.visibility = View.GONE
                 finish()
             }
 
@@ -316,13 +359,19 @@ class MarkDownViewModel : BaseViewModel() {
                 override fun onPageScrollStateChanged(state: Int) {
                     when (state) {
                         1 -> {
-                            val anim = AnimationUtils.loadAnimation(this@apply, R.anim.app_save_button_hide)
+                            val anim = AnimationUtils.loadAnimation(
+                                this@apply,
+                                R.anim.app_save_button_hide
+                            )
                             tv_save.startAnimation(anim)
 
 
                         }
                         0 -> {
-                            val anim = AnimationUtils.loadAnimation(this@apply, R.anim.app_save_button_show)
+                            val anim = AnimationUtils.loadAnimation(
+                                this@apply,
+                                R.anim.app_save_button_show
+                            )
                             tv_save.startAnimation(anim)
                             anim.setAnimationListener(object : Animation.AnimationListener {
                                 override fun onAnimationRepeat(p0: Animation?) {
@@ -334,7 +383,7 @@ class MarkDownViewModel : BaseViewModel() {
 
                                 override fun onAnimationStart(p0: Animation?) {
                                     when (mPosition) {
-                                        0 -> tv_save.text = "编\n辑"
+                                        0 -> tv_save.text = saveText
                                         1 -> tv_save.text = "预\n览"
                                     }
                                 }
@@ -345,7 +394,11 @@ class MarkDownViewModel : BaseViewModel() {
                     }
                 }
 
-                override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
                     mPosition = position
 
                 }
@@ -358,62 +411,73 @@ class MarkDownViewModel : BaseViewModel() {
 
 
             tv_save.setOnClickListener {
-                if (saveText != "编\n辑") {
-                    val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")// HH:mm:ss
-                    //获取当前时间
-                    val date = Date(System.currentTimeMillis())
-                    //初始化一个textBean
-                    val text = NotepadBean.DatesBean.TextsBean().apply {
-                        isIsMardown = true
-                        val str = editText.editableText.toString()
-                        val ma = Pattern.compile(" *#+ \\w+.*").matcher(str)
-                        if (ma.lookingAt()) {
-                            val a = ma.group()
-                            title = ma.group().replace(Regex(" *#+ "), "").replace(Regex("\\s*"), "")
-                        }else {
-                            if (str.length < 15) {
-                                title = str
-                            }else{
-                                title = editText.editableText.toString().substring(0,15)
-                            }
-                        }
-                        text = editText.editableText.toString()
+                if (editText.editableText.toString().isNotEmpty()) {
+                    if (saveText != "编\n辑") {
+                        val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")// HH:mm:ss
                         //获取当前时间
-                        this.date = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(Date(System.currentTimeMillis()))
-                    }
-
-                    timelineList?.add(text)
-                    timelineList?.let {
-                        asynSaveSerializationObject(this, "timelineList", it)
-                    }
-                    var isFind = false
-                    note?.let { notepadBean ->
-                        notepadBean.dates.forEach note@{
-                            if (it.date == simpleDateFormat.format(date)) {
-                                it.texts.add(text)
-                                isFind = true
+                        val date = Date(System.currentTimeMillis())
+                        //初始化一个textBean
+                        val text = (if(bean ==null)NotepadBean.DatesBean.TextsBean() else bean)?.apply {
+                            isIsMardown = true
+                            val str = editText.editableText.toString()
+                            val ma = Pattern.compile(" *#+ \\w+.*").matcher(str)
+                            if (ma.lookingAt()) {
+                                val a = ma.group()
+                                title = ma.group().replace(Regex(" *#+ "), "")
+                                    .replace(Regex("\\s*"), "")
+                            } else {
+                                if (str.length < 15) {
+                                    title = str
+                                } else {
+                                    title = editText.editableText.toString().substring(0, 15)
+                                }
                             }
+                            text = editText.editableText.toString()
+                            //获取当前时间
+                            this.date =
+                                SimpleDateFormat(timeFormat2).format(Date(System.currentTimeMillis()))
                         }
-                        if (!isFind) {
-                            notepadBean.dates.add(NotepadBean.DatesBean(simpleDateFormat.format(date)).apply {
-                                texts.add(text)
-                            })
+
+                        text?.let { it1 -> timelineList?.add(it1) }
+                        timelineList?.let {
+                            asynSaveSerializationObject(this, "timelineList", it)
                         }
-                        asynSaveSerializationObject(this, "note", notepadBean)
+                        var isFind = false
+                        note?.let { notepadBean ->
+                            notepadBean.dates.forEach note@{
+                                if (it.date == simpleDateFormat.format(date)) {
+                                    it.texts.add(text)
+                                    isFind = true
+                                }
+                            }
+                            if (!isFind) {
+                                notepadBean.dates.add(
+                                    NotepadBean.DatesBean(
+                                        simpleDateFormat.format(
+                                            date
+                                        )
+                                    ).apply {
+                                        texts.add(text)
+                                    })
+                            }
+                            asynSaveSerializationObject(this, "note", notepadBean)
+                        }
+
                     }
+                    lottie_mark_yes.addAnimatorListener(object : AnimatorListenerAdapter() {
+                        override fun onAnimationEnd(animation: Animator?) {
+                            maskFrameLayout?.visibility = View.GONE
+                            activity.finish()
+                        }
+                    })
+                    lottie_mark_yes.visibility = View.VISIBLE
+                    lottie_mark_yes.speed = 1.5f
+                    lottie_mark_yes.playAnimation()
+                }else{
+                    Toast.makeText(this,"你还没有输入哦",Toast.LENGTH_SHORT).show()
 
                 }
-                lottie_mark_yes.addAnimatorListener(object : AnimatorListenerAdapter(){
-                    override fun onAnimationEnd(animation: Animator?) {
-                        maskFrameLayout.visibility = View.GONE
-                        activity.finish()
-                    }
-                })
-                lottie_mark_yes.visibility = View.VISIBLE
-                lottie_mark_yes.speed = 1.5f
-                lottie_mark_yes.playAnimation()
             }
-
         }
     }
 
@@ -430,14 +494,14 @@ class MarkDownViewModel : BaseViewModel() {
                     if (isTips) {
                         it.onNext(i)
                     }
-                    if (isExitLoopPrompt){
+                    if (isExitLoopPrompt) {
                         break
                     }
                 }
             }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
                 when (it % 2) {
                     0 -> {
-                        if (editText.editableText.isNotEmpty()&&!isTipsPause) {
+                        if (editText.editableText.isNotEmpty() && !isTipsPause) {
                             tv_mark_title.text = "左滑可以预览哦"
                         }
                     }
@@ -446,8 +510,6 @@ class MarkDownViewModel : BaseViewModel() {
                     }
                 }
             }
-
-
 
 
         }
@@ -471,7 +533,7 @@ class MarkDownViewModel : BaseViewModel() {
                         et_search_mark
                     )
                     et_search_mark.setOnEditorActionListener { v, actionId, _ ->
-                        editText.visibility  = View.GONE
+                        editText.visibility = View.GONE
                         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                             searchNoteList.clear()
                             vp_skid_edit_top.visibility = View.INVISIBLE
@@ -484,8 +546,9 @@ class MarkDownViewModel : BaseViewModel() {
                                     note?.let {
                                         it.dates.forEach { it2 ->
                                             it2.texts.forEach { it3 ->
-                                                val ma = Pattern.compile("${this@View.et_search_mark.editableText}")
-                                                    .matcher(it3.text)
+                                                val ma =
+                                                    Pattern.compile("${this@View.et_search_mark.editableText}")
+                                                        .matcher(it3.text)
                                                 if (ma.find()) {
                                                     searchNoteList.add(it3)
                                                 }
@@ -495,22 +558,27 @@ class MarkDownViewModel : BaseViewModel() {
                                     Thread.sleep(1000)
                                     it.onNext(searchNoteList)
                                 } else {
-                                    Toast.makeText(this@activity, "哎呀，好像发生了意料之外的错误", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(
+                                        this@activity,
+                                        "哎呀，好像发生了意料之外的错误",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
                                     lottie_no_find.visibility = View.VISIBLE
                                     lottie_no_find.playAnimation()
                                 }
-                            }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
-                                (vp_skid_edit_top.adapter as SkidTopAdapter).notifyDataSetChanged()
-                                editText.visibility  = View.VISIBLE
-                                vp_skid_edit_top.visibility = View.VISIBLE
-                                lottie_mark_loading.pauseAnimation()
-                                lottie_mark_loading.visibility = View.GONE
-                                if (searchNoteList.size == 0) {
-                                    lottie_no_find.visibility = View.VISIBLE
-                                    lottie_no_find.playAnimation()
-                                    openKeybord(et_search_mark, this@activity)
+                            }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                                .subscribe {
+                                    (vp_skid_edit_top.adapter as SkidTopAdapter).notifyDataSetChanged()
+                                    editText.visibility = View.VISIBLE
+                                    vp_skid_edit_top.visibility = View.VISIBLE
+                                    lottie_mark_loading.pauseAnimation()
+                                    lottie_mark_loading.visibility = View.GONE
+                                    if (searchNoteList.size == 0) {
+                                        lottie_no_find.visibility = View.VISIBLE
+                                        lottie_no_find.playAnimation()
+                                        openKeybord(et_search_mark, this@activity)
+                                    }
                                 }
-                            }
                         }
                         false
                     }
@@ -519,7 +587,12 @@ class MarkDownViewModel : BaseViewModel() {
 
                         }
 
-                        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                        override fun beforeTextChanged(
+                            p0: CharSequence?,
+                            p1: Int,
+                            p2: Int,
+                            p3: Int
+                        ) {
                         }
 
                         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -533,7 +606,11 @@ class MarkDownViewModel : BaseViewModel() {
                 })
                 .setScrimColor(0x2F000000)
                 .addListener(object : SimpleSwipeListener() {
-                    override fun onSwipeOpened(wrapper: SmartSwipeWrapper?, consumer: SwipeConsumer?, direction: Int) {
+                    override fun onSwipeOpened(
+                        wrapper: SmartSwipeWrapper?,
+                        consumer: SwipeConsumer?,
+                        direction: Int
+                    ) {
                         isSkidTopOpen = true
                         if (isOpenKey) {
                             isOpenKey = false
@@ -554,12 +631,16 @@ class MarkDownViewModel : BaseViewModel() {
                     ) {
                         isSkidTopOpen = true
                         view?.let {
-                                closeKeybord(it.et_search_mark, this@activity)
-                                closeKeybord(editText, this@activity)
+                            closeKeybord(it.et_search_mark, this@activity)
+                            closeKeybord(editText, this@activity)
                         }
                     }
 
-                    override fun onSwipeClosed(wrapper: SmartSwipeWrapper?, consumer: SwipeConsumer?, direction: Int) {
+                    override fun onSwipeClosed(
+                        wrapper: SmartSwipeWrapper?,
+                        consumer: SwipeConsumer?,
+                        direction: Int
+                    ) {
                         isOpenKey = true
                         isSkidTopOpen = false
 
@@ -586,75 +667,87 @@ class MarkDownViewModel : BaseViewModel() {
                 val keyboardHeight = mark_container.bottom - rect.bottom// 输入法的高度
                 editText.apply {
                     layoutParams.height =
-                        vp_mark_down.bottom - vp_mark_down.top - keyboardHeight - dip2px(40f) - dp2px(15f)
+                        vp_mark_down.bottom - vp_mark_down.top - keyboardHeight - dip2px(40f) - dp2px(
+                            15f
+                        )
                 }
                 vp_mark_down.requestLayout()
                 if (abs(keyboardHeight) > phoneHeight / 5) {
                     mIsSoftKeyBoardShowing = true // 超过屏幕五分之一则表示弹出了输入法
                     if (isFirst) {
 //                    初始化工具栏
-                        view = View.inflate(this, R.layout.app_soft_keyboard_top_tool_view, null).apply {
-                            fun sliding(textView: TextView) {
-                                onClick(activity, textView)
-                                tv_mark_title.text = "MarkDown"
-                            }
-
-                            keyboard_top_view_first_txt.slidingPositionMonitoring = { sliding(it)
-                                isTipsPause = it.tag as Boolean
-                            }
-                            keyboard_top_view_second_txt.slidingPositionMonitoring = { sliding(it)
-                                isTipsPause = it.tag as Boolean }
-                            keyboard_top_view_third_txt.slidingPositionMonitoring = { sliding(it)
-                                isTipsPause = it.tag as Boolean}
-                            keyboard_top_view_fourth_txt.slidingPositionMonitoring = { sliding(it)
-                                isTipsPause = it.tag as Boolean}
-
-                            keyboard_top_view_first_txt.selected = {
-                                isTipsPause = it.tag as Boolean
-
-                                when (it) {
-                                    keyboard_top_view_first_txt1 -> tv_mark_title.text = "一级标题"
-                                    keyboard_top_view_first_txt2 -> tv_mark_title.text = "二级标题"
-                                    keyboard_top_view_first_txt3 -> tv_mark_title.text = "三级标题"
-                                    keyboard_top_view_first_txt4 -> tv_mark_title.text = "四级标题"
-                                    keyboard_top_view_first_txt5 -> tv_mark_title.text = "五级标题"
-                                    keyboard_top_view_first_txt6 -> tv_mark_title.text = "六级标题"
+                        view = View.inflate(this, R.layout.app_soft_keyboard_top_tool_view, null)
+                            .apply {
+                                fun sliding(textView: TextView) {
+                                    onClick(activity, textView)
+                                    tv_mark_title.text = "MarkDown"
                                 }
-                            }
-                            keyboard_top_view_second_txt.selected = {
-                                isTipsPause = it.tag as Boolean
-                                when (it) {
-                                    keyboard_top_view_second_txt1 -> tv_mark_title.text = "一级引用"
-                                    keyboard_top_view_second_txt2 -> tv_mark_title.text = "二级引用"
-                                    keyboard_top_view_second_txt3 -> tv_mark_title.text = "三级引用"
-                                    keyboard_top_view_second_txt4 -> tv_mark_title.text = "四级引用"
-                                    keyboard_top_view_second_txt5 -> tv_mark_title.text = "五级引用"
-                                    keyboard_top_view_second_txt6 -> tv_mark_title.text = "六级引用"
-                                }
-                            }
 
-                            keyboard_top_view_third_txt.selected = {
-                                isTipsPause = it.tag as Boolean
-                                when (it) {
-                                    keyboard_top_view_third_txt1 -> tv_mark_title.text = "粗体字"
-                                    keyboard_top_view_third_txt2 -> tv_mark_title.text = "斜体字"
-                                    keyboard_top_view_third_txt3 -> tv_mark_title.text = "斜体加粗"
-                                    keyboard_top_view_third_txt4 -> tv_mark_title.text = "删除线"
-                                    keyboard_top_view_third_txt5 -> tv_mark_title.text = "无序列表"
-                                    keyboard_top_view_third_txt6 -> tv_mark_title.text = "下划线"
+                                keyboard_top_view_first_txt.slidingPositionMonitoring = {
+                                    sliding(it)
+                                    isTipsPause = it.tag as Boolean
                                 }
-                            }
-                            keyboard_top_view_fourth_txt.selected = {
-                                isTipsPause = it.tag as Boolean
-                                when (it) {
-                                    keyboard_top_view_fourth_txt1 -> tv_mark_title.text = "插入链接"
-                                    keyboard_top_view_fourth_txt2 -> tv_mark_title.text = "插入有标题的链接"
-                                    keyboard_top_view_fourth_txt3 -> tv_mark_title.text = "插入图片"
-                                    keyboard_top_view_fourth_txt4 -> tv_mark_title.text = "插入有标题的图片"
+                                keyboard_top_view_second_txt.slidingPositionMonitoring = {
+                                    sliding(it)
+                                    isTipsPause = it.tag as Boolean
                                 }
-                            }
+                                keyboard_top_view_third_txt.slidingPositionMonitoring = {
+                                    sliding(it)
+                                    isTipsPause = it.tag as Boolean
+                                }
+                                keyboard_top_view_fourth_txt.slidingPositionMonitoring = {
+                                    sliding(it)
+                                    isTipsPause = it.tag as Boolean
+                                }
 
-                        }
+                                keyboard_top_view_first_txt.selected = {
+                                    isTipsPause = it.tag as Boolean
+
+                                    when (it) {
+                                        keyboard_top_view_first_txt1 -> tv_mark_title.text = "一级标题"
+                                        keyboard_top_view_first_txt2 -> tv_mark_title.text = "二级标题"
+                                        keyboard_top_view_first_txt3 -> tv_mark_title.text = "三级标题"
+                                        keyboard_top_view_first_txt4 -> tv_mark_title.text = "四级标题"
+                                        keyboard_top_view_first_txt5 -> tv_mark_title.text = "五级标题"
+                                        keyboard_top_view_first_txt6 -> tv_mark_title.text = "六级标题"
+                                    }
+                                }
+                                keyboard_top_view_second_txt.selected = {
+                                    isTipsPause = it.tag as Boolean
+                                    when (it) {
+                                        keyboard_top_view_second_txt1 -> tv_mark_title.text = "一级引用"
+                                        keyboard_top_view_second_txt2 -> tv_mark_title.text = "二级引用"
+                                        keyboard_top_view_second_txt3 -> tv_mark_title.text = "三级引用"
+                                        keyboard_top_view_second_txt4 -> tv_mark_title.text = "四级引用"
+                                        keyboard_top_view_second_txt5 -> tv_mark_title.text = "五级引用"
+                                        keyboard_top_view_second_txt6 -> tv_mark_title.text = "六级引用"
+                                    }
+                                }
+
+                                keyboard_top_view_third_txt.selected = {
+                                    isTipsPause = it.tag as Boolean
+                                    when (it) {
+                                        keyboard_top_view_third_txt1 -> tv_mark_title.text = "粗体字"
+                                        keyboard_top_view_third_txt2 -> tv_mark_title.text = "斜体字"
+                                        keyboard_top_view_third_txt3 -> tv_mark_title.text = "斜体加粗"
+                                        keyboard_top_view_third_txt4 -> tv_mark_title.text = "删除线"
+                                        keyboard_top_view_third_txt5 -> tv_mark_title.text = "无序列表"
+                                        keyboard_top_view_third_txt6 -> tv_mark_title.text = "下划线"
+                                    }
+                                }
+                                keyboard_top_view_fourth_txt.selected = {
+                                    isTipsPause = it.tag as Boolean
+                                    when (it) {
+                                        keyboard_top_view_fourth_txt1 -> tv_mark_title.text = "插入链接"
+                                        keyboard_top_view_fourth_txt2 -> tv_mark_title.text =
+                                            "插入有标题的链接"
+                                        keyboard_top_view_fourth_txt3 -> tv_mark_title.text = "插入图片"
+                                        keyboard_top_view_fourth_txt4 -> tv_mark_title.text =
+                                            "插入有标题的图片"
+                                    }
+                                }
+
+                            }
                         fl_mark_container.addView(view)
                         isFirst = false
                     }

@@ -10,20 +10,26 @@ import com.tree.newidea.R
 import com.tree.newidea.bean.NotepadBean
 import com.tree.newidea.event.PreviewEvent
 import kotlinx.android.synthetic.main.app_activity_preview.*
+import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 
 class PreviewActivity : BaseActivity() {
     override val isFragmentActivity: Boolean
         get() = false
+    lateinit var bean: NotepadBean.DatesBean.TextsBean
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.app_activity_preview)
+
+
+
     }
 
 
     @Subscribe(sticky = true)
     fun receiveIndex(previewEvent: PreviewEvent) {
+        this.bean = previewEvent.textBean
         previewEvent.textBean.apply {
             val anim =
                 AnimationUtils.loadAnimation(this@PreviewActivity, R.anim.app_preview_show)
@@ -43,7 +49,13 @@ class PreviewActivity : BaseActivity() {
                     }
 
                 })
+                preview_fab.setOnClickListener {
+                    EventBus.getDefault().postSticky(this)
+                    startActivity<MarkDownActivity>()
+                }
                 anim.start()
+
+
 
             } else {
                 preview_activity_top_search_normal.animation = anim

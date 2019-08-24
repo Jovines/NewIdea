@@ -1,5 +1,6 @@
 package com.tree.newidea.util
 
+import com.tree.newidea.R
 import com.tree.newidea.bean.NotepadBean
 
 /**
@@ -11,6 +12,14 @@ import com.tree.newidea.bean.NotepadBean
  */
 const val activityStartTime = 1500.toLong()
 
+/**
+ * 大时间格式,和详细时间格式
+ */
+const val timeFormat1 = "yyyy-MM-dd"//大时间格式请勿更改
+const val timeFormat2 = "yyyy-MM-dd HH-mm"
+
+
+var momeList:MutableList<Int>? = null
 
 /**
  * 本地记事本数据
@@ -18,10 +27,16 @@ const val activityStartTime = 1500.toLong()
 
 var note:NotepadBean? = null
 
+
 /**
  *时间轴
  */
 var timelineList: MutableList<NotepadBean.DatesBean.TextsBean>? = null
+
+/**
+ * 代办事项
+ */
+var todoList: MutableList<NotepadBean.DatesBean.TextsBean>? = null
 
 
 /**

@@ -16,6 +16,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.app_activity_main.*
 import kotlinx.android.synthetic.main.app_main_activity_content.*
+import kotlinx.android.synthetic.main.app_main_below_layer.*
 import kotlinx.android.synthetic.main.app_main_sidebar.*
 import org.greenrobot.eventbus.Subscribe
 
@@ -41,6 +42,9 @@ class MainActivity : BaseViewModelActivity<MainViewModel>() {
 
     override fun onResume() {
         super.onResume()
+        srv_main_sidebar.adapter?.notifyDataSetChanged()
+        rc_main.adapter?.notifyDataSetChanged()
+        rv_to_do_list.adapter?.notifyDataSetChanged()
     }
 
 
@@ -62,13 +66,13 @@ class MainActivity : BaseViewModelActivity<MainViewModel>() {
     }
 
 
-    @Subscribe
-    fun update(mianUpDate: MainUpDate) {
-        srv_main_sidebar.adapter?.notifyDataSetChanged()
-        rc_main.adapter?.notifyDataSetChanged()
-//        srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
-
-    }
+//    @Subscribe
+//    fun update(mianUpDate: MainUpDate) {
+//        srv_main_sidebar.adapter?.notifyDataSetChanged()
+//        rc_main.adapter?.notifyDataSetChanged()
+////        srv_main_sidebar.adapter = SidebarRecycleViewAdapter(note)
+//
+//    }
 
 
 

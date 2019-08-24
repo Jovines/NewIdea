@@ -36,17 +36,20 @@ import com.billy.android.swipe.consumer.StretchConsumer
 import com.tree.common.utils.LogUtils
 import com.tree.newidea.adapter.ToDoListRecycleViewAdapter
 import kotlinx.android.synthetic.main.app_main_below_layer.*
-import android.R
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.tree.newidea.R
 import com.tree.newidea.activity.EditActivity
 import com.tree.newidea.activity.MarkDownActivity
+import com.tree.newidea.activity.UndoneActivity
 import com.tree.newidea.adapter.SidebarRecycleViewAdapter
 import com.tree.newidea.bean.NotepadBean
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.app_main_dialog_view.view.*
 import kotlinx.android.synthetic.main.app_main_sidebar.*
 import org.greenrobot.eventbus.EventBus
 import java.text.DecimalFormat
@@ -230,11 +233,10 @@ class MainViewModel : BaseViewModel() {
                 StatusBarUtil.setStatusBarDarkTheme(activity, true)
             }
             rv_to_do_list.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-            rv_to_do_list.adapter = ToDoListRecycleViewAdapter()
 
             srv_main_sidebar.layoutManager = LinearLayoutManager(this)
             note?.let {
-                srv_main_sidebar.adapter = SidebarRecycleViewAdapter(this,it)
+                srv_main_sidebar.adapter = SidebarRecycleViewAdapter(this,it,srv_main_sidebar)
             }
             //SlidingPaneLayout阴影设置
             dl_main.sliderFadeColor = 0x00ffffff
@@ -242,15 +244,31 @@ class MainViewModel : BaseViewModel() {
 
             Observable.create<MutableList<NotepadBean.DatesBean.TextsBean>?> {
                 timelineList = getObject(this,"timelineList") as MutableList<NotepadBean.DatesBean.TextsBean>?
+                timelineList?.forEach { textBean ->
+                    if (textBean.isUndo) {
+                        todoList?.add(textBean)
+                    }
+                }
                 if (timelineList == null) {
                     timelineList = mutableListOf()
                 }
+
+                if (todoList == null) {
+                    todoList = mutableListOf()
+                }
+
+
                 it.onNext(timelineList!!)
             }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe {
                 rc_main.adapter = MainRecycleViewAdapter(timelineList,lottie_main)
+                rv_to_do_list.adapter = ToDoListRecycleViewAdapter(todoList)
+
             }
 
+//            momeList = listOf(R.drawable.anger)
+
         }
+
     }
 
 
@@ -313,6 +331,42 @@ class MainViewModel : BaseViewModel() {
                 }
 
 
+            }
+
+
+            fl_button_add_main_undone.setOnClickListener {
+                mask_main.setLocation(
+                    it.left.toFloat(),
+                    it.right.toFloat(),
+                    it.top.toFloat() + resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    it.bottom.toFloat()+ resources.getDimension(com.tree.newidea.R.dimen.mainToolBarHeight),
+                    dl_main.bottom.toFloat(),
+                    dl_main.right.toFloat(),
+                    400
+                )
+                mask_main.animStart {
+                    EventBus.getDefault().postSticky(mask_main)
+                    val intent = Intent(this, UndoneActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+            ll_no_notebook_tips.setOnClickListener {
+                var dialog: AlertDialog? = null
+                dialog = AlertDialog.Builder(activity)
+                    .setView(View.inflate(activity, R.layout.app_main_dialog_view, null).apply {
+                        dialog_m.setOnClickListener {
+                            activity.startActivity<MarkDownActivity>()
+                            dialog?.dismiss()
+                        }
+                        dialog_nnormal.setOnClickListener {
+                            activity.startActivity<EditActivity>()
+                            dialog?.dismiss()
+
+                        }
+                    }).show()
+
+//                startActivity<>()
             }
 
 
