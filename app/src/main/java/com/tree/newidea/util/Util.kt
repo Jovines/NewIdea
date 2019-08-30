@@ -1,19 +1,19 @@
 package com.tree.newidea.util
 
-import android.app.Activity
+import android.content.ContentValues
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.tree.newidea.MyApplication.context
 import com.tree.newidea.api.OrdinaryApi
+import com.tree.newidea.data.NotepadEntry
+import com.tree.newidea.data.NoteDbHelper
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
-import org.jetbrains.anko.startActivity
 import java.io.*
 
 /**
@@ -144,6 +144,7 @@ fun saveObject(context: Context,name: String, `object`: Any) {
 }
 
 
+
 fun asynSaveSerializationObject(context: Context,name: String, `object`: Any) {
     Observable.create<Any> {
         saveObject(context,name,`object`)
@@ -215,3 +216,26 @@ fun closeKeybord(mEditText: EditText, mContext: Context) {
         .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     imm.hideSoftInputFromWindow(mEditText.windowToken, 0)
 }
+
+/**
+ * 异步插入数据到数据库
+ */
+fun insertData(table: String, contentValues: ContentValues) {
+    Observable.create<Any> {
+        val mDbHelper = NoteDbHelper(context)
+        val db = mDbHelper.writableDatabase
+        db.insert(table, null, contentValues)
+    }.subscribeOn(Schedulers.io()).subscribe()
+}
+
+/**
+ * 异步修改数据库的内容
+ */
+fun asynChangeDB(table: String, id: Int, contentValues: ContentValues) {
+    Observable.create<Any> {
+        val mDbHelper = NoteDbHelper(context)
+        val db = mDbHelper.writableDatabase
+        db.update(table,contentValues,"${NotepadEntry.ID} = $id",null)
+    }.subscribeOn(Schedulers.io()).subscribe()
+}
+

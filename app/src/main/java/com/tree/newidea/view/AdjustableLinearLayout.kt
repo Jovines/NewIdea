@@ -4,12 +4,14 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
 import android.widget.LinearLayout
+import com.tree.newidea.data.NotepadContract
 
 /**
  * Created by Tree on 2019/8/16 11:08
  */
 class AdjustableLinearLayout : LinearLayout {
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context) {
+    }
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {}
 

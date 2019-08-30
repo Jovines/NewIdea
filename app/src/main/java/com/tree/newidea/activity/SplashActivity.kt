@@ -43,15 +43,10 @@ class SplashActivity : BaseActivity() {
         ordinaryApi = ApiGenerator.getApiService(OrdinaryApi::class.java)
         Observable.create<Any> {
             note =  (getObject(this,"note") as NotepadBean?) ?: NotepadBean()
-            val a = Gson().toJson(note)
-            val b = 0
             Thread.sleep(1500)
                 startActivity<MainActivity>()
             finish()
-            it.onNext(0)
-        }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe{
-            val   a= 0
-        }
+        }.subscribeOn(Schedulers.io()).subscribe{}
 //        ordinaryApi.getSplashPicture("https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN").enqueue(object : retrofit2.Callback<BingPictureBean> {
 //            override fun onResponse(call: Call<BingPictureBean>, response: Response<BingPictureBean>) {
 //                val a = response.body()
